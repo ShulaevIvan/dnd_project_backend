@@ -1,0 +1,5 @@
+dnd_backend/__pycache__
+users/__pycache__
+users/migrations
+api/__pycache__
+api/migrations

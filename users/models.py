@@ -7,4 +7,7 @@ from django.contrib.auth.models import AbstractUser
 
 class DndUser(AbstractUser):
     name = models.CharField(max_length=255)
-    email = models.EmailField(('email adress'), unique=True)
+    email = models.EmailField(('email address'), unique=True)
+    
+    REQUIRED_FIELDS = []
+    USERNAME_FIELD = 'email'

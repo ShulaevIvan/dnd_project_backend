@@ -28,6 +28,11 @@ SECRET_KEY = 'django-insecure-xhv9=#*5m3y$f3^u=ui$!z6-+x79ysbro%94_l95dad(s^jh_p
 DEBUG = True
 
 ALLOWED_HOSTS = []
+SECURE_CROSS_ORIGIN_OPENER_POLICY=None
+CORS_ALLOW_METHODS = ('GET','POST','PUT','PATCH','DELETE','OPTIONS',)
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
 
 
 # Application definition
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'api',
     'users',
 ]
@@ -53,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'dnd_backend.urls'
@@ -120,9 +127,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_METHODS = ('GET','POST','PUT','PATCH','DELETE','OPTIONS',)
 
 
 # Static files (CSS, JavaScript, Images)

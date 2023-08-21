@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, logout
 from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
+from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookCharSubClass
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -52,7 +53,7 @@ class UserRecoverPasswordView(APIView):
     def post(self, request):
         recover_email = request.data.get('email')
         target_user = get_object_or_404(DndUser, email=recover_email)
-        print(request.data.get('email'))
+        
         if target_user:
             password = generate_user_password()
             target_user.set_password(password)
@@ -105,7 +106,30 @@ class UserLogoutView(APIView):
         Token.objects.get(user=target_user_id).delete()
 
         return Response('logout success', status=status.HTTP_200_OK)
-            
+
+class ReferenceBookView(APIView):
+
+    def get(self, request):
+        # ReferenceBookCharClass.objects.get(id=1).subclass.create(char_subclass='test3').save()
+        print(ReferenceBookCharClass.objects.get(id=1).subclass.all().values())
+        # print(ReferenceBook.objects.filter(char_classes__isnull=False).distinct())
+        print(ReferenceBookCharClass.objects.filter(char_classname='paladin'))
+        return Response('referenceBook')
+
+class ReferenceBookClassView(APIView):
+
+    def get(self, request):
+        char_class_req = request.GET.get('class', None)
+        if not char_class_req:
+            queryset = ReferenceBookCharClass.objects.all()
+            clear_data = [{'id': c.id, 'classname': c.char_classname, 'allsubclass': c.subclass.all().values()} for c in queryset]
+        else :
+            char_class_req = char_class_req.lower()
+            queryset = ReferenceBookCharClass.objects.get(char_classname = char_class_req)  
+            clear_data = {'id': queryset.id, 'classname': queryset.id, 'allsubclass': queryset.subclass.all().values()}
+
+        return Response(clear_data)
+
 
 def generate_user_password():
     password = secrets.token_urlsafe(6)

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
+from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView, ReferenceBookView, ReferenceBookClassView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +23,6 @@ urlpatterns = [
     path('api/user/login/', UserLoginView.as_view()),
     path('api/user/logout/', UserLogoutView.as_view()),
     path('api/user/recover/', UserRecoverPasswordView.as_view()),
+    path('api/reference_book/', ReferenceBookView.as_view()),
+    path('api/reference_book/class/', ReferenceBookClassView.as_view())
 ]

@@ -1,0 +1,170 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ReferenceBook",
+        "fields": {
+            "book_name": "reference_book"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "bard",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "warrior",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "barbarian",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "wizzard",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "druid",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "cleric",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "inventor",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "warlock",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "monk",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "paladin",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "rouge",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "ranger",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "sorcerer",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Valor",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Knowledge",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Swords",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "Collegium of Enchantmentglamour",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "The College of Whispers",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "The College of Creation",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Eloquence",
+            "main_class": 1
+        }
+    }
+    
+]

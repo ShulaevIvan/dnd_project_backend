@@ -12,6 +12,10 @@ class ReferenceBook(models.Model):
 
         return self.book_name
     
+class ReferenceBookMenu(models.Model):
+    menu_item_name = models.CharField(max_length=255)
+    book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='ref_menu')
+    
 
 class ReferenceBookCharClass(models.Model):
     char_classname = models.CharField(max_length=255, unique=True)
@@ -28,3 +32,10 @@ class ReferenceBookCharClass(models.Model):
 class ReferenceBookCharSubClass(models.Model):
     char_subclass = models.CharField(max_length=255, unique=True)
     main_class = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='subclass')
+
+class InstrumentsMenu(models.Model):
+    menu_name = models.CharField(max_length=255, unique=True)
+
+class InstrumentItem(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    menu_id = models.ForeignKey(InstrumentsMenu, on_delete=models.CASCADE, related_name='instrument')

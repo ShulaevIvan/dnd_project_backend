@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, logout
 from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
-from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookCharSubClass
+from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, ReferenceBookCharSubClass, InstrumentsMenu
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -110,11 +110,16 @@ class UserLogoutView(APIView):
 class ReferenceBookView(APIView):
 
     def get(self, request):
-        # ReferenceBookCharClass.objects.get(id=1).subclass.create(char_subclass='test3').save()
-        print(ReferenceBookCharClass.objects.get(id=1).subclass.all().values())
-        # print(ReferenceBook.objects.filter(char_classes__isnull=False).distinct())
-        print(ReferenceBookCharClass.objects.filter(char_classname='paladin'))
-        return Response('referenceBook')
+        book_menu = ReferenceBookMenu.objects.all()
+        character_classes = ReferenceBook.objects.get(id=1).charclass.all()
+
+        response_data = {
+            'menu': [{'id': item['id'], 'name': item['menu_item_name'] }for item in book_menu.values()],
+            'classes': [{'id': c['id'], 'classname': c['char_classname'] } for c in character_classes.values()]
+        }
+
+        return Response(response_data)
+
 
 class ReferenceBookClassView(APIView):
 
@@ -130,6 +135,13 @@ class ReferenceBookClassView(APIView):
 
         return Response(clear_data)
 
+class InstrumentsView(APIView):
+    
+    def get(self, request):
+        query = get_object_or_404(InstrumentsMenu, id=1).instrument.all().values()
+        clear_data = [{'id': inst['id'], 'name': inst['name']} for inst in query]
+
+        return Response({'instruments': clear_data})
 
 def generate_user_password():
     password = secrets.token_urlsafe(6)

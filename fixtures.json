@@ -308,6 +308,227 @@
             "char_subclass": "College of Eloquence",
             "main_class": 1
         }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Human",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Orc",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Dwarf",
+            "subrace_avalible": true,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Gnome",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Elves",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Half elve",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Halflings",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Aasimars",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Genasi",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Tieflings",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Dwarf_Subrace",
+
+            "race_id": 3
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 1,
+            "dex_bonuce": 2,
+            "con_bonuce": 3,
+            "int_bonuce": 4,
+            "wis_bonuce": 5,
+            "cha_bonuce": 6,
+            "race_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 10
+        }
     }
+    
     
 ]

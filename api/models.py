@@ -14,11 +14,13 @@ class ReferenceBook(models.Model):
     
 class ReferenceBookMenu(models.Model):
     menu_item_name = models.CharField(max_length=255)
+    
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='ref_menu')
     
 
 class ReferenceBookCharClass(models.Model):
     char_classname = models.CharField(max_length=255, unique=True)
+
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='charclass')
 
     class Meta:
@@ -31,11 +33,38 @@ class ReferenceBookCharClass(models.Model):
     
 class ReferenceBookCharSubClass(models.Model):
     char_subclass = models.CharField(max_length=255, unique=True)
+
     main_class = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='subclass')
+
+
+class ReferenceBookCharRace(models.Model):
+    char_race_name = models.CharField(max_length=255, unique=True)
+    subrace_avalible = models.BooleanField(blank=True, null=True)
+    race_description = models.TextField(blank=True, max_length=3000)
+
+    book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='char_race')
+
+class ReferenceBookSubRace(models.Model):
+    subrace_name = models.CharField(max_length=255)
+
+    race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='subrace', blank=True, null=True)
+
+
+class ReferenceBookCharRaceBonuces(models.Model):
+    str_bonuce = models.IntegerField(null=False)
+    dex_bonuce = models.IntegerField(null=False)
+    con_bonuce = models.IntegerField(null=False)
+    int_bonuce = models.IntegerField(null=False)
+    wis_bonuce = models.IntegerField(null=False)
+    cha_bonuce = models.IntegerField(null=False)
+
+    race_id = models.OneToOneField(ReferenceBookCharRace, on_delete = models.CASCADE, related_name='race_bonuces', primary_key = True)
+
 
 class InstrumentsMenu(models.Model):
     menu_name = models.CharField(max_length=255, unique=True)
 
 class InstrumentItem(models.Model):
     name = models.CharField(max_length=255, unique=True)
+
     menu_id = models.ForeignKey(InstrumentsMenu, on_delete=models.CASCADE, related_name='instrument')

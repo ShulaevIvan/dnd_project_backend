@@ -134,6 +134,33 @@ class ReferenceBookClassView(APIView):
             clear_data = {'id': queryset.id, 'classname': queryset.id, 'allsubclass': queryset.subclass.all().values()}
 
         return Response(clear_data)
+    
+class ReferenceBookRaceView(APIView):
+
+    def get(self, request):
+        book = get_object_or_404(ReferenceBook, id=1).char_race.all()
+        clear_data = []
+
+        for race_obj in book:
+            subraces = []
+            if race_obj.subrace_avalible:
+                subraces = [s.subrace_name for s in race_obj.subrace.all()]
+
+            clear_data.append({
+                'id': race_obj.id,
+                'name': race_obj.char_race_name,
+                'subrace': subraces,
+                'bonuces': {
+                    'str': race_obj.race_bonuces.str_bonuce,
+                    'dex': race_obj.race_bonuces.dex_bonuce,
+                    'con': race_obj.race_bonuces.con_bonuce,
+                    'int': race_obj.race_bonuces.int_bonuce,
+                    'wis': race_obj.race_bonuces.wis_bonuce,
+                    'cha': race_obj.race_bonuces.cha_bonuce,
+                }
+            })
+      
+        return Response({'races': clear_data})
 
 class InstrumentsView(APIView):
     

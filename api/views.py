@@ -142,14 +142,25 @@ class ReferenceBookRaceView(APIView):
         clear_data = []
 
         for race_obj in book:
+            print(race_obj.race_bonuces.race_bonuce_skill.all().values())
             subraces = []
             if race_obj.subrace_avalible:
                 subraces = [s.subrace_name for s in race_obj.subrace.all()]
+            if race_obj.race_bonuces.race_bonuce_skill:
+                race_skills = [
+                    {
+                        'id': skill['id'], 
+                        'skillname': skill['skill_name'], 
+                        'description': skill['skill_description']
+                    } for skill in race_obj.race_bonuces.race_bonuce_skill.all().values()
+                ]
+                print(race_skills)
 
             clear_data.append({
                 'id': race_obj.id,
                 'name': race_obj.char_race_name,
                 'subrace': subraces,
+                'skills': race_skills,
                 'bonuces': {
                     'str': race_obj.race_bonuces.str_bonuce,
                     'dex': race_obj.race_bonuces.dex_bonuce,

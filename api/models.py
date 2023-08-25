@@ -44,11 +44,11 @@ class ReferenceBookCharRace(models.Model):
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='char_race')
 
+
 class ReferenceBookSubRace(models.Model):
     subrace_name = models.CharField(max_length=255)
 
     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='subrace', blank=True, null=True)
-
 
 class ReferenceBookCharRaceBonuces(models.Model):
     str_bonuce = models.IntegerField(null=False)
@@ -60,6 +60,14 @@ class ReferenceBookCharRaceBonuces(models.Model):
 
     race_id = models.OneToOneField(ReferenceBookCharRace, on_delete = models.CASCADE, related_name='race_bonuces', primary_key = True)
 
+class ReferenceBookCharRaceSkill(models.Model):
+    skill_name = models.CharField(max_length=255)
+    skill_description = models.TextField(max_length=5000)
+    race_bonuce = models.ManyToManyField(ReferenceBookCharRaceBonuces, related_name='race_bonuce_skill', through='ReferenceBookCharRaceBonuceSkill')
+
+class ReferenceBookCharRaceBonuceSkill(models.Model):
+    skill_id = models.ForeignKey(ReferenceBookCharRaceSkill, on_delete=models.CASCADE, related_name='bonuce_skill')
+    race_bonuce_id  = models.ForeignKey(ReferenceBookCharRaceBonuces, on_delete=models.CASCADE, related_name='race_skill')
 
 class InstrumentsMenu(models.Model):
     menu_name = models.CharField(max_length=255, unique=True)

@@ -399,6 +399,7 @@
             "race_id": 3
         }
     },
+    
     {
         "pk": 1,
         "model": "api.ReferenceBookCharRaceBonuces",
@@ -461,6 +462,7 @@
             "int_bonuce": 3,
             "wis_bonuce": 2,
             "cha_bonuce": 1,
+
             "race_id": 5
         }
     },
@@ -527,6 +529,38 @@
             "wis_bonuce": 2,
             "cha_bonuce": 1,
             "race_id": 10
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharRaceSkill",
+        "fields": {
+            "skill_name" : "test race skill name",
+            "skill_description": "test race skill description"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharRaceSkill",
+        "fields": {
+            "skill_name" : "test race skill name 2",
+            "skill_description": "test race skill description 2"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharRaceBonuceSkill",
+        "fields": {
+            "skill_id" : 1,
+            "race_bonuce_id": 5
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharRaceBonuceSkill",
+        "fields": {
+            "skill_id" : 2,
+            "race_bonuce_id": 5
         }
     }
     

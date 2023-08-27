@@ -40,7 +40,11 @@ class ReferenceBookCharSubClass(models.Model):
 class ReferenceBookCharRace(models.Model):
     char_race_name = models.CharField(max_length=255, unique=True)
     subrace_avalible = models.BooleanField(blank=True, null=True)
-    race_description = models.TextField(blank=True, max_length=3000)
+    age = models.IntegerField(blank=True, null=True)
+    speed = models.IntegerField(blank=True, null=True)
+    size = models.IntegerField(blank=True, null=True)
+    weight = models.CharField(max_length=255, blank=True, null=True)
+    race_description = models.TextField(max_length=3000)
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='char_race')
 
@@ -48,6 +52,7 @@ class ReferenceBookCharRace(models.Model):
 class ReferenceBookSubRace(models.Model):
     subrace_name = models.CharField(max_length=255)
 
+    race_description = models.TextField(max_length=3000, blank=True, null=True)
     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='subrace', blank=True, null=True)
 
 class ReferenceBookCharRaceBonuces(models.Model):
@@ -68,6 +73,12 @@ class ReferenceBookCharRaceSkill(models.Model):
 class ReferenceBookCharRaceBonuceSkill(models.Model):
     skill_id = models.ForeignKey(ReferenceBookCharRaceSkill, on_delete=models.CASCADE, related_name='bonuce_skill')
     race_bonuce_id  = models.ForeignKey(ReferenceBookCharRaceBonuces, on_delete=models.CASCADE, related_name='race_skill')
+
+class ReferenceBookLanguage(models.Model):
+    name = models.CharField(max_length=255)
+    book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='languages')
+    race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='languages', null=True, blank=True)
+
 
 class InstrumentsMenu(models.Model):
     menu_name = models.CharField(max_length=255, unique=True)

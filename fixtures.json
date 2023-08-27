@@ -8,149 +8,6 @@
     },
     {
         "pk": 1,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "classes",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "races",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "features",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "history",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "spells",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "weapons",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "armor",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 8,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "equipment",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 9,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "items",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 10,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "enemies",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.InstrumentsMenu",
-        "fields": {
-            "menu_name": "instrument_menu"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "characteristic-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-char-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-npc-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-treasure-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "wildmagic",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-enemy-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-vendor-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 1,
         "model": "api.ReferenceBookCharClass",
         "fields": {
             "char_classname": "bard",
@@ -314,6 +171,11 @@
         "model": "api.ReferenceBookCharRace",
         "fields": {
             "char_race_name": "Human",
+            "age": 25,
+            "size": 5,
+            "weight": "medium",
+            "speed": 30,
+            "race_description": "Люди являются самыми приспособленным и амбициозным народом среди распространённых рас. Их вкусы, нравы и обычаи сильно отличаются во множестве разных земель, где они поселились. Однако там, где они селятся, они остаются надолго: строят города, стоящие веками, и великие королевства, сохраняющиеся множество столетий. У отдельного человека может быть относительно короткая продолжительность жизни, но человеческая нация и культура сохраняет традиции от своих истоков на время, намного превышающее память одного человека. Они живут сегодняшним днём, что весьма хорошо подходит для приключенческой жизни, и позволяет вдобавок строить планы на будущее, со стремлением оставить после себя прочное наследие. Индивидуально или в группах, люди легко приспосабливаются к ситуации, и всегда остаются внимательными к изменяющейся политической и социальной динамике.",
             "book_id": 1
         }
     },
@@ -371,6 +233,12 @@
         "model": "api.ReferenceBookCharRace",
         "fields": {
             "char_race_name": "Aasimars",
+            "subrace_avalible": true,
+            "age": 160,
+            "size": 5,
+            "weight": "medium or small",
+            "speed": 30,
+            "race_description": "Аасимары несут в себе дух небесного света. Они происходят от людей, осененных силой с Горы Селестии, божественных чертогов многих законно–добрых божеств. Аасимары рождаются, чтобы служить поборниками богов, их рождение провозглашается как благодать. Внешне они люди другого мира, ярко выраженные особенности которых выдают их небесное происхождение.",
             "book_id": 1
         }
     },
@@ -395,8 +263,33 @@
         "model": "api.ReferenceBookSubRace",
         "fields": {
             "subrace_name": "Dwarf_Subrace",
-
             "race_id": 3
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Protector",
+
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Scourge",
+
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Fallen",
+            "race_id": 8
         }
     },
     
@@ -405,11 +298,11 @@
         "model": "api.ReferenceBookCharRaceBonuces",
         "fields": {
             "str_bonuce": 1,
-            "dex_bonuce": 2,
-            "con_bonuce": 3,
-            "int_bonuce": 4,
-            "wis_bonuce": 5,
-            "cha_bonuce": 6,
+            "dex_bonuce": 1,
+            "con_bonuce": 1,
+            "int_bonuce": 1,
+            "wis_bonuce": 1,
+            "cha_bonuce": 1,
             "race_id": 1
         }
     },
@@ -496,12 +389,12 @@
         "pk": 8,
         "model": "api.ReferenceBookCharRaceBonuces",
         "fields": {
-            "str_bonuce": 6,
-            "dex_bonuce": 5,
-            "con_bonuce": 4,
-            "int_bonuce": 3,
-            "wis_bonuce": 2,
-            "cha_bonuce": 1,
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 2,
             "race_id": 8
         }
     },
@@ -548,6 +441,30 @@
         }
     },
     {
+        "pk": 3,
+        "model": "api.ReferenceBookCharRaceSkill",
+        "fields": {
+            "skill_name" : "Темное зрение",
+            "skill_description": "Благословленное светлым духом, ваше зрение может легко проникать сквозь темноту. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharRaceSkill",
+        "fields": {
+            "skill_name" : "Небесеное благословение",
+            "skill_description": "У Вас есть сопротивление некротическому урону и урону излучением."
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharRaceSkill",
+        "fields": {
+            "skill_name" : "Исцеляющие руки",
+            "skill_description": "В качестве действия вы можете коснуться существо и восстановить ему количество хитов, равное Вашему уровню. Вы не сможете вновь воспользоваться этой способностью пока не окончите длительный отдых."
+        }
+    },
+    {
         "pk": 1,
         "model": "api.ReferenceBookCharRaceBonuceSkill",
         "fields": {
@@ -561,6 +478,201 @@
         "fields": {
             "skill_id" : 2,
             "race_bonuce_id": 5
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharRaceBonuceSkill",
+        "fields": {
+            "skill_id" : 3,
+            "race_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharRaceBonuceSkill",
+        "fields": {
+            "skill_id" : 4,
+            "race_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharRaceBonuceSkill",
+        "fields": {
+            "skill_id" : 5,
+            "race_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "general",
+            "book_id": 1,
+            "race_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "general",
+            "book_id": 1,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "supernal",
+            "book_id": 1,
+            "race_id": 8
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "classes",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "races",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "features",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "history",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "spells",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "weapons",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "armor",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "equipment",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "items",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookMenu",
+        "fields": {
+            "menu_item_name": "enemies",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.InstrumentsMenu",
+        "fields": {
+            "menu_name": "instrument_menu"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "characteristic-generator",
+            "menu_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "random-char-generator",
+            "menu_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "random-npc-generator",
+            "menu_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "random-treasure-generator",
+            "menu_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "wildmagic",
+            "menu_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "random-enemy-generator",
+            "menu_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.InstrumentItem",
+        "fields": {
+            "name": "random-vendor-generator",
+            "menu_id": 1
         }
     }
     

@@ -209,6 +209,7 @@
         "model": "api.ReferenceBookCharRace",
         "fields": {
             "char_race_name": "Elves",
+            "subrace_avalible": true,
             "book_id": 1
         }
     },
@@ -290,6 +291,14 @@
         "fields": {
             "subrace_name": "Fallen",
             "race_id": 8
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Лесной Эльф",
+            "race_id": 5
         }
     },
     
@@ -506,6 +515,99 @@
     },
     {
         "pk": 1,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 2,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 5
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "asimar subrace_skill",
+            "skill_description": "asimar subrace skill descr"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Темное зрение",
+            "skill_description": "Привыкнув к сумраку леса и ночному небу, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Обострённые чувства",
+            "skill_description": "Вы владеете навыком Внимательность."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Наследие фей",
+            "skill_description": "Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить."
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 1,
+            "subrace_bonuce_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 2,
+            "subrace_bonuce_id": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 3,
+            "subrace_bonuce_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 4,
+            "subrace_bonuce_id": 2
+        }
+    },
+
+    {
+        "pk": 1,
         "model": "api.ReferenceBookLanguage",
         "fields": {
             "name": "general",
@@ -529,150 +631,6 @@
             "name": "supernal",
             "book_id": 1,
             "race_id": 8
-        }
-    },
-
-    {
-        "pk": 1,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "classes",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "races",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "features",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "history",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "spells",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "weapons",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "armor",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 8,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "equipment",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 9,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "items",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 10,
-        "model": "api.ReferenceBookMenu",
-        "fields": {
-            "menu_item_name": "enemies",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.InstrumentsMenu",
-        "fields": {
-            "menu_name": "instrument_menu"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "characteristic-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-char-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-npc-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-treasure-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "wildmagic",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-enemy-generator",
-            "menu_id": 1
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.InstrumentItem",
-        "fields": {
-            "name": "random-vendor-generator",
-            "menu_id": 1
         }
     }
     

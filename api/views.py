@@ -3,7 +3,9 @@ from django.contrib.auth import authenticate, logout
 from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
-from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, ReferenceBookCharSubClass, InstrumentsMenu
+from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
+from .models import ReferenceBookCharRace
+from .serializers import DetailRaceViewSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -210,6 +212,14 @@ class ReferenceBookRaceView(APIView):
             })
       
         return Response({'races': clear_data})
+    
+class DetailRaceView(APIView):
+
+    def get(self, request, race_id):
+        query_race = ReferenceBookCharRace.objects.all().filter(id = race_id)
+
+
+        return Response({'status': list(query_race.values())})
 
 class InstrumentsView(APIView):
     

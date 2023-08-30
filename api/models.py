@@ -51,7 +51,7 @@ class ReferenceBookCharRace(models.Model):
 
 class ReferenceBookSubRace(models.Model):
     subrace_name = models.CharField(max_length=255)
-
+    subrace_active = models.BooleanField()
     race_description = models.TextField(max_length=3000, blank=True, null=True)
     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='subrace', blank=True, null=True)
 

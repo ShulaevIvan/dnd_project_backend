@@ -149,9 +149,7 @@ class ReferenceBookRaceView(APIView):
 
             if race_obj.subrace_avalible:
                 for subrace_obj in race_obj.subrace.all():
-                    print(subrace_obj.subrace_bonuces.all())
-                    if subrace_obj.race_id_id == race_obj.id:
-
+                    if subrace_obj.race_id_id == race_obj.id and subrace_obj.subrace_active:
                         for subrace_bonuce in subrace_obj.subrace_bonuces.all().filter(subrace_id = subrace_obj.id, subrace_bonuce_skill__isnull=False):
                             subrace_bonuces['str'] = subrace_bonuce.str_bonuce
                             subrace_bonuces['dex'] = subrace_bonuce.dex_bonuce
@@ -195,7 +193,7 @@ class ReferenceBookRaceView(APIView):
                 'speed': race_obj.speed,
                 'size': race_obj.size,
                 'weight': race_obj.weight,
-                'subrace_avalible': subrace_avalible,
+                'subraceAvalible': subrace_avalible,
                 'skills': race_skills,
 
                 'bonuces': {

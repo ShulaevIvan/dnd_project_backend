@@ -217,9 +217,38 @@ class DetailRaceView(APIView):
 
     def get(self, request, race_id):
         query_race = ReferenceBookCharRace.objects.all().filter(id = race_id)
+        race_bonuces = {}
+        subrace_active_all_data = {}
+        clear_data = {
+            "race": list(query_race.values()),
+            "race_bonuce_data": race_bonuces,
+            "subrace_bonuce_data": subrace_active_all_data,
+        }
 
+        for race_obj in query_race:
+            if race_obj.subrace_avalible:
+                clear_data['subraces_avalible'] = list(race_obj.subrace.all().filter(subrace_active=False).values())
+                clear_data['subrace_active'] = list(race_obj.subrace.all().filter(subrace_active=True).values())
+                race_bonuces['bonuces'] = {
+                    "str_bonuce": race_obj.race_bonuces.str_bonuce,
+                    "dex_bonuce": race_obj.race_bonuces.dex_bonuce,
+                    "con_bonuce": race_obj.race_bonuces.con_bonuce,
+                    "int_bonuce": race_obj.race_bonuces.int_bonuce,
+                    "wis_bonuce": race_obj.race_bonuces.wis_bonuce,
+                    "cha_bonuce": race_obj.race_bonuces.cha_bonuce,
+                }
+              
+                race_bonuces["skills"] = race_obj.race_bonuces.race_bonuce_skill.all().values()
 
-        return Response({'status': list(query_race.values())})
+                for subrace in race_obj.subrace.all():
+                    if subrace.subrace_active:
+                        for skill in subrace.subrace_bonuces.all():
+                            subrace_active_all_data['subrace_bonuce_skills'] = list(skill.subrace_bonuce_skill.all().values())
+
+                    subrace_active_all_data['subrace_bonuces'] = list(subrace.subrace_bonuces.all().values())
+
+                
+        return Response({'status': clear_data})
 
 class InstrumentsView(APIView):
     
@@ -231,4 +260,5 @@ class InstrumentsView(APIView):
 
 def generate_user_password():
     password = secrets.token_urlsafe(6)
+
     return password

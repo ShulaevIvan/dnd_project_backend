@@ -1332,6 +1332,109 @@
             "skill_id": 38,
             "subrace_bonuce_id": 10
         }
+    },
+
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "general",
+            "book_id": 1,
+            "race_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "general",
+            "book_id": 1,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "supernal",
+            "book_id": 1,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "orcish",
+            "book_id": 1,
+            "race_id": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookLanguage",
+        "fields": {
+            "name": "general",
+            "book_id": 1,
+            "race_id": 2
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookLanguges",
+        "fields": {
+            "book_name": "test",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "lang1",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "lang2",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "lang3",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 1,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 1,
+            "languge_id": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 1,
+            "languge_id": 3
+        }
     }
     
 

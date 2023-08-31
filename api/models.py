@@ -45,6 +45,7 @@ class ReferenceBookCharRace(models.Model):
     size = models.IntegerField(blank=True, null=True)
     weight = models.CharField(max_length=255, blank=True, null=True)
     race_description = models.TextField(max_length=3000)
+    languges = models.ManyToManyField('ReferenceBookLangugeItem', through='ReferenceBookLangugeItemRace')
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='char_race')
 
@@ -95,10 +96,24 @@ class ReferenceBookCharRaceBonuceSkill(models.Model):
     skill_id = models.ForeignKey(ReferenceBookCharRaceSkill, on_delete=models.CASCADE, related_name='bonuce_skill')
     race_bonuce_id  = models.ForeignKey(ReferenceBookCharRaceBonuces, on_delete=models.CASCADE, related_name='race_skill')
 
-class ReferenceBookLanguage(models.Model):
+# class ReferenceBookLanguage(models.Model):
+#     name = models.CharField(max_length=255)
+#     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='race_languages')
+#     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='languages', null=True, blank=True)
+
+
+class ReferenceBookLanguges(models.Model):
+     book_name = models.CharField(max_length=255)
+     book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='book_languges')
+
+class ReferenceBookLangugeItem(models.Model):
     name = models.CharField(max_length=255)
-    book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='languages')
-    race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='languages', null=True, blank=True)
+    lang_book = models.ForeignKey(ReferenceBookLanguges, on_delete=models.CASCADE, related_name='lang_item')
+
+class ReferenceBookLangugeItemRace(models.Model):
+    race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='race_languges')
+    languge_id = models.ForeignKey(ReferenceBookLangugeItem, on_delete=models.CASCADE, related_name='race_languges')
+
 
 
 class InstrumentsMenu(models.Model):

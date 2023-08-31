@@ -6,6 +6,7 @@ from rest_framework.authtoken.models import Token
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
 from .models import ReferenceBookCharRace
 from .serializers import DetailRaceViewSerializer
+from itertools import chain
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -219,24 +220,34 @@ class DetailRaceView(APIView):
         query_race = ReferenceBookCharRace.objects.all().filter(id = race_id)
         race_bonuces = {}
         subrace_active_all_data = {}
+        langusges = []
+        
+        for lang_obj in query_race.all():
+            langusges = [lang for lang in lang_obj.languges.all().values()]
+
         clear_data = {
-            "race": list(query_race.values()),
+            "race": {
+                "data": list(query_race.values()),
+                "languages": langusges
+            },
             "race_bonuce_data": race_bonuces,
             "subrace_bonuce_data": subrace_active_all_data,
         }
-
+        
         for race_obj in query_race:
-            if race_obj.subrace_avalible:
-                clear_data['subraces_avalible'] = list(race_obj.subrace.all().filter(subrace_active=False).values())
-                clear_data['subrace_active'] = list(race_obj.subrace.all().filter(subrace_active=True).values())
-                race_bonuces['bonuces'] = {
+            # clear_data['race']['languges'] = list(race_obj.languages.all().filter(name__isnull=False).values())
+            race_bonuces['bonuces'] = {
                     "str_bonuce": race_obj.race_bonuces.str_bonuce,
                     "dex_bonuce": race_obj.race_bonuces.dex_bonuce,
                     "con_bonuce": race_obj.race_bonuces.con_bonuce,
                     "int_bonuce": race_obj.race_bonuces.int_bonuce,
                     "wis_bonuce": race_obj.race_bonuces.wis_bonuce,
                     "cha_bonuce": race_obj.race_bonuces.cha_bonuce,
-                }
+            }
+
+            if race_obj.subrace_avalible:
+                clear_data['subraces_avalible'] = list(race_obj.subrace.all().filter(subrace_active=False).values())
+                clear_data['subrace_active'] = list(race_obj.subrace.all().filter(subrace_active=True).values())
               
                 race_bonuces["skills"] = race_obj.race_bonuces.race_bonuce_skill.all().values()
 

@@ -224,10 +224,14 @@ class DetailRaceView(APIView):
         
         for lang_obj in query_race.all():
             langusges = [lang for lang in lang_obj.languges.all().values()]
+        
+        for skill_obj in query_race.all():
+            skills = [skill for skill in skill_obj.skills.all().values()]
 
         clear_data = {
             "race": {
                 "data": list(query_race.values()),
+                "skills": skills,
                 "languages": langusges
             },
             "race_bonuce_data": race_bonuces,

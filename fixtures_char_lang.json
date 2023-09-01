@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "api.ReferenceBookLanguges",
         "fields": {
-            "book_name": "test",
+            "book_name": "race_languges",
             "book_id": 1
         }
     },
@@ -27,7 +27,47 @@
         "pk": 3,
         "model": "api.ReferenceBookLangugeItem",
         "fields": {
-            "name": "lang3",
+            "name": "dwarf",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "gnome",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "dragon",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "halfing",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "elvish",
+            "lang_book": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "infernal",
             "lang_book": 1
         }
     },
@@ -43,16 +83,146 @@
         "pk": 2,
         "model": "api.ReferenceBookLangugeItemRace",
         "fields": {
-            "race_id": 1,
-            "languge_id": 2
+            "race_id": 2,
+            "languge_id": 1
         }
     },
     {
         "pk": 3,
         "model": "api.ReferenceBookLangugeItemRace",
         "fields": {
-            "race_id": 1,
+            "race_id": 2,
+            "languge_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 3,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 3,
             "languge_id": 3
         }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 4,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 4,
+            "languge_id": 4
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 5,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 5,
+            "languge_id": 7
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 6,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 6,
+            "languge_id": 7
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 7,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 7,
+            "languge_id": 8
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 8,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 9,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 9,
+            "languge_id": 5
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 10,
+            "languge_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 10,
+            "languge_id": 8
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookLangugeItemRace",
+        "fields": {
+            "race_id": 8,
+            "languge_id": 5
+        }
     }
+
+
 ]

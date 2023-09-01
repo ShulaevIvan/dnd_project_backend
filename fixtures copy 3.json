@@ -1,0 +1,1266 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ReferenceBook",
+        "fields": {
+            "book_name": "reference_book"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "bard",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "warrior",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "barbarian",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "wizzard",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "druid",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "cleric",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "inventor",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "warlock",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "monk",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "paladin",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "rouge",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "ranger",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookCharClass",
+        "fields": {
+            "char_classname": "sorcerer",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Valor",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Knowledge",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Swords",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "Collegium of Enchantmentglamour",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "The College of Whispers",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "The College of Creation",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharSubClass",
+        "fields": {
+            "char_subclass": "College of Eloquence",
+            "main_class": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Human",
+            "age": 25,
+            "size": 5,
+            "weight": "medium",
+            "speed": 30,
+            "race_description": "Люди являются самыми приспособленным и амбициозным народом среди распространённых рас. Их вкусы, нравы и обычаи сильно отличаются во множестве разных земель, где они поселились. Однако там, где они селятся, они остаются надолго: строят города, стоящие веками, и великие королевства, сохраняющиеся множество столетий. У отдельного человека может быть относительно короткая продолжительность жизни, но человеческая нация и культура сохраняет традиции от своих истоков на время, намного превышающее память одного человека. Они живут сегодняшним днём, что весьма хорошо подходит для приключенческой жизни, и позволяет вдобавок строить планы на будущее, со стремлением оставить после себя прочное наследие. Индивидуально или в группах, люди легко приспосабливаются к ситуации, и всегда остаются внимательными к изменяющейся политической и социальной динамике.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Half orc",
+            "age": 75,
+            "size": 5,
+            "weight": "medium",
+            "speed": 30,
+            "race_description": "Крепкие и покрытые шрамами. Серый цвет кожи, плоский лоб, выступающая челюсть, торчащие клыки и могучее телосложение не оставляет сомнений в орочьем происхождении для любого, кто смотрит на полуорка. ",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Dwarf",
+            "subrace_avalible": true,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Gnome",
+            "subrace_avalible": true,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Elves",
+            "subrace_avalible": true,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Half elve",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Halfling",
+            "subrace_avalible": true,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Aasimars",
+            "subrace_avalible": true,
+            "age": 160,
+            "size": 5,
+            "weight": "medium or small",
+            "speed": 30,
+            "race_description": "Аасимары несут в себе дух небесного света. Они происходят от людей, осененных силой с Горы Селестии, божественных чертогов многих законно–добрых божеств. Аасимары рождаются, чтобы служить поборниками богов, их рождение провозглашается как благодать. Внешне они люди другого мира, ярко выраженные особенности которых выдают их небесное происхождение.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Dragonborn",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookCharRace",
+        "fields": {
+            "char_race_name": "Tiefling",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Дварф Горный",
+            "subrace_active": false,
+            "race_id": 3
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Protector",
+            "subrace_active": false,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Scourge",
+            "subrace_active": true,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Fallen",
+            "subrace_active": false,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Лесной Эльф",
+            "subrace_active": false,
+            "race_id": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Высший Эльф",
+            "subrace_active": false,
+            "race_id": 5
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Дроу",
+            "subrace_active": true,
+            "race_id": 5
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Лесной гном",
+            "subrace_active": false,
+            "race_id": 4
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Скальный гном",
+            "subrace_active": true,
+            "race_id": 4
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Холмовой дворф",
+            "subrace_active": true,
+            "race_id": 3
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Коренастый полурослик",
+            "subrace_active": false,
+            "race_id": 7
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookSubRace",
+        "fields": {
+            "subrace_name": "Легконогий полурослик",
+            "subrace_active": true,
+            "race_id": 7
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 1,
+            "dex_bonuce": 1,
+            "con_bonuce": 1,
+            "int_bonuce": 1,
+            "wis_bonuce": 1,
+            "cha_bonuce": 1,
+            "race_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+
+            "race_id": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 2,
+            "race_id": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookCharRaceBonuces",
+        "fields": {
+            "str_bonuce": 6,
+            "dex_bonuce": 5,
+            "con_bonuce": 4,
+            "int_bonuce": 3,
+            "wis_bonuce": 2,
+            "cha_bonuce": 1,
+            "race_id": 10
+        }
+    },
+  
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 2,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 5
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 2,
+            "con_bonuce": 0,
+            "int_bonuce": 1,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 6
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 2,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 1,
+
+            "subrace_id": 7
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 1,
+            "con_bonuce": 0,
+            "int_bonuce": 2,
+            "wis_bonuce": 0,
+            "cha_bonuce": 1,
+
+            "subrace_id": 8
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 1,
+            "int_bonuce": 2,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 9
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 2,
+            "dex_bonuce": 0,
+            "con_bonuce": 2,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 2,
+            "int_bonuce": 0,
+            "wis_bonuce": 1,
+            "cha_bonuce": 0,
+
+            "subrace_id": 10
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 2,
+            "con_bonuce": 1,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 11
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 2,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 1,
+
+            "subrace_id": 12
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "asimar subrace_skill",
+            "skill_description": "asimar subrace skill descr"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Темное зрение",
+            "skill_description": "Привыкнув к сумраку леса и ночному небу, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Обострённые чувства",
+            "skill_description": "Вы владеете навыком Внимательность."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Наследие фей",
+            "skill_description": "Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить."
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Наследие фей",
+            "skill_description": "Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить."
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Обострённые чувства",
+            "skill_description": "Вы владеете навыком Внимательность."
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Транс",
+            "skill_description": "Эльфы не спят. Вместо этого они погружаются в глубокую медитацию, находясь в полубессознательном состоянии до 4 часов в сутки (обычно такую медитацию называют трансом). Во время этой медитации вы можете грезить о разных вещах. Некоторые из этих грёз являются ментальными упражнениями, выработанными за годы тренировок. После такого отдыха вы получаете все преимущества, которые получает человек после 8 часов сна."
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Заговор",
+            "skill_description": "Вы знаете один заговор из списка заклинаний волшебника. Базовой характеристикой для его использования является Интеллект."
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Наследие фей",
+            "skill_description": "Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить."
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Обострённые чувства",
+            "skill_description": "Вы владеете навыком Внимательность."
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Транс",
+            "skill_description": "Эльфы не спят. Вместо этого они погружаются в глубокую медитацию, находясь в полубессознательном состоянии до 4 часов в сутки (обычно такую медитацию называют трансом). Во время этой медитации вы можете грезить о разных вещах. Некоторые из этих грёз являются ментальными упражнениями, выработанными за годы тренировок. После такого отдыха вы получаете все преимущества, которые получает человек после 8 часов сна."
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Гномья хитрость",
+            "skill_description": "Вы совершаете с преимуществом спасброски Интеллекта, Мудрости и Харизмы против магии."
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Природная иллюзия",
+            "skill_description": "Вы знаете заговор малая иллюзия [minor illusion]. Базовой характеристикой для его использования является Интеллект."
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Природная иллюзия",
+            "skill_description": "С помощью звуков и жестов вы можете передавать простые понятия Маленьким или ещё меньшим зверям. Лесные гномы любят животных и часто держат белок, барсуков, кроликов, кротов, дятлов и других животных в качестве питомцев."
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Общение с маленькими зверями",
+            "skill_description": "С помощью звуков и жестов вы можете передавать простые понятия Маленьким или ещё меньшим зверям. Лесные гномы любят животных и часто держат белок, барсуков, кроликов, кротов, дятлов и других животных в качестве питомцев."
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Тёмное зрение",
+            "skill_description": "Привыкнув к жизни под землёй, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого."
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Гномья хитрость",
+            "skill_description": "Вы совершаете с преимуществом спасброски Интеллекта, Мудрости и Харизмы против магии."
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Ремесленные знания",
+            "skill_description": "При совершении проверки Интеллекта (История) применительно к магическому, алхимическому или технологическому объекту, вы можете добавить к проверке удвоенный бонус мастерства вместо обычного."
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Жестянщик",
+            "skill_description": "Вы владеете ремесленными инструментами (инструменты жестянщика)."
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Тёмное зрение",
+            "skill_description": "Привыкнув к жизни под землёй, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого."
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Дварфская устойчивость",
+            "skill_description": "Вы совершаете с преимуществом спасброски от яда, и вы получаете сопротивление к урону ядом"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Дварфская боевая тренировка",
+            "skill_description": "Вы владеете боевым топором, ручным топором, лёгким и боевым молотами."
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Владение инструментами",
+            "skill_description": "Вы владеете ремесленными инструментами на ваш выбор: инструменты кузнеца, пивовара или каменщика."
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Знание камня",
+            "skill_description": "Если вы совершаете проверку Интеллекта (История), связанную с происхождением работы по камню, вы считаетесь владеющим навыком История, и добавляете к проверке удвоенный бонус мастерства вместо обычного."
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Владение доспехами дварфов",
+            "skill_description": "Вы владеете лёгкими и средними доспехами."
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Дварфская устойчивость",
+            "skill_description": "Вы совершаете с преимуществом спасброски от яда, и вы получаете сопротивление к урону ядом"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Дварфская боевая тренировка",
+            "skill_description": "Вы владеете ремесленными инструментами на ваш выбор: инструменты кузнеца, пивовара или каменщика."
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Знание камня",
+            "skill_description": "Если вы совершаете проверку Интеллекта (История), связанную с происхождением работы по камню, вы считаетесь владеющим навыком История, и добавляете к проверке удвоенный бонус мастерства вместо обычного."
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Дварфская выдержка",
+            "skill_description": "Максимальное значение ваших хитов увеличивается на 1, и вы получаете 1 дополнительный хит с каждым новым уровнем."
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Темное зрение",
+            "skill_description": "Привыкнув к жизни под землёй, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого."
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Везучий",
+            "skill_description": "Если при броске атаки, проверке характеристики или спасброске у вас выпало «1», вы можете перебросить кость, и должны использовать новый результат."
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Храбрый",
+            "skill_description": "Вы совершаете с преимуществом спасброски от испуга."
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Проворство полуросликов",
+            "skill_description": "Вы можете проходить сквозь пространство, занятое существами, чей размер больше вашего."
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Устойчивость коренастых",
+            "skill_description": "Вы совершаете с преимуществом спасброски от яда, и вы получаете сопротивление к урону ядом."
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Проворство полуросликов",
+            "skill_description": "Вы можете проходить сквозь пространство, занятое существами, чей размер больше вашего."
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Везучий",
+            "skill_description": "Если при броске атаки, проверке характеристики или спасброске у вас выпало «1», вы можете перебросить кость, и должны использовать новый результат."
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Храбрый",
+            "skill_description": "Вы совершаете с преимуществом спасброски от испуга."
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.ReferenceBookSubRaceSkill",
+        "fields": {
+            "skill_name": "Естественная скрытность",
+            "skill_description": "Вы можете предпринять попытку скрыться даже если заслонены только существом, превосходящими вас в размере как минимум на одну категорию."
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 1,
+            "subrace_bonuce_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 2,
+            "subrace_bonuce_id": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 3,
+            "subrace_bonuce_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 4,
+            "subrace_bonuce_id": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 5,
+            "subrace_bonuce_id": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 6,
+            "subrace_bonuce_id": 3
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 7,
+            "subrace_bonuce_id": 3
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 8,
+            "subrace_bonuce_id": 3
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 9,
+            "subrace_bonuce_id": 4
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 10,
+            "subrace_bonuce_id": 4
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 11,
+            "subrace_bonuce_id": 4
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 12,
+            "subrace_bonuce_id": 5
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 13,
+            "subrace_bonuce_id": 5
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 14,
+            "subrace_bonuce_id": 5
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 15,
+            "subrace_bonuce_id": 5
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 16,
+            "subrace_bonuce_id": 6
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 17,
+            "subrace_bonuce_id": 6
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 18,
+            "subrace_bonuce_id": 6
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 19,
+            "subrace_bonuce_id": 6
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 20,
+            "subrace_bonuce_id": 7
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 21,
+            "subrace_bonuce_id": 7
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 22,
+            "subrace_bonuce_id": 7
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 23,
+            "subrace_bonuce_id": 7
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 24,
+            "subrace_bonuce_id": 7
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 25,
+            "subrace_bonuce_id": 7
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 26,
+            "subrace_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 27,
+            "subrace_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 28,
+            "subrace_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 29,
+            "subrace_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 30,
+            "subrace_bonuce_id": 8
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 31,
+            "subrace_bonuce_id": 9
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 32,
+            "subrace_bonuce_id": 9
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 33,
+            "subrace_bonuce_id": 9
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 34,
+            "subrace_bonuce_id": 9
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 35,
+            "subrace_bonuce_id": 10
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 36,
+            "subrace_bonuce_id": 10
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 37,
+            "subrace_bonuce_id": 10
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.ReferenceBookSubRaceBonuceSkill",
+        "fields": {
+            "skill_id": 38,
+            "subrace_bonuce_id": 10
+        }
+    }
+    
+
+
+
+
+
+    
+    
+    
+]

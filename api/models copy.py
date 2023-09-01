@@ -55,7 +55,6 @@ class ReferenceBookSubRace(models.Model):
     subrace_name = models.CharField(max_length=255)
     subrace_active = models.BooleanField()
     race_description = models.TextField(max_length=3000, blank=True, null=True)
-    skills = models.ManyToManyField('ReferenceBookSubraceItemSkill',  through='ReferenceBookItemSkillSubrace')
     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='subrace', blank=True, null=True)
 
 class ReferenceBookSubRaceBonuces(models.Model):
@@ -66,23 +65,17 @@ class ReferenceBookSubRaceBonuces(models.Model):
     wis_bonuce = models.IntegerField(null=True, blank=True)
     cha_bonuce = models.IntegerField(null=True, blank=True)
 
-    subrace_id = models.OneToOneField(ReferenceBookSubRace, on_delete=models.CASCADE, related_name='subrace_bonuce', blank=True)
+    subrace_id = models.ForeignKey(ReferenceBookSubRace, on_delete=models.CASCADE, related_name='subrace_bonuces', blank=True)
 
-# class ReferenceBookSubRaceSkill(models.Model):
-#     skill_name = models.CharField(max_length=255)
-#     skill_description = models.TextField(max_length=5000)
-
-#     subrace_bonuce = models.ForeignKey(ReferenceBookSubRaceBonuces, on_delete=models.CASCADE, related_name='subrace_bonuce_skill', blank=True)
-
-# class ReferenceBookSubRaceSkill(models.Model):
-#     skill_name = models.CharField(max_length=255)
-#     skill_description = models.TextField(max_length=5000)
+class ReferenceBookSubRaceSkill(models.Model):
+    skill_name = models.CharField(max_length=255)
+    skill_description = models.TextField(max_length=5000)
     
-#     subrace_bonuce = models.ManyToManyField(ReferenceBookSubRaceBonuces, related_name='subrace_bonuce_skill', through='ReferenceBookSubRaceBonuceSkill', blank=True)
+    subrace_bonuce = models.ManyToManyField(ReferenceBookSubRaceBonuces, related_name='subrace_bonuce_skill', through='ReferenceBookSubRaceBonuceSkill', blank=True)
 
-# class ReferenceBookSubRaceBonuceSkill(models.Model): 
-#     skill_id = models.ForeignKey(ReferenceBookSubRaceSkill, on_delete=models.CASCADE, related_name='bonuce_skill', blank=True)
-#     subrace_bonuce_id  = models.ForeignKey(ReferenceBookSubRaceBonuces, on_delete=models.CASCADE, related_name='race_skill', blank=True)
+class ReferenceBookSubRaceBonuceSkill(models.Model): 
+    skill_id = models.ForeignKey(ReferenceBookSubRaceSkill, on_delete=models.CASCADE, related_name='bonuce_skill', blank=True)
+    subrace_bonuce_id  = models.ForeignKey(ReferenceBookSubRaceBonuces, on_delete=models.CASCADE, related_name='race_skill', blank=True)
 
 
 class ReferenceBookCharRaceBonuces(models.Model):
@@ -105,19 +98,9 @@ class ReferenceBookCharRaceBonuces(models.Model):
 #     race_bonuce_id  = models.ForeignKey(ReferenceBookCharRaceBonuces, on_delete=models.CASCADE, related_name='race_skill')
 
 
-
 class ReferenceBookSkills(models.Model):
     book_name = models.CharField(max_length=255)
     book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='race_skills')
-
-class ReferenceBookSubraceItemSkill(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    skill_book = models.ForeignKey(ReferenceBookSkills, on_delete=models.CASCADE, related_name='subrace_skill')
-
-class ReferenceBookItemSkillSubrace(models.Model):
-    subrace_id = models.ForeignKey(ReferenceBookSubRace, on_delete=models.CASCADE, related_name='subrace_skills')
-    skill_id = models.ForeignKey(ReferenceBookSubraceItemSkill, on_delete=models.CASCADE, related_name='subrace_skills')
 
 class ReferenceBookItemSkill(models.Model):
     name = models.CharField(max_length=255)

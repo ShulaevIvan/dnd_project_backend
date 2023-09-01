@@ -419,5 +419,13 @@
             "race_id": 5,
             "skill_id": 20
         }
+    },
+    {
+        "pk": 29,
+        "model": "api.ReferenceBookItemSkillRace",
+        "fields": {
+            "race_id": 5,
+            "skill_id": 20
+        }
     }
 ]

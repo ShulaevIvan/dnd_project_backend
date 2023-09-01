@@ -218,15 +218,28 @@ class DetailRaceView(APIView):
 
     def get(self, request, race_id):
         query_race = ReferenceBookCharRace.objects.all().filter(id = race_id)
+
+        if not query_race.exists():
+            return Response({'status': 'not found'})
+        
         race_bonuces = {}
         subrace_active_all_data = {}
         langusges = []
+
+        for race_param in query_race.all():
+            for subrace in race_param.subrace.all():
+                print(subrace.subrace_name)
+                if subrace.subrace_active:
+                    subrace_active_all_data['subrace_active_name'] = subrace.subrace_name
+                    subrace_active_all_data['skills'] = list(subrace.skills.all().values())
+                
         
         for lang_obj in query_race.all():
             langusges = [lang for lang in lang_obj.languges.all().values()]
         
         for skill_obj in query_race.all():
             skills = [skill for skill in skill_obj.skills.all().values()]
+
 
         clear_data = {
             "race": {
@@ -248,21 +261,7 @@ class DetailRaceView(APIView):
                     "wis_bonuce": race_obj.race_bonuces.wis_bonuce,
                     "cha_bonuce": race_obj.race_bonuces.cha_bonuce,
             }
-
-            if race_obj.subrace_avalible:
-                clear_data['subraces_avalible'] = list(race_obj.subrace.all().filter(subrace_active=False).values())
-                clear_data['subrace_active'] = list(race_obj.subrace.all().filter(subrace_active=True).values())
-              
-                race_bonuces["skills"] = race_obj.race_bonuces.race_bonuce_skill.all().values()
-
-                for subrace in race_obj.subrace.all():
-                    if subrace.subrace_active:
-                        for skill in subrace.subrace_bonuces.all():
-                            subrace_active_all_data['subrace_bonuce_skills'] = list(skill.subrace_bonuce_skill.all().values())
-
-                    subrace_active_all_data['subrace_bonuces'] = list(subrace.subrace_bonuces.all().values())
-
-                
+    
         return Response({'status': clear_data})
 
 class InstrumentsView(APIView):

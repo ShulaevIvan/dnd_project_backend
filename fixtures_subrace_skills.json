@@ -1,114 +1,16 @@
 [
     {
         "pk": 1,
-        "model": "api.ReferenceBookSkills",
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
-            "book_name": "race_skills",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Дополнительный навык",
-            "description": "Вы получаете владение одним навыком на ваш выбор.",
+            "name": "Тёмное зрение",
+            "description": "Привыкнув к жизни под землёй, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого.",
             "skill_book_id": 1
         }
     },
     {
         "pk": 2,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Темное зрение",
-            "description": "Благодаря орочьей крови, вы обладаете превосходным зрением в темноте и при тусклом освещении. На расстоянии в 60 футов вы при тусклом освещении можете видеть так, как будто это яркое освещение, и в темноте так, как будто это тусклое освещение. В темноте вы не можете различать цвета, только оттенки серого.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Угрожающий вид",
-            "description": "Вы владеете навыком Запугивание.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Непоколебимая стойкость",
-            "description": "Если ваши хиты опустились до нуля, но вы при этом не убиты, ваши хиты вместо этого опускаются до 1. Вы не можете использовать эту способность снова, пока не завершите длительный отдых.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Свирепые атаки",
-            "description": "Если вы совершили критическое попадание рукопашной атакой оружием, вы можете добавить к урону ещё одну кость урона оружия.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Наследие фей",
-            "description": "Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Универсальность навыков",
-            "description": "Вы получаете владение двумя навыками на ваш выбор.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 8,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Дварфская устойчивость",
-            "description": "Вы совершаете с преимуществом спасброски от яда, и вы получаете сопротивление к урону ядом",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 9,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Дварфская боевая тренировка",
-            "description": "Вы владеете боевым топором, ручным топором, лёгким и боевым молотами.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 10,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Владение инструментами",
-            "description": "Вы владеете ремесленными инструментами на ваш выбор: инструменты кузнеца, пивовара или каменщика.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 11,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Знание камня",
-            "description": "Если вы совершаете проверку Интеллекта (История), связанную с происхождением работы по камню, вы считаетесь владеющим навыком История, и добавляете к проверке удвоенный бонус мастерства вместо обычного.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 12,
-        "model": "api.ReferenceBookItemSkill",
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
             "name": "Гномья хитрость",
             "description": "Вы совершаете с преимуществом спасброски Интеллекта, Мудрости и Харизмы против магии.",
@@ -116,35 +18,98 @@
         }
     },
     {
+        "pk": 3,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Природная иллюзия",
+            "description": "Вы знаете заговор малая иллюзия.Базовой характеристикой для его использования является Интеллект.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Общение с маленькими зверями",
+            "description": "С помощью звуков и жестов вы можете передавать простые понятия Маленьким или ещё меньшим зверям. Лесные гномы любят животных и часто держат белок, барсуков, кроликов, кротов, дятлов и других животных в качестве питомцев.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Ремесленные знания",
+            "description": "При совершении проверки Интеллекта (История) применительно к магическому, алхимическому или технологическому объекту, вы можете добавить к проверке удвоенный бонус мастерства вместо обычного.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Жестянщик",
+            "description": "Вы владеете ремесленными инструментами (инструменты жестянщика). С их помощью вы можете, потратив 1 час времени и материалы на сумму в 10 зм, создать Крошечное механическое устройство (КД 5, 1 хит). Это устройство перестаёт работать через 24 часа (если вы не потратите 1 час на поддержание его работы). Вы можете Действием разобрать его; в этом случае вы можете получить обратно использованные материалы.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Дварфская устойчивость",
+            "description": "Вы совершаете с преимуществом спасброски от яда, и вы получаете сопротивление к урону ядом",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Дварфская боевая тренировка",
+            "description": "Вы владеете боевым топором, ручным топором, лёгким и боевым молотами.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Владение инструментами",
+            "description": "Вы владеете ремесленными инструментами на ваш выбор: инструменты кузнеца, пивовара или каменщика.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Знание камня",
+            "description": "Если вы совершаете проверку Интеллекта (История), связанную с происхождением работы по камню, вы считаетесь владеющим навыком История, и добавляете к проверке удвоенный бонус мастерства вместо обычного.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Владение доспехами дварфов",
+            "description": "Вы владеете лёгкими и средними доспехами.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Дварфская выдержкаДварфская выдержка",
+            "description": "Максимальное значение ваших хитов увеличивается на 1, и вы получаете 1 дополнительный хит с каждым новым уровнем.",
+            "skill_book_id": 1
+        }
+    },
+    {
         "pk": 13,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Наследие драконов",
-            "description": "many to one",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 14,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Наследие драконов",
-            "description": "Вы можете Действием выдохнуть разрушительную энергию. Ваше наследие драконов определяет размер, форму и вид урона вашего выдоха. Когда вы используете оружие дыхания, все существа в зоне выдоха должны совершить спасбросок, вид которого определяется вашим наследием.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 15,
-        "model": "api.ReferenceBookItemSkill",
-        "fields": {
-            "name": "Сопротивление урону",
-            "description": "Вы получаете сопротивление к урону того вида, который указан в вашем наследии драконов.",
-            "skill_book_id": 1
-        }
-    },
-    {
-        "pk": 16,
-        "model": "api.ReferenceBookItemSkill",
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
             "name": "Везучий",
             "description": "Если при броске атаки, проверке характеристики или спасброске у вас выпало «1», вы можете перебросить кость, и должны использовать новый результат.",
@@ -152,8 +117,8 @@
         }
     },
     {
-        "pk": 17,
-        "model": "api.ReferenceBookItemSkill",
+        "pk": 14,
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
             "name": "Храбрый",
             "description": "Вы совершаете с преимуществом спасброски от испуга.",
@@ -161,8 +126,8 @@
         }
     },
     {
-        "pk": 18,
-        "model": "api.ReferenceBookItemSkill",
+        "pk": 15,
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
             "name": "Проворство полуросликов",
             "description": "Вы можете проходить сквозь пространство, занятое существами, чей размер больше вашего.",
@@ -170,17 +135,26 @@
         }
     },
     {
-        "pk": 19,
-        "model": "api.ReferenceBookItemSkill",
+        "pk": 16,
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
-            "name": "Адское сопротивление",
-            "description": "Вы получаете сопротивление к урону огнём.",
+            "name": "Устойчивость коренастых",
+            "description": "Вы совершаете с преимуществом спасброски от яда, и вы получаете сопротивление к урону ядом.",
             "skill_book_id": 1
         }
     },
     {
-        "pk": 19,
-        "model": "api.ReferenceBookItemSkill",
+        "pk": 17,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Естественная скрытность",
+            "description": "Вы можете предпринять попытку скрыться даже если заслонены только существом, превосходящими вас в размере как минимум на одну категорию",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
             "name": "Обострённые чувства",
             "description": "Вы владеете навыком Внимательность.",
@@ -188,8 +162,17 @@
         }
     },
     {
+        "pk": 19,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Наследие фей",
+            "description": "Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить.",
+            "skill_book_id": 1
+        }
+    },
+    {
         "pk": 20,
-        "model": "api.ReferenceBookItemSkill",
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
             "name": "Транс",
             "description": "Эльфы не спят. Вместо этого они погружаются в глубокую медитацию, находясь в полубессознательном состоянии до 4 часов в сутки (обычно такую медитацию называют трансом). Во время этой медитации вы можете грезить о разных вещах. Некоторые из этих грёз являются ментальными упражнениями, выработанными за годы тренировок. После такого отдыха вы получаете все преимущества, которые получает человек после 8 часов сна.",
@@ -197,227 +180,470 @@
         }
     },
     {
-        "pk": 1,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 21,
+        "model": "api.ReferenceBookSubraceItemSkill",
         "fields": {
-            "race_id": 1,
+            "name": "Владение эльфийским оружием",
+            "description": "Вы владеете длинным мечом, коротким мечом, коротким и длинным луками.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Заговор",
+            "description": "Вы знаете один заговор из списка заклинаний волшебника. Базовой характеристикой для его использования является Интеллект.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Быстрые ноги",
+            "description": "Ваша базовая скорость перемещения увеличивается до 35 футов.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Маскировка в дикой местности",
+            "description": "Вы можете предпринять попытку спрятаться, даже если вы слабо заслонены листвой, сильным дождём, снегопадом, туманом или другими природными явлениями.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Превосходное тёмное зрение",
+            "description": "Ваше тёмное зрение имеет радиус 120 футов.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Чувствительность к солнцу",
+            "description": "Вы совершаете с помехой броски атаки и проверки Мудрости (Внимательность), основанные на зрении, если вы, цель вашей атаки или изучаемый предмет расположены на прямом солнечном свете.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Магия дроу",
+            "description": "Вы знаете заговор пляшущие огоньки.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Владение оружием дроу",
+            "description": "Вы владеете рапирой, коротким мечом и ручным арбалетом.",
+            "skill_book_id": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.ReferenceBookSubraceItemSkill",
+        "fields": {
+            "name": "Дополнительный язык",
+            "description": "Вы можете говорить, читать и писать на ещё одном языке, на ваш выбор.",
+            "skill_book_id": 1
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 1,
             "skill_id": 1
         }
     },
     {
         "pk": 2,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 2,
-            "skill_id": 2
+            "subrace_id": 1,
+            "skill_id": 7
         }
     },
     {
         "pk": 3,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 2,
-            "skill_id": 3
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 2,
-            "skill_id": 4
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 2,
-            "skill_id": 5
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 6,
-            "skill_id": 2
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 6,
-            "skill_id": 6
-        }
-    },
-    {
-        "pk": 8,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 6,
-            "skill_id": 7
-        }
-    },
-    {
-        "pk": 9,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 6,
-            "skill_id": 7
-        }
-    },
-    {
-        "pk": 10,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 3,
-            "skill_id": 7
-        }
-    },
-    {
-        "pk": 11,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 3,
+            "subrace_id": 1,
             "skill_id": 8
         }
     },
     {
-        "pk": 12,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 4,
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 3,
+            "subrace_id": 1,
             "skill_id": 9
         }
     },
     {
-        "pk": 13,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 5,
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 3,
+            "subrace_id": 1,
             "skill_id": 10
         }
     },
     {
-        "pk": 14,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 6,
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 3,
+            "subrace_id": 1,
             "skill_id": 11
         }
     },
     {
-        "pk": 15,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 7,
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 4,
-            "skill_id": 2
+            "subrace_id": 5,
+            "skill_id": 1
         }
     },
     {
-        "pk": 16,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 8,
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 4,
-            "skill_id": 12
-        }
-    },
-    {
-        "pk": 17,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 9,
-            "skill_id": 13
-        }
-    },
-    {
-        "pk": 18,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 9,
-            "skill_id": 14
-        }
-    },
-    {
-        "pk": 19,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 9,
-            "skill_id": 15
-        }
-    },
-    {
-        "pk": 20,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 7,
-            "skill_id": 16
-        }
-    },
-    {
-        "pk": 21,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 7,
-            "skill_id": 17
-        }
-    },
-    {
-        "pk": 22,
-        "model": "api.ReferenceBookItemSkillRace",
-        "fields": {
-            "race_id": 7,
+            "subrace_id": 5,
             "skill_id": 18
         }
     },
     {
-        "pk": 23,
-        "model": "api.ReferenceBookItemSkillRace",
+        "pk": 9,
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 10,
-            "skill_id": 2
+            "subrace_id": 5,
+            "skill_id": 19
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 5,
+            "skill_id": 20
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 5,
+            "skill_id": 15
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 5,
+            "skill_id": 21
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 5,
+            "skill_id": 22
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 6,
+            "skill_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 6,
+            "skill_id": 19
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 6,
+            "skill_id": 15
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 6,
+            "skill_id": 21
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 6,
+            "skill_id": 3
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 6,
+            "skill_id": 27
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 7,
+            "skill_id": 18
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 7,
+            "skill_id": 19
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 7,
+            "skill_id": 15
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 7,
+            "skill_id": 23
         }
     },
     {
         "pk": 24,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 10,
-            "skill_id": 19
+            "subrace_id": 7,
+            "skill_id": 24
         }
     },
     {
         "pk": 25,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 5,
-            "skill_id": 2
+            "subrace_id": 7,
+            "skill_id": 25
         }
     },
     {
         "pk": 26,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 5,
-            "skill_id": 19
+            "subrace_id": 7,
+            "skill_id": 26
         }
     },
     {
         "pk": 27,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 5,
-            "skill_id": 6
+            "subrace_id": 8,
+            "skill_id": 1
         }
     },
     {
         "pk": 28,
-        "model": "api.ReferenceBookItemSkillRace",
+        "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
-            "race_id": 5,
-            "skill_id": 20
+            "subrace_id": 8,
+            "skill_id": 2
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 8,
+            "skill_id": 3
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 8,
+            "skill_id": 4
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 9,
+            "skill_id": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 9,
+            "skill_id": 3
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 9,
+            "skill_id": 5
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 9,
+            "skill_id": 6
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 1
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 7
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 8
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 8
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 9
+        }
+    },
+    {
+        "pk": 39,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 10
+        }
+    },
+    {
+        "pk": 40,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 10,
+            "skill_id": 12
+        }
+    },
+    {
+        "pk": 41,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 11,
+            "skill_id": 14
+        }
+    },
+    {
+        "pk": 42,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 11,
+            "skill_id": 15
+        }
+    },
+    {
+        "pk": 43,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 11,
+            "skill_id": 16
+        }
+    },
+    {
+        "pk": 44,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 12,
+            "skill_id": 13
+        }
+    },
+    {
+        "pk": 45,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 12,
+            "skill_id": 14
+        }
+    },
+    {
+        "pk": 46,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 12,
+            "skill_id": 15
+        }
+    },
+    {
+        "pk": 46,
+        "model": "api.ReferenceBookItemSkillSubrace",
+        "fields": {
+            "subrace_id": 12,
+            "skill_id": 17
         }
     }
+
 ]

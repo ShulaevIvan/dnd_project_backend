@@ -41,10 +41,12 @@ class ReferenceBookCharRace(models.Model):
     char_race_name = models.CharField(max_length=255, unique=True)
     subrace_avalible = models.BooleanField(blank=True, null=True)
     age = models.IntegerField(blank=True, null=True)
+    max_age = models.IntegerField(blank=True, null=True)
     speed = models.IntegerField(blank=True, null=True)
     size = models.IntegerField(blank=True, null=True)
     weight = models.CharField(max_length=255, blank=True, null=True)
     race_description = models.TextField(max_length=3000)
+    preferred_worldview = models.CharField(max_length=255, blank=True, null=True)
     skills = models.ManyToManyField('ReferenceBookItemSkill', through='ReferenceBookItemSkillRace')
     languges = models.ManyToManyField('ReferenceBookLangugeItem', through='ReferenceBookLangugeItemRace')
 

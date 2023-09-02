@@ -141,78 +141,33 @@ class ReferenceBookClassView(APIView):
 class ReferenceBookRaceView(APIView):
 
     def get(self, request):
-        book = get_object_or_404(ReferenceBook, id=1).char_race.all()
-        clear_data = []
 
-        for race_obj in book:
-            subraces = []
-            subrace_data = {}
-            subrace_skills = []
-            subrace_bonuces = {}
+        races_query = ReferenceBookCharRace.objects.all()
+        clear_data = {
+            "races": []
+        }
 
-            if race_obj.subrace_avalible:
-                for subrace_obj in race_obj.subrace.all():
-                    if subrace_obj.race_id_id == race_obj.id and subrace_obj.subrace_active:
-                        for subrace_bonuce in subrace_obj.subrace_bonuces.all().filter(subrace_id = subrace_obj.id, subrace_bonuce_skill__isnull=False):
-                            subrace_bonuces['str'] = subrace_bonuce.str_bonuce
-                            subrace_bonuces['dex'] = subrace_bonuce.dex_bonuce
-                            subrace_bonuces['con'] = subrace_bonuce.con_bonuce
-                            subrace_bonuces['int'] = subrace_bonuce.int_bonuce
-                            subrace_bonuces['wis'] = subrace_bonuce.wis_bonuce
-                            subrace_bonuces['cha'] = subrace_bonuce.cha_bonuce
+        for race in races_query.all():
+            race_obj = {
+                "id": race.id,
+                "name": race.char_race_name,
+                "subrace_avalible": race.subrace_avalible,
+                "age" : race.subrace_avalible,
+                "max_age" : race.max_age,
+                "speed" : race.speed,
+                "size" : race.size,
+                "weight" : race.weight,
+                "race_description" : race.race_description,
+                "preferred_worldview" : race.preferred_worldview,
+            }
 
-                            subrace_data = {
-                                'subrace_id': subrace_obj.id,
-                                'subrace_name': subrace_obj.subrace_name,
-                            }
-
-                            subrace_skills = [
-                                {
-                                    'id': skill.id, 
-                                    'name': skill.skill_name, 
-                                    'description': skill.skill_description
-                                } for skill in subrace_bonuce.subrace_bonuce_skill.all()
-                            ]
-                            
-            
-            subrace_avalible = [s.subrace_name for s in race_obj.subrace.all()]
- 
-            
-            if race_obj.race_bonuces.race_bonuce_skill:
-                race_skills = [
-                    {
-                        'id': skill['id'], 
-                        'skillname': skill['skill_name'], 
-                        'description': skill['skill_description']
-                    } for skill in race_obj.race_bonuces.race_bonuce_skill.all().values()
-                ]
-
-
-            clear_data.append({
-                'id': race_obj.id,
-                'name': race_obj.char_race_name,
-                'description': race_obj.race_description,
-                'age': race_obj.age,
-                'speed': race_obj.speed,
-                'size': race_obj.size,
-                'weight': race_obj.weight,
-                'subraceAvalible': subrace_avalible,
-                'skills': race_skills,
-
-                'bonuces': {
-                    'str': race_obj.race_bonuces.str_bonuce,
-                    'dex': race_obj.race_bonuces.dex_bonuce,
-                    'con': race_obj.race_bonuces.con_bonuce,
-                    'int': race_obj.race_bonuces.int_bonuce,
-                    'wis': race_obj.race_bonuces.wis_bonuce,
-                    'cha': race_obj.race_bonuces.cha_bonuce,
-                },
-                'subrace_active': subrace_data,
-                'subrace_skills': subrace_skills,
-                'subrace_bonuces': subrace_bonuces
-            })
-      
-        return Response({'races': clear_data})
+            if race.subrace_avalible:
+                race_obj['subraces'] = list(race.subrace.all().filter(race_id = race.id).values())
+           
+           
+            clear_data['races'].append(race_obj)
+        
+        return Response(clear_data)
     
 class DetailRaceView(APIView):
 
@@ -223,12 +178,20 @@ class DetailRaceView(APIView):
             return Response({'status': 'not found'})
         
         race_bonuces = {}
-        subrace_active_all_data = {}
+        subrace_active_all_data = {
+            "subrace_bonuces": {}
+        }
         langusges = []
 
         for race_param in query_race.all():
             for subrace in race_param.subrace.all():
-                print(subrace.subrace_name)
+                subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
+                subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce
+                subrace_active_all_data['subrace_bonuces']['int_bonuce'] = subrace.subrace_bonuce.int_bonuce
+                subrace_active_all_data['subrace_bonuces']['con_bonuce'] = subrace.subrace_bonuce.con_bonuce
+                subrace_active_all_data['subrace_bonuces']['wis_bonuce'] = subrace.subrace_bonuce.wis_bonuce
+                subrace_active_all_data['subrace_bonuces']['cha_bonuce'] = subrace.subrace_bonuce.cha_bonuce
+
                 if subrace.subrace_active:
                     subrace_active_all_data['subrace_active_name'] = subrace.subrace_name
                     subrace_active_all_data['skills'] = list(subrace.skills.all().values())

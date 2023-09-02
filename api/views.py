@@ -9,7 +9,7 @@ from .serializers import DetailRaceViewSerializer
 from itertools import chain
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
+import json
 import secrets
 
 from .serializers import RegisterDndUser
@@ -166,7 +166,7 @@ class ReferenceBookRaceView(APIView):
            
            
             clear_data['races'].append(race_obj)
-        
+
         return Response(clear_data)
     
 class DetailRaceView(APIView):
@@ -185,12 +185,13 @@ class DetailRaceView(APIView):
 
         for race_param in query_race.all():
             for subrace in race_param.subrace.all():
-                subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
-                subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce
-                subrace_active_all_data['subrace_bonuces']['int_bonuce'] = subrace.subrace_bonuce.int_bonuce
-                subrace_active_all_data['subrace_bonuces']['con_bonuce'] = subrace.subrace_bonuce.con_bonuce
-                subrace_active_all_data['subrace_bonuces']['wis_bonuce'] = subrace.subrace_bonuce.wis_bonuce
-                subrace_active_all_data['subrace_bonuces']['cha_bonuce'] = subrace.subrace_bonuce.cha_bonuce
+                if race_param.subrace_avalible and subrace.subrace_bonuce.str_bonuce:
+                    subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
+                    subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce
+                    subrace_active_all_data['subrace_bonuces']['int_bonuce'] = subrace.subrace_bonuce.int_bonuce
+                    subrace_active_all_data['subrace_bonuces']['con_bonuce'] = subrace.subrace_bonuce.con_bonuce
+                    subrace_active_all_data['subrace_bonuces']['wis_bonuce'] = subrace.subrace_bonuce.wis_bonuce
+                    subrace_active_all_data['subrace_bonuces']['cha_bonuce'] = subrace.subrace_bonuce.cha_bonuce
 
                 if subrace.subrace_active:
                     subrace_active_all_data['subrace_active_name'] = subrace.subrace_name
@@ -205,18 +206,16 @@ class DetailRaceView(APIView):
 
 
         clear_data = {
-            "race": {
-                "data": list(query_race.values()),
-                "skills": skills,
-                "languages": langusges
-            },
+            "data": list(query_race.values()),
+            "skills": skills,
+            "languages": langusges,
             "race_bonuce_data": race_bonuces,
             "subrace_bonuce_data": subrace_active_all_data,
         }
         
         for race_obj in query_race:
             # clear_data['race']['languges'] = list(race_obj.languages.all().filter(name__isnull=False).values())
-            race_bonuces['bonuces'] = {
+            clear_data['race_bonuces'] = {
                     "str_bonuce": race_obj.race_bonuces.str_bonuce,
                     "dex_bonuce": race_obj.race_bonuces.dex_bonuce,
                     "con_bonuce": race_obj.race_bonuces.con_bonuce,
@@ -224,8 +223,8 @@ class DetailRaceView(APIView):
                     "wis_bonuce": race_obj.race_bonuces.wis_bonuce,
                     "cha_bonuce": race_obj.race_bonuces.cha_bonuce,
             }
-    
-        return Response({'status': clear_data})
+        print(clear_data)
+        return Response(clear_data)
 
 class InstrumentsView(APIView):
     

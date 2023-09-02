@@ -698,16 +698,36 @@
 
             "subrace_id": 12
         }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 3
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookSubRaceBonuces",
+        "fields": {
+            "str_bonuce": 0,
+            "dex_bonuce": 0,
+            "con_bonuce": 0,
+            "int_bonuce": 0,
+            "wis_bonuce": 0,
+            "cha_bonuce": 0,
+
+            "subrace_id": 4
+        }
     }
-    
-  
-    
 
 
-
-
-
-    
-    
     
 ]

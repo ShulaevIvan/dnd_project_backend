@@ -382,14 +382,6 @@
         }
     },
     {
-        "pk": 16,
-        "model": "api.ReferenceBookItemSkillSubrace",
-        "fields": {
-            "subrace_id": 6,
-            "skill_id": 15
-        }
-    },
-    {
         "pk": 17,
         "model": "api.ReferenceBookItemSkillSubrace",
         "fields": {
@@ -427,14 +419,6 @@
         "fields": {
             "subrace_id": 7,
             "skill_id": 19
-        }
-    },
-    {
-        "pk": 22,
-        "model": "api.ReferenceBookItemSkillSubrace",
-        "fields": {
-            "subrace_id": 7,
-            "skill_id": 15
         }
     },
     {

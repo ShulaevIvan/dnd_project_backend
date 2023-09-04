@@ -172,6 +172,7 @@ class ReferenceBookRaceView(APIView):
 class DetailRaceView(APIView):
 
     def get(self, request, race_id):
+        target_subrace = request.GET.get('subrace')
         query_race = ReferenceBookCharRace.objects.all().filter(id = race_id)
 
         if not query_race.exists():
@@ -184,16 +185,31 @@ class DetailRaceView(APIView):
         langusges = []
 
         for race_param in query_race.all():
-            for subrace in race_param.subrace.all():
-                if race_param.subrace_avalible and subrace.subrace_bonuce.str_bonuce:
-                    subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
-                    subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce
-                    subrace_active_all_data['subrace_bonuces']['int_bonuce'] = subrace.subrace_bonuce.int_bonuce
-                    subrace_active_all_data['subrace_bonuces']['con_bonuce'] = subrace.subrace_bonuce.con_bonuce
-                    subrace_active_all_data['subrace_bonuces']['wis_bonuce'] = subrace.subrace_bonuce.wis_bonuce
-                    subrace_active_all_data['subrace_bonuces']['cha_bonuce'] = subrace.subrace_bonuce.cha_bonuce
+            if target_subrace:
+                for subrace in race_param.subrace.all().filter(subrace_name = target_subrace):
+                    if race_param.subrace_avalible and subrace.subrace_bonuce:
+                        subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
+                        subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce
+                        subrace_active_all_data['subrace_bonuces']['int_bonuce'] = subrace.subrace_bonuce.int_bonuce
+                        subrace_active_all_data['subrace_bonuces']['con_bonuce'] = subrace.subrace_bonuce.con_bonuce
+                        subrace_active_all_data['subrace_bonuces']['wis_bonuce'] = subrace.subrace_bonuce.wis_bonuce
+                        subrace_active_all_data['subrace_bonuces']['cha_bonuce'] = subrace.subrace_bonuce.cha_bonuce
 
-                if subrace.subrace_active:
+                   
+                    subrace_active_all_data['subrace_active_name'] = subrace.subrace_name
+                    subrace_active_all_data['skills'] = list(subrace.skills.all().values())
+
+            else:
+                for subrace in race_param.subrace.all():
+                    if race_param.subrace_avalible and subrace.subrace_bonuce:
+                        subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
+                        subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce
+                        subrace_active_all_data['subrace_bonuces']['int_bonuce'] = subrace.subrace_bonuce.int_bonuce
+                        subrace_active_all_data['subrace_bonuces']['con_bonuce'] = subrace.subrace_bonuce.con_bonuce
+                        subrace_active_all_data['subrace_bonuces']['wis_bonuce'] = subrace.subrace_bonuce.wis_bonuce
+                        subrace_active_all_data['subrace_bonuces']['cha_bonuce'] = subrace.subrace_bonuce.cha_bonuce
+
+                    
                     subrace_active_all_data['subrace_active_name'] = subrace.subrace_name
                     subrace_active_all_data['skills'] = list(subrace.skills.all().values())
                 
@@ -210,7 +226,7 @@ class DetailRaceView(APIView):
             "skills": skills,
             "languages": langusges,
             "race_bonuce_data": race_bonuces,
-            "subrace_bonuce_data": subrace_active_all_data,
+            "subrace_bonuce_data": [subrace_active_all_data],
         }
         
         for race_obj in query_race:
@@ -223,7 +239,7 @@ class DetailRaceView(APIView):
                     "wis_bonuce": race_obj.race_bonuces.wis_bonuce,
                     "cha_bonuce": race_obj.race_bonuces.cha_bonuce,
             }
-        print(clear_data)
+        
         return Response(clear_data)
 
 class InstrumentsView(APIView):

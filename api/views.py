@@ -70,7 +70,6 @@ class UserRecoverPasswordView(APIView):
             return Response('password send to email', status=status.HTTP_200_OK)
         
         return Response('not found', status=status.HTTP_404_NOT_FOUND)
-
     
 class UserLoginView(APIView):
     
@@ -241,6 +240,12 @@ class DetailRaceView(APIView):
             }
         
         return Response(clear_data)
+    
+class ReferenceBookCharClassView(APIView):
+
+    def get(self, reuqest):
+        
+        return Response({'status: ok'})
 
 class InstrumentsView(APIView):
     

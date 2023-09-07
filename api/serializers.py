@@ -21,3 +21,4 @@ class DetailRaceViewSerializer(serializers.Serializer):
 
     def char_race_name(self, value):
         print(value)
+

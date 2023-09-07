@@ -137,6 +137,18 @@ class ReferenceBookClassView(APIView):
 
         return Response(clear_data)
     
+class DetailClassView(APIView):
+
+    def get(self, reuqest, class_id):
+        
+        query = get_object_or_404(ReferenceBookCharClass, id=class_id)
+        
+        clear_data = {
+            'class_name': query.char_classname,
+        }
+        
+        return Response(clear_data)
+    
 class ReferenceBookRaceView(APIView):
 
     def get(self, request):
@@ -240,12 +252,7 @@ class DetailRaceView(APIView):
             }
         
         return Response(clear_data)
-    
-class ReferenceBookCharClassView(APIView):
 
-    def get(self, reuqest):
-        
-        return Response({'status: ok'})
 
 class InstrumentsView(APIView):
     

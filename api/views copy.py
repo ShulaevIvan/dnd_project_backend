@@ -126,54 +126,26 @@ class ReferenceBookView(APIView):
 class ReferenceBookClassView(APIView):
 
     def get(self, request):
-        query_class = ReferenceBookCharClass.objects.all()
-        clear_data = []
-        for class_obj in query_class:
-            clear_class_data = {}
-            clear_class_data['class_data'] = {
-                'className': class_obj.char_classname,
-                'baseHits': class_obj.base_hits,
-                'minHitsLvl': class_obj.min_hits_lvl,
-                'maxHitsLvl': class_obj.max_hits_lvl,
-                'hitsByLvl': class_obj.hits_by_lvl,
-                'subclassAvalible': class_obj.subclass_avalible,
-                'description': class_obj.description
-            }
-            
-            if class_obj.subclass_avalible:
-                clear_class_data['subclases'] = [subclass.name for subclass in class_obj.subclass.all()]
+        char_class_req = request.GET.get('class', None)
+        if not char_class_req:
+            queryset = ReferenceBookCharClass.objects.all()
+            clear_data = [{'id': c.id, 'classname': c.char_classname, 'allsubclass': c.subclass.all().values()} for c in queryset]
+        else :
+            char_class_req = char_class_req.lower()
+            queryset = ReferenceBookCharClass.objects.get(char_classname = char_class_req)  
+            clear_data = {'id': queryset.id, 'classname': queryset.id, 'allsubclass': queryset.subclass.all().values()}
 
-            clear_data.append(clear_class_data)
-
-        return Response({'classData': clear_data})
+        return Response(clear_data)
     
 class DetailClassView(APIView):
 
     def get(self, reuqest, class_id):
         
-        query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
+        query = get_object_or_404(ReferenceBookCharClass, id=class_id)
         
         clear_data = {
-            'id': query_class.id,
-            'className': query_class.char_classname,
-            'baseHits': query_class.base_hits,
-            'minHitsLvl': query_class.min_hits_lvl,
-            'maxHitsLvl': query_class.max_hits_lvl,
-            'hitsByLvl': query_class.hits_by_lvl,
-            'subclassAvalible': query_class.subclass_avalible,
-            'description': query_class.description,
-            'subclasses': [],
+            'class_name': query.char_classname,
         }
-
-        if query_class.subclass_avalible:
-            for subclass in query_class.subclass.all():
-                subclassdata = {
-                    'id': subclass.id,
-                    'name': subclass.name,
-                    'description': subclass.description,
-                    'mainClassId': subclass.main_class.id,
-                }
-                clear_data['subclasses'].append(subclassdata)
         
         return Response(clear_data)
     

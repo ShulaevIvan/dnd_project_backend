@@ -20,6 +20,12 @@ class ReferenceBookMenu(models.Model):
 
 class ReferenceBookCharClass(models.Model):
     char_classname = models.CharField(max_length=255, unique=True)
+    base_hits = models.IntegerField()
+    min_hits_lvl = models.IntegerField()
+    max_hits_lvl = models.IntegerField()
+    hits_by_lvl = models.IntegerField(null=True, blank=True)
+    subclass_avalible = models.BooleanField()
+    description = models.TextField(max_length=3000, blank=True, null=True)
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='charclass')
 
@@ -32,7 +38,8 @@ class ReferenceBookCharClass(models.Model):
         return self.char_classname
     
 class ReferenceBookCharSubClass(models.Model):
-    char_subclass = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(max_length=3000, blank=True)
 
     main_class = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='subclass')
 

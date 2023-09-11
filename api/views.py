@@ -131,7 +131,8 @@ class ReferenceBookClassView(APIView):
         for class_obj in query_class:
             clear_class_data = {}
             clear_class_data['class_data'] = {
-                'className': class_obj.char_classname,
+                'id': class_obj.id,
+                'name': class_obj.char_classname,
                 'baseHits': class_obj.base_hits,
                 'minHitsLvl': class_obj.min_hits_lvl,
                 'maxHitsLvl': class_obj.max_hits_lvl,
@@ -141,11 +142,11 @@ class ReferenceBookClassView(APIView):
             }
             
             if class_obj.subclass_avalible:
-                clear_class_data['subclases'] = [subclass.name for subclass in class_obj.subclass.all()]
+                clear_class_data['subclases'] = [{'id': subclass.id, 'name': subclass.name, 'mainClass': subclass.main_class.id} for subclass in class_obj.subclass.all()]
 
             clear_data.append(clear_class_data)
 
-        return Response({'classData': clear_data})
+        return Response(clear_data)
     
 class DetailClassView(APIView):
 

@@ -1,0 +1,346 @@
+[
+    {
+        "pk": 1,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 1,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 1,
+            "mastery_id": 19
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 1,
+            "mastery_id": 25
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 1,
+            "mastery_id": 23
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 1,
+            "mastery_id": 35
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 2,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 2,
+            "mastery_id": 37
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 3,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 3,
+            "mastery_id": 37
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 4,
+            "mastery_id": 2
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 4,
+            "mastery_id": 10
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 4,
+            "mastery_id": 12
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 4,
+            "mastery_id": 7
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 4,
+            "mastery_id": 9
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 7
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 6
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 10
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 11
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 2
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 4
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 12
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 8
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 5,
+            "mastery_id": 24
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 6,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 6,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 7,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 8,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 8,
+            "mastery_id": 25
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 9,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 9,
+            "mastery_id": 37
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 10,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 10,
+            "mastery_id": 35
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 10,
+            "mastery_id": 19
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 10,
+            "mastery_id": 23
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 10,
+            "mastery_id": 25
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 11,
+            "mastery_id": 36
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 11,
+            "mastery_id": 37
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 12,
+            "mastery_id": 7
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 12,
+            "mastery_id": 10
+        }
+    },
+    {
+        "pk": 39,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 12,
+            "mastery_id": 2
+        }
+    },
+    {
+        "pk": 40,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 12,
+            "mastery_id": 9
+        }
+    },
+    {
+        "pk": 41,
+        "model": "api.WeaponCharMastery",
+        "fields": {
+            "class_id": 12,
+            "mastery_id": 12
+        }
+    }
+]

@@ -1,0 +1,619 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookMastery",
+        "fields": {
+            "name": "оружие",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Дубина",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Кинжал",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Ручной топор",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Копье",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Легкий молот",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Булава",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Боевой посох",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Серп",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Легкий арбалет",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Дротик",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Короткий лук",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Праща",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Боевой топор",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Цеп",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Глефа",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Большой топор",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 12,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Большой меч",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 2,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Алебарда",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Длинный меч",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Кувалда",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 2,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Моргенштерн",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Пика",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Рапира",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Скимитар",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Короткий меч",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Трезубец",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Боевая кирка",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Боевой молот",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Кнут",
+            "range_weapon": false,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 4,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Пистоль",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Тяжелый арбалет",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Длинный лук",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Мушкет",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 12,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Пистолет автоматический",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 2,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Ручной арбалет",
+            "range_weapon": true,
+            "melee_weapon": false,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Простое оружие",
+            "range_weapon": true,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": false,
+            "simple_weapon": true,
+            "min_dmg": 0,
+            "max_dmg": 0,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Вониское оружие",
+            "range_weapon": true,
+            "melee_weapon": true,
+            "warrior_weapon": true,
+            "exotic_weapon": false,
+            "simple_weapon": false,
+            "min_dmg": 0,
+            "max_dmg": 0,
+
+            "mastery_book_id": 1
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.WeaponMasteryItem",
+        "fields": {
+            "name": "Экзотическое оружие",
+            "range_weapon": true,
+            "melee_weapon": true,
+            "warrior_weapon": false,
+            "exotic_weapon": true,
+            "simple_weapon": false,
+            "min_dmg": 0,
+            "max_dmg": 0,
+
+            "mastery_book_id": 1
+        }
+    }
+
+]

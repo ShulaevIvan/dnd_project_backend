@@ -27,6 +27,7 @@ class ReferenceBookCharClass(models.Model):
     subclass_avalible = models.BooleanField()
     description = models.TextField(max_length=3000, blank=True, null=True)
     class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery', null=True, blank=True)
+    class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery', null=True, blank=True)
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='charclass')
 
@@ -56,8 +57,6 @@ class WeaponMasteryItem(models.Model):
     warrior_weapon = models.BooleanField()
     exotic_weapon = models.BooleanField()
     simple_weapon = models.BooleanField()
-    min_dmg = models.IntegerField()
-    max_dmg = models.IntegerField()
     
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='mastery_skill')
 
@@ -68,7 +67,14 @@ class WeaponCharMastery(models.Model):
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='weapon_mastery')
     mastery_id = models.ForeignKey(WeaponMasteryItem, on_delete=models.CASCADE, related_name='char_weapon_mastery')
 
+class ArmorMasteryItem(models.Model):
+    name = models.TextField(max_length=255, unique=True)
 
+    mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='armor_mastery')
+
+class ArmorCharMastery(models.Model):
+    mastery_id = models.ForeignKey(ArmorMasteryItem, on_delete=models.CASCADE, related_name='char_armor_mastery')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='char_armor_mastery')
 
 class ReferenceBookCharRace(models.Model):
     char_race_name = models.CharField(max_length=255, unique=True)

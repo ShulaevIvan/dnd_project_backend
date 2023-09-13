@@ -142,7 +142,13 @@ class ReferenceBookClassView(APIView):
             }
             
             if class_obj.subclass_avalible:
-                clear_class_data['subclases'] = [{'id': subclass.id, 'name': subclass.name, 'mainClass': subclass.main_class.id} for subclass in class_obj.subclass.all()]
+                clear_class_data['subclases'] = [
+                    {
+                        'id': subclass.id, 
+                        'name': subclass.name, 
+                        'mainClass': subclass.main_class.id
+                    } for subclass in class_obj.subclass.all()
+                ]
 
             clear_data.append(clear_class_data)
 
@@ -153,7 +159,8 @@ class DetailClassView(APIView):
     def get(self, reuqest, class_id):
         
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
-        
+        class_weapon_mastery = [class_obj.mastery_id.name for class_obj in query_class.weapon_mastery.all()],
+
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,
@@ -161,6 +168,7 @@ class DetailClassView(APIView):
             'minHitsLvl': query_class.min_hits_lvl,
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
+            'classWeaponMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.weapon_mastery.all()],
             'subclassAvalible': query_class.subclass_avalible,
             'description': query_class.description,
             'subclasses': [],

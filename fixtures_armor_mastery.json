@@ -1,0 +1,19 @@
+[
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookMastery",
+        "fields": {
+            "name": "доспехи",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ArmorMasteryItem",
+        "fields": {
+            "name": "Вониское оружие",
+
+            "mastery_book_id": 2
+        }
+    }
+]

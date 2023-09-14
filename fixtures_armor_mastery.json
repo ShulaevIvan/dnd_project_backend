@@ -11,8 +11,44 @@
         "pk": 1,
         "model": "api.ArmorMasteryItem",
         "fields": {
-            "name": "Вониское оружие",
+            "name": "Легкие доспехи",
 
+            "mastery_book_id": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ArmorMasteryItem",
+        "fields": {
+            "name": "Средние доспехи",
+            
+            "mastery_book_id": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ArmorMasteryItem",
+        "fields": {
+            "name": "Тяжелые доспехи",
+            
+            "mastery_book_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ArmorMasteryItem",
+        "fields": {
+            "name": "Щиты",
+            
+            "mastery_book_id": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ArmorMasteryItem",
+        "fields": {
+            "name": "Нет",
+            
             "mastery_book_id": 2
         }
     }

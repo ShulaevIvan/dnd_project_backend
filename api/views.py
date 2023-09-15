@@ -157,8 +157,7 @@ class ReferenceBookClassView(APIView):
 class DetailClassView(APIView):
 
     def get(self, reuqest, class_id):
-        target_subclass = reuqest.GET.get('subclass')
-        print(target_subclass)
+        subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
 
         clear_data = {
@@ -175,7 +174,22 @@ class DetailClassView(APIView):
             'subclasses': [],
         }
 
-        if query_class.subclass_avalible:
+        if subclass_req and query_class.subclass_avalible:
+            subclassdata = dict()
+            target_subclass = query_class.subclass.all().filter(id=int(subclass_req))[0]
+            subclassdata['id'] = target_subclass.id
+            subclassdata['name'] = target_subclass.name
+            subclassdata['description'] = target_subclass.description
+            subclassdata['mainClassId'] = query_class.id
+            clear_data['description'] = target_subclass.description
+            clear_data['subraceActive'] = True
+            clear_data['subclassInfo'] = subclassdata
+
+            clear_data.pop('subclassAvalible', None)
+            clear_data.pop('subclasses', None)
+            clear_data.pop('description', None)
+
+        elif query_class.subclass_avalible and not subclass_req:
             for subclass in query_class.subclass.all():
                 subclassdata = {
                     'id': subclass.id,
@@ -183,6 +197,7 @@ class DetailClassView(APIView):
                     'description': subclass.description,
                     'mainClassId': subclass.main_class.id,
                 }
+
                 clear_data['subclasses'].append(subclassdata)
         
         return Response(clear_data)

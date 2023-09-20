@@ -251,6 +251,7 @@ class DetailRaceView(APIView):
         for race_param in query_race.all():
             if target_subrace:
                 for subrace in race_param.subrace.all().filter(subrace_name = target_subrace):
+                    subrace_active_all_data['subrace_id'] = subrace.id
                     if race_param.subrace_avalible and subrace.subrace_bonuce:
                         subrace_active_all_data['subrace_bonuces']['str_bonuce'] = subrace.subrace_bonuce.str_bonuce
                         subrace_active_all_data['subrace_bonuces']['dex_bonuce'] = subrace.subrace_bonuce.dex_bonuce

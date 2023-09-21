@@ -306,6 +306,13 @@ class DetailRaceView(APIView):
             }
         
         return Response(clear_data)
+    
+
+class CalculateStatsView(APIView):
+
+    def post(self, request):
+        print(request)
+        return Response({'status': 'ok'})
 
 
 class InstrumentsView(APIView):

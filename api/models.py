@@ -50,6 +50,17 @@ class ReferenceBookMastery(models.Model):
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='mastery_book')
 
+class SaveThrowItem(models.Model):
+    name = models.CharField(max_length=255)
+
+    mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='save_throw')
+
+class ClassSaveThrow(models.Model):
+
+    save_throw_id = models.ForeignKey(SaveThrowItem, on_delete=models.CASCADE, related_name='save_throw_item')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_save_throw')
+    
+
 class WeaponMasteryItem(models.Model):
     name = models.TextField(max_length=255, unique=True)
     range_weapon = models.BooleanField()

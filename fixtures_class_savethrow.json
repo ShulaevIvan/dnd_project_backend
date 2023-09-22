@@ -1,0 +1,73 @@
+[
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookMastery",
+        "fields": {
+            "name": "спасброски",
+            "book_id": 3
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.SaveThrowItem",
+        "fields": {
+            "name": "сила",
+
+            "mastery_book_id": 3
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.SaveThrowItem",
+        "fields": {
+            "name": "ловкость",
+
+            "mastery_book_id": 3
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.SaveThrowItem",
+        "fields": {
+            "name": "Выносливость",
+
+            "mastery_book_id": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.SaveThrowItem",
+        "fields": {
+            "name": "Интелект",
+
+            "mastery_book_id": 3
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.SaveThrowItem",
+        "fields": {
+            "name": "Мудрость",
+
+            "mastery_book_id": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.SaveThrowItem",
+        "fields": {
+            "name": "Харизма",
+
+            "mastery_book_id": 3
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 1,
+            "save_throw_id": 1
+        }
+    }
+
+]

@@ -4,7 +4,7 @@
         "model": "api.ReferenceBookMastery",
         "fields": {
             "name": "спасброски",
-            "book_id": 3
+            "book_id": 1
         }
     },
     {
@@ -29,7 +29,7 @@
         "pk": 3,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "Выносливость",
+            "name": "Телосложение",
 
             "mastery_book_id": 3
         }
@@ -66,7 +66,191 @@
         "model": "api.ClassSaveThrow",
         "fields": {
             "class_id": 1,
+            "save_throw_id": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 1,
+            "save_throw_id": 6
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 2,
             "save_throw_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 2,
+            "save_throw_id": 3
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 3,
+            "save_throw_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 3,
+            "save_throw_id": 3
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 4,
+            "save_throw_id": 4
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 4,
+            "save_throw_id": 5
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 5,
+            "save_throw_id": 4
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 5,
+            "save_throw_id": 5
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 6,
+            "save_throw_id": 5
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 6,
+            "save_throw_id": 6
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 7,
+            "save_throw_id": 5
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 7,
+            "save_throw_id": 6
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 8,
+            "save_throw_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 8,
+            "save_throw_id": 2
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 9,
+            "save_throw_id": 5
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 9,
+            "save_throw_id": 6
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 10,
+            "save_throw_id": 2
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 10,
+            "save_throw_id": 4
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 11,
+            "save_throw_id": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 11,
+            "save_throw_id": 2
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 12,
+            "save_throw_id": 3
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ClassSaveThrow",
+        "fields": {
+            "class_id": 12,
+            "save_throw_id": 6
         }
     }
 

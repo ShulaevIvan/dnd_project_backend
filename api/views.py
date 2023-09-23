@@ -128,7 +128,9 @@ class ReferenceBookClassView(APIView):
     def get(self, request):
         query_class = ReferenceBookCharClass.objects.all()
         clear_data = []
+
         for class_obj in query_class:
+            
             clear_class_data = {}
             clear_class_data['class_data'] = {
                 'id': class_obj.id,
@@ -138,6 +140,7 @@ class ReferenceBookClassView(APIView):
                 'maxHitsLvl': class_obj.max_hits_lvl,
                 'hitsByLvl': class_obj.hits_by_lvl,
                 'subclassAvalible': class_obj.subclass_avalible,
+                'classSaveThrows': [{'id': throw.save_throw_id.id, 'name': throw.save_throw_id.name} for throw in class_obj.class_save_throw.all()],
                 'description': class_obj.description
             }
             
@@ -160,6 +163,7 @@ class DetailClassView(APIView):
         subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
 
+        print(query_class.class_save_throw.all().values())
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,
@@ -167,6 +171,7 @@ class DetailClassView(APIView):
             'minHitsLvl': query_class.min_hits_lvl,
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
+            'classSaveThrows': [{'id': throw.save_throw_id.id, 'name': throw.save_throw_id.name} for throw in query_class.class_save_throw.all()],
             'classWeaponMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.weapon_mastery.all()],
             'classArmorMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.char_armor_mastery.all()],
             'subclassAvalible': query_class.subclass_avalible,
@@ -295,7 +300,6 @@ class DetailRaceView(APIView):
         }
         
         for race_obj in query_race:
-            # clear_data['race']['languges'] = list(race_obj.languages.all().filter(name__isnull=False).values())
             clear_data['race_bonuces'] = {
                     "str_bonuce": race_obj.race_bonuces.str_bonuce,
                     "dex_bonuce": race_obj.race_bonuces.dex_bonuce,

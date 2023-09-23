@@ -1,0 +1,786 @@
+[
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSkills",
+        "fields": {
+            "book_name": "class_abilities",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Атлетика",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Акробатика",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Ловкость рук",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Скрытность",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Магия",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "История",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Расследование",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Природа",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Религия",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Обращение с животными",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Проницательность",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Медицина",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Восприятие",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Выживание",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Обман",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Запугивание",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Выступление",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "Убеждение",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ReferenceBookAbilityItem",
+        "fields": {
+            "name": "all",
+            "skill_book": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 19
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 14
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 2,
+            "ablility_id": 10
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 14
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 8
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 10
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 3,
+            "ablility_id": 10
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 4,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 4,
+            "ablility_id": 6
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 4,
+            "ablility_id": 12
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 4,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 4,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 14
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 5
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 12
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 10
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 8
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 5,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 6,
+            "ablility_id": 6
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 6,
+            "ablility_id": 12
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 6,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 6,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 6,
+            "ablility_id": 18
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 7
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 6
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 5
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 15
+        }
+    },
+    {
+        "pk": 39,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 8
+        }
+    },
+    {
+        "pk": 40,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 7,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 41,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 8,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 42,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 8,
+            "ablility_id": 2
+        }
+    },
+    {
+        "pk": 43,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 8,
+            "ablility_id": 6
+        }
+    },
+    {
+        "pk": 44,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 8,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 45,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 8,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 46,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 8,
+            "ablility_id": 4
+        }
+    },
+    {
+        "pk": 47,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 9,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 48,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 9,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 49,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 9,
+            "ablility_id": 12
+        }
+    },
+    {
+        "pk": 50,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 9,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 51,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 9,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 52,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 9,
+            "ablility_id": 18
+        }
+    },
+    {
+        "pk": 53,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 2
+        }
+    },
+    {
+        "pk": 54,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 7
+        }
+    },
+    {
+        "pk": 55,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 56,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 57,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 17
+        }
+    },
+    {
+        "pk": 58,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 59,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 3
+        }
+    },
+    {
+        "pk": 60,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 15
+        }
+    },
+    {
+        "pk": 61,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 62,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 4
+        }
+    },
+    {
+        "pk": 63,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 10,
+            "ablility_id": 18
+        }
+    },
+    {
+        "pk": 64,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 7
+        }
+    },
+    {
+        "pk": 65,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 66,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 67,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 14
+        }
+    },
+    {
+        "pk": 68,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 8
+        }
+    },
+    {
+        "pk": 69,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 70,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 4
+        }
+    },
+    {
+        "pk": 71,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 11,
+            "ablility_id": 10
+        }
+    },
+    {
+        "pk": 72,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 12,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 73,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 12,
+            "ablility_id": 5
+        }
+    },
+    {
+        "pk": 74,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 12,
+            "ablility_id": 15
+        }
+    },
+    {
+        "pk": 75,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 12,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 76,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 12,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 77,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 12,
+            "ablility_id": 18
+        }
+    }
+]

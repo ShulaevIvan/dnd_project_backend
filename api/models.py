@@ -26,6 +26,8 @@ class ReferenceBookCharClass(models.Model):
     hits_by_lvl = models.IntegerField(null=True, blank=True)
     subclass_avalible = models.BooleanField()
     description = models.TextField(max_length=3000, blank=True, null=True)
+    ability_count = models.IntegerField(null=True, blank=True)
+    class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility', null=True, blank=True)
     class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery', null=True, blank=True)
     class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery', null=True, blank=True)
 
@@ -151,6 +153,15 @@ class ReferenceBookItemSkill(models.Model):
 class ReferenceBookItemSkillRace(models.Model):
     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='race_skills')
     skill_id = models.ForeignKey(ReferenceBookItemSkill, on_delete=models.CASCADE, related_name='race_skills')
+
+class ReferenceBookAbilityItem(models.Model):
+    name = models.CharField(max_length=255)
+    skill_book = models.ForeignKey(ReferenceBookSkills, on_delete=models.CASCADE, related_name='abilities')
+
+class ReferenceBookClassAbility(models.Model):
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_ability')
+    ablility_id = models.ForeignKey(ReferenceBookAbilityItem, on_delete=models.CASCADE, related_name='ability')
+
 
 class ReferenceBookLanguges(models.Model):
     book_name = models.CharField(max_length=255)

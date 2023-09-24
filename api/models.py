@@ -28,6 +28,7 @@ class ReferenceBookCharClass(models.Model):
     description = models.TextField(max_length=3000, blank=True, null=True)
     ability_count = models.IntegerField(null=True, blank=True)
     class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility', null=True, blank=True)
+    class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill', null=True, blank=True)
     class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery', null=True, blank=True)
     class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery', null=True, blank=True)
 
@@ -132,6 +133,22 @@ class ReferenceBookCharRaceBonuces(models.Model):
     
     race_id = models.OneToOneField(ReferenceBookCharRace, on_delete = models.CASCADE, related_name='race_bonuces', primary_key = True)
 
+class ReferenceBookClassSkills(models.Model):
+    book_name = models.CharField(max_length=255)
+    book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='class_skills')
+
+class ReferenceBookItemClassSkill(models.Model):
+    name = models.CharField(max_length=255)
+    level_required = models.IntegerField()
+    skill_description = models.TextField(max_length=3000, null=True, blank=True)
+
+    book_id = models.ForeignKey(ReferenceBookClassSkills, on_delete=models.CASCADE, related_name='class_skill')
+
+class ReferenceBookClassSkill(models.Model):
+
+    skill_id = models.ForeignKey(ReferenceBookItemClassSkill, on_delete=models.CASCADE, related_name='char_class_skills')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='char_class_skills')
+
 class ReferenceBookSkills(models.Model):
     book_name = models.CharField(max_length=255)
     book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='race_skills')
@@ -162,6 +179,58 @@ class ReferenceBookClassAbility(models.Model):
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_ability')
     ablility_id = models.ForeignKey(ReferenceBookAbilityItem, on_delete=models.CASCADE, related_name='ability')
 
+class ItemsEquipBook(models.Model):
+    name = models.CharField(max_length=255)
+
+class WeaponItemEquip(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(null=True, blank=True)
+    ranged_weapon = models.BooleanField()
+    melle_weapon = models.BooleanField()
+    default_price = models.IntegerField(null=True, blank=True)
+
+    onehanded = models.BooleanField(blank=True)
+    magic = models.BooleanField(default=False, blank=True)
+    piercing = models.BooleanField(default=False, blank=True)
+    slashing = models.BooleanField(default=False, blank=True)
+    bludgeoning = models.BooleanField(default=False, blank=True)
+    acid = models.BooleanField(default=False, blank=True)
+    cold = models.BooleanField(default=False, blank=True)
+    fire = models.BooleanField(default=False, blank=True)
+    force = models.BooleanField(default=False, blank=True)
+    lightning = models.BooleanField(default=False, blank=True)
+    necrotic = models.BooleanField(default=False, blank=True)
+    poison = models.BooleanField(default=False, blank=True)
+    psychic = models.BooleanField(default=False, blank=True)
+    radiant = models.BooleanField(default=False, blank=True)
+
+    book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_weapons')
+
+class ArmorItemEquip(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(null=True, blank=True)
+    default_price = models.IntegerField(null=True, blank=True)
+    base_armor = models.IntegerField()
+    dex_modif = models.IntegerField()
+    sneak_penalty = models.BooleanField(blank=True)
+    light_armor = models.BooleanField(blank=True)
+    medium_armor = models.BooleanField(blank=True)
+    heavy_armor = models.BooleanField(blank=True)
+    shield = models.BooleanField(blank=True)
+
+    book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_armor')
+
+class InstrumentItemEquip(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(null=True, blank=True)
+
+    book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_instruments')
+
+class OtherItemEquip(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(null=True, blank=True)
+
+    book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_other')
 
 class ReferenceBookLanguges(models.Model):
     book_name = models.CharField(max_length=255)

@@ -162,8 +162,7 @@ class DetailClassView(APIView):
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
-
-        print(query_class.class_save_throw.all().values())
+        
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,
@@ -171,6 +170,17 @@ class DetailClassView(APIView):
             'minHitsLvl': query_class.min_hits_lvl,
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
+            'classAbilityPoints': query_class.ability_count,
+            'classAbilities': [{'id': ability.ablility_id.id, 'name': ability.ablility_id.name} for ability in query_class.class_ability.all()],
+            'classSkills': [
+                {
+                    'id': class_skill.skill_id.id, 
+                    'name': class_skill.skill_id.name,
+                    'levelRequired': class_skill.skill_id.level_required,
+                    'description': class_skill.skill_id.skill_description,
+                } 
+                for class_skill in query_class.char_class_skills.all()
+            ],
             'classSaveThrows': [{'id': throw.save_throw_id.id, 'name': throw.save_throw_id.name} for throw in query_class.class_save_throw.all()],
             'classWeaponMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.weapon_mastery.all()],
             'classArmorMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.char_armor_mastery.all()],

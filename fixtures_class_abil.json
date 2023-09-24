@@ -1,18 +1,10 @@
 [
     {
-        "pk": 2,
-        "model": "api.ReferenceBookSkills",
-        "fields": {
-            "book_name": "class_abilities",
-            "book_id": 1
-        }
-    },
-    {
         "pk": 1,
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Атлетика",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -20,7 +12,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Акробатика",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -28,7 +20,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Ловкость рук",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -36,7 +28,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Скрытность",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -44,7 +36,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Магия",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -52,7 +44,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "История",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -60,7 +52,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Расследование",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -68,7 +60,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Природа",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -76,7 +68,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Религия",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -84,7 +76,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Обращение с животными",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -92,7 +84,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Проницательность",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -100,7 +92,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Медицина",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -108,7 +100,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Восприятие",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -116,7 +108,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Выживание",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -124,7 +116,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Обман",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -132,7 +124,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Запугивание",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -140,7 +132,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Выступление",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -148,7 +140,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Убеждение",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -156,7 +148,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "all",
-            "skill_book": 2
+            "skill_book": 1
         }
     },
     {
@@ -782,5 +774,150 @@
             "class_id": 12,
             "ablility_id": 18
         }
+    },
+    {
+        "pk": 78,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 1
+        }
+    },
+    {
+        "pk": 79,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 2
+        }
+    },
+    {
+        "pk": 80,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 3
+        }
+    },
+    {
+        "pk": 81,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 4
+        }
+    },
+    {
+        "pk": 82,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 5
+        }
+    },
+    {
+        "pk": 83,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 6
+        }
+    },
+    {
+        "pk": 84,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 7
+        }
+    },
+    {
+        "pk": 85,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 8
+        }
+    },
+    {
+        "pk": 86,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 9
+        }
+    },
+    {
+        "pk": 87,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 10
+        }
+    },
+    {
+        "pk": 88,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 11
+        }
+    },
+    {
+        "pk": 89,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 12
+        }
+    },
+    {
+        "pk": 90,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 13
+        }
+    },
+    {
+        "pk": 91,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 14
+        }
+    },
+    {
+        "pk": 92,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 15
+        }
+    },
+    {
+        "pk": 93,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 16
+        }
+    },
+    {
+        "pk": 94,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 17
+        }
+    },
+    {
+        "pk": 95,
+        "model": "api.ReferenceBookClassAbility",
+        "fields": {
+            "class_id": 1,
+            "ablility_id": 18
+        }
     }
+
 ]

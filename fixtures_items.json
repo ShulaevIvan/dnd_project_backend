@@ -1,0 +1,780 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ItemsEquipBook",
+        "fields": {
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Алебарда",
+            "description": "Древковое оружие состоит из рукояти, обычно деревянной, и металлического острия или лезвия на её конце. Это классическое военное оружие, чей широкий радиус действия делает его отличным выбором против крупных противников.",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 10,
+            "weight": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "dmg_type": "рубящий",
+            "default_price": 2000,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Арбалет, лёгкий",
+            "description": "Арбалет — это простое механическое оружие, активируемое нажатием на спусковой крючок, чтобы отпустить защёлку на тетиве, посылая болт к цели.",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "weight": 5,
+            "effective_range": 80,
+            "max_range": 320,
+            "dmg_type": "колющий",
+            "default_price": 2500,
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Арбалет, ручной",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "weight": 6,
+            "effective_range": 30,
+            "max_range": 120,
+            "dmg_type": "колющий",
+            "default_price": 7500,
+            "description": "Арбалет — это простое механическое оружие, активируемое нажатием на спусковой крючок, чтобы отпустить защёлку на тетиве, посылая болт к цели.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Арбалет, тяжёлый",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 10,
+            "effective_range": 100,
+            "max_range": 400,
+            "weight" : 18,
+            "dmg_type": "колющий",
+            "default_price": 5000,
+            "description": "Арбалет — это простое механическое оружие, активируемое нажатием на спусковой крючок, чтобы отпустить защёлку на тетиве, посылая болт к цели.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Боевая кирка (клевец)",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "колющий",
+            "default_price": 500,
+            "description": "Маленький, острый шип с рукоятью, традиционно используемый для разрушения льда или камня. Кирку легко спрятать и она эффективен в ближнем бою.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Боевой молот",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "дробящий",
+            "default_price": 1500,
+            "description": "Используемые как инструменты для строительства, сноса и ковки, молотки стали излюбленным оружием среди некоторых из самых крепких рас, включая орков и дварфов, которые очень сильны от природы.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Боевой посох",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 4,
+            "dmg_type": "дробящий",
+            "default_price": 2000,
+            "description": "",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Боевой топор",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 10,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 4,
+            "dmg_type": "рубящий",
+            "default_price": 1000,
+            "description": "Изначально топоры предназначались для рубки деревьев и раскалывания поленьев, но потом стали популярным оружием среди лесных жителей. Топоры очень разнообразны по размеру и стилю. У некоторых есть одно лезвие, а у других — два.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Булава",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 1,
+            "dmg_type": "дробящий",
+            "default_price": 500,
+            "description": "Булава — короткодревковое ударно-дробящее холодное оружие в виде рукояти с шаровидной ударной частью — навершием.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Глефа",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 10,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 6,
+            "dmg_type": "рубящий",
+            "default_price": 2000,
+            "description": "Глефа — вид древкового холодного оружия ближнего боя. Состоит из древка и наконечника. Древко обычно покрывается заклёпками или увивается металлической лентой для предохранения от перерубания. Наконечник — клинок, имеет вид заточенного только с одной стороны широкого фальшиона.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Двуручный меч",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 2,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 6,
+            "dmg_type": "рубящий",
+            "default_price": 5000,
+            "description": "Вечная классика, мечи, сделаны из длинного куска металла, заостренного с двух сторон и закрепленного на прочной рукояти. Мечи бывают разной длины и веса и могут быть как разукрашены, так и нет, в зависимости от богатства и вкуса владельца.,Двуручный меч — это мощное оружие, требующее огромной силы и умения для эффективного использования. Любой неподготовленный герой может ранить себя больше, чем противника, если попытается его использовать!,Будучи двуручным оружием, мечи могут наносить мощные удары, убивая небольших существ с одного попадания. Из-за своих размеров и цены, двуручные мечи ассоциируются с паладинами, воинами и варварами, хотя любой обученный боец с достаточной силой может использовать такой меч, получив мощного союзника в бою!",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Двуручный топор (cекира)",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 12,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 7,
+            "dmg_type": "колющий",
+            "default_price": 3000,
+            "description": "Изначально топоры предназначались для рубки деревьев и раскалывания поленьев, но потом стали популярным оружием среди лесных жителей. Топоры очень разнообразны по размеру и стилю. У некоторых есть одно лезвие, а у других — два.,Ручные топоры можно использовать и как рукопашное и как метательное оружие, а некоторые искатели приключений учатся драться двумя ручными топорами одновременно! Всё же большинство топоров — инструменты, но некоторые из самых стильных топоров специально сделаны как оружие.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Длинное копьё",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 12,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 6,
+            "dmg_type": "колющий",
+            "default_price": 1000,
+            "description": "Вы совершаете с помехой атаки длинным копьём по существам, находящимся в пределах 5 футов от вас. Кроме того, если вы не находитесь верхом, длинное копьё используется двумя руками.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Длинный лук",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "effective_range": 150,
+            "max_range": 600,
+            "weight" : 2,
+            "dmg_type": "колющий",
+            "default_price": 5000,
+            "description": "Длинные луки используют натяжение тетивы рукой, чтобы посылать стрелу к цели. Длинные луки на пару футов выше, но их не так легко носить с собой.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Длинный меч",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 3,
+            "dmg_type": "рубящий",
+            "default_price": 1500,
+            "description": "Вечная классика, мечи, сделаны из длинного куска металла, заостренного с двух сторон и закрепленного на прочной рукояти. Мечи бывают разной длины и веса и могут быть как разукрашены, так и нет, в зависимости от богатства и вкуса владельца. Мечами рубить врагов, коля их острым концом и даже наносить тупые удары лезвием плашмя или рукоятью. Чем больше ваш боец может придумать применений для меча, тем сложнее будет врагам от них отбиваться!,Универсальность длинного меча предлагает отличный баланс между скоростью короткого меча и огромной силой двуручного меча. Как одноручное оружие, он позволяет герою наносить быстрые, резкие удары, в то же время позволяя использовать щит в качестве дополнительной защиты. Используемые обеими руками, длинные мечи концентрируют в нанесении ударов всю силу бойца.,Длинный меч — отличный выбор, когда Вы не уверены, с какой опасностью столкнетесь. Независимо от того, связываетесь ли Вы с большим количеством мелких противников, которых нужно быстро уничтожить, или мощным зверем, которого можно победить только сильными ударами, длинный меч пойдёт вам всегда!"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Дубинка",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 4,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "дробящий",
+            "default_price": 100,
+            "description": "Умение обращаться с дубиной позволяет вам добавить бонус мастерства к броску атаки за любую атаку, которую вы совершаете с ее помощью."
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Духовая трубка",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 1,
+            "effective_range": 25,
+            "max_range": 100,
+            "weight" : 1,
+            "dmg_type": "колющий",
+            "default_price": 1000,
+            "description": "Может стрелять иглами для трубки."
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Кинжал",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 4,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 1,
+            "dmg_type": "колющий",
+            "default_price": 2000,
+            "description": "Кинжал холодное оружие с коротким прямым или изогнутым клинком, заточенным с двух сторон."
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Кнут",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 4,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 3,
+            "dmg_type": "рубящий",
+            "default_price": 2000,
+            "description": "Некоторые кнуты бьют на расстоянии, давая большую дальность, чем большинство оружия ближнего боя!"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Копьё",
+            "ranged_weapon": true,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 60,
+            "weight" : 3,
+            "dmg_type": "колющий",
+            "default_price": 1000,
+            "description": "Копьё — древковое оружие, состоящее из деревянного древка и наконечника, который может быть любой формы и сделан из любого материала."
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Короткий лук",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 80,
+            "max_range": 320,
+            "weight" : 2,
+            "dmg_type": "колющий",
+            "default_price": 2500,
+            "description": "Копьё — древковое оружие, состоящее из деревянного древка и наконечника, который может быть любой формы и сделан из любого материала."
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Короткий меч",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "колющий",
+            "default_price": 1000,
+            "description": "Как одноручное оружие, короткие мечи позволяют своему владельцу также носить щит — важный фактор для бойцов, которым недоступна прочная броня. Не стоит недооценивать ущерб, который умелый герой может нанести одним из этих быстрых, острых орудий!"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Лёгкий молот",
+            "ranged_weapon": true,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 4,
+            "effective_range": 5,
+            "max_range": 60,
+            "weight" : 2,
+            "dmg_type": "дробящий",
+            "default_price": 200,
+            "description": "Используемые как инструменты для строительства, сноса и ковки, молотки стали излюбленным оружием среди некоторых из самых крепких рас, включая орков и дварфов, которые очень сильны от природы.,Размеры молотков варьируются от кузнечных молотков до огромных боевых молотов. Многие из них — просто тяжёлые тупые штуки для битья врагов и пробивания доспехов, но другие, например — боевые молоты сконструированы как впечатляющее сокрушительное оружие с длинной рукоятью и маленькой тяжёлой головкой, которое можно использовать быстро и ловко.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Метательное копьё",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 30,
+            "max_range": 60,
+            "weight" : 2,
+            "dmg_type": "колющий",
+            "default_price": 50,
+            "description": "Метательное копьё - представляющее собой копьё, несколько уменьшенное и облегчённое по сравнению с копьями для рукопашного боя и соответствующим образом уравновешенное для удобства метания.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Молот",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 2,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 10,
+            "dmg_type": "рубящий",
+            "default_price": 1000,
+            "description": "",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Мушкет",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 12,
+            "effective_range": 40,
+            "max_range": 120,
+            "weight" : 10,
+            "dmg_type": "колющий",
+            "default_price": 50000,
+            "description": "Владение. Мастер сам решает, владеет ли персонаж обращением с огнестрельным оружием. У персонажей в большинстве миров таких навыков нет. Во время простоя персонажи могут использовать правила обучения из Книги игрока, чтобы получить владение этим навыком, при условии, что у них есть достаточное количество боеприпасов, чтобы оружие можно было использовать во время обучения.,Порох. Порох преимущественно используется для приведения в движение пули в стволе пистолета или винтовки, а также для изготовления бомб. Порох продаётся в маленьких деревянных бочонках или водонепроницаемых рожках.,Поджигание контейнера с порохом может вызвать взрыв, причиняющий урон огнём всем существам в пределах 10 футов от него (3к6 от рожка, 7к6 от бочонка). Успешный спасбросок Ловкости со Сл 12 уменьшает урон вдвое. Подожжённая унция пороха просто горит 1 раунд, распространяя яркий свет в радиусе 30 футов и тусклый свет в пределах ещё 30 футов.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Палица (дубина)",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 2,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 10,
+            "dmg_type": "дробящий",
+            "default_price": 200,
+            "description": "Палицы - это тяжелые куски дерева, которые могут использовать практически все классы, кроме магов и колдунов. Они являются типичным оружием для друидов, которые обычно вооружены палицами или посохами.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Моргенштерн",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 4,
+            "dmg_type": "колющий",
+            "default_price": 200,
+            "description": "Холодное оружие ударно-дробящего действия в виде металлического шарика, снабжённого шипами. Используется в качестве навершия булав, палиц. Такое навершие сильно увеличивает вес оружия, что оказывает сильное моральное воздействие на противника, устрашая его своим видом.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Пика",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 10,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 18,
+            "dmg_type": "колющий",
+            "default_price": 500,
+            "description": "Пика — колющее холодное оружие, разновидность длинного копья, состоящее из древка и трёхгранного или четырёхгранного металлического наконечника.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Пистоль",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 10,
+            "effective_range": 30,
+            "max_range": 90,
+            "weight" : 3,
+            "dmg_type": "колющий",
+            "default_price": 25000,
+            "description": "Владение. Мастер сам решает, владеет ли персонаж обращением с огнестрельным оружием. У персонажей в большинстве миров таких навыков нет. Во время простоя персонажи могут использовать правила обучения из Книги игрока, чтобы получить владение этим навыком, при условии, что у них есть достаточное количество боеприпасов, чтобы оружие можно было использовать во время обучения.,Порох. Порох преимущественно используется для приведения в движение пули в стволе пистолета или винтовки, а также для изготовления бомб. Порох продаётся в маленьких деревянных бочонках или водонепроницаемых рожках.,Поджигание контейнера с порохом может вызвать взрыв, причиняющий урон огнём всем существам в пределах 10 футов от него (3к6 от рожка, 7к6 от бочонка). Успешный спасбросок Ловкости со Сл 12 уменьшает урон вдвое. Подожжённая унция пороха просто горит 1 раунд, распространяя яркий свет в радиусе 30 футов и тусклый свет в пределах ещё 30 футов.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Посох",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 0,
+            "max_dmg": 0,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 4,
+            "dmg_type": "колющий",
+            "default_price": 500,
+            "description": "Особый посох — созданный для проведения тайных заклинаний. Волшебники, колдуны и чародеи могут использовать эти предметы в качестве фокусировки для заклинаний",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Праща",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 4,
+            "effective_range": 30,
+            "max_range": 120,
+            "weight" : 1,
+            "dmg_type": "колющий",
+            "default_price": 500,
+            "description": "Простое метательное оружие, сделанное из мешочка и шнура, праща используются для того, чтобы метать маленький круглый снаряд с большой силой примерно на тридцать футов. Обычно используются снаряды из твердого металла, называемые «пулями», но большим преимуществом пращи является то, что ей также можно запускать любые мелкие объекты, такие как камни или даже монеты!",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Рапира",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 8,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "колющий",
+            "default_price": 2500,
+            "description": "Рапи́ра (буквально «меч для одежды», то есть носимый с гражданским платьем, а не с доспехом) — преимущественно колющее клинковое оружие, разновидность шпаги, в изначальном значении длинная «гражданская» шпага, в отличие от «боевой» шпаги слишком лёгкая для нанесения рубящего удара.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Ручной (метательный) топор",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 20,
+            "max_range": 60,
+            "weight" : 2,
+            "dmg_type": "рубящий",
+            "default_price": 500,
+            "description": "Изначально топоры предназначались для рубки деревьев и раскалывания поленьев, но потом стали популярным оружием среди лесных жителей. Топоры очень разнообразны по размеру и стилю. У некоторых есть одно лезвие, а у других — два.,Ручные топоры можно использовать и как рукопашное и как метательное оружие, а некоторые искатели приключений учатся драться двумя ручными топорами одновременно! Всё же большинство топоров — инструменты, но некоторые из самых стильных топоров специально сделаны как оружие.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Серп",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 4,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "рубящий",
+            "default_price": 100,
+            "description": "Маленькая одноручная версия косы. Изогнутое лезвие делает его отличным выбором для мастеров боевых искусств, которые бьют под неожиданными углами.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Сеть",
+            "ranged_weapon": true,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": true,
+            "min_dmg": 0,
+            "max_dmg": 0,
+            "effective_range": 5,
+            "max_range": 15,
+            "weight" : 3,
+            "dmg_type": "рубящий",
+            "default_price": 100,
+            "description": "Тяжёлые рыболовные сети могут быть брошены в противников, запутывая их и делая их уязвимыми для последующих атак.,Особое: Существа Большого и меньшего размеров, по которым попала атака сетью, становятся опутанным, пока не высвободятся. Сеть не оказывает эффекта на бесформенных существ и тех, чей размер Огромный или ещё больше.,Существо может Действием совершить проверку Силы СЛ 10, чтобы высвободиться самому или освободить другое существо, находящееся в пределах его досягаемости. Причинение сети 5 единиц рубящего урона (КД 10) тоже освобождает существо, не причиняя ему вреда, оканчивая эффект и уничтожая сеть.,Если Вы действием, бонусным действием или реакцией совершаете атаку сетью, Вы можете совершить только одну атаку, вне зависимости от количества положенных атак.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Трезубец",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": true,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 4,
+            "dmg_type": "колющий",
+            "default_price": 500,
+            "description": "Трезу́бец или острога — оружие, которое состоит из длинного древка и наконечника, увенчанного тремя зубцами. Как и многие другие колюще виды оружия, трезубец произошёл от повседневного мирного инструмента, в данном случае остроги, применяемой для рыбной ловли. При переформировании трезубца из инструмента охоты в оружие исчезли крючки на концах зубцов, которыми удерживалась рыба. В ближнем бою этот эффект был не востребован.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "Цеп",
+            "ranged_weapon": false,
+            "melee_weapon": true,
+            "onehanded": true,
+            "twohanded": false,
+            "min_dmg": 1,
+            "max_dmg": 6,
+            "effective_range": 5,
+            "max_range": 5,
+            "weight" : 2,
+            "dmg_type": "дробящий",
+            "default_price": 1000,
+            "description": "Боевой цеп — контактное холодное оружие дробящего действия, состоящее из двух (реже — трёх) гибко сочленённых твёрдых палок.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ArmorItemEquip",
+        "fields": {
+            "name": "Кираса (Нагрудник)",
+            "base_armor": 14,
+            "dex_modif": 2,
+            "sneak_penalty": false,
+            "light_armor": false,
+            "medium_armor": true,
+            "heavy_armor": false,
+            "shield": false,
+            "default_price": 40000,
+            "weight": 20,
+            "description": "Этот доспех состоит из подогнанного металлического панциря, носимого с подкладкой из кожи. Несмотря на то, что руки и ноги остаются практически без защиты, этот доспех хорошо защищает жизненно важные органы, оставляя владельцу относительную подвижность.,Будьте осторожны, хотя ваша грудь может быть в безопасности, но ваши руки и ноги по прежнему открыты.",
+            "book_id": 1
+        }
+    }
+
+]

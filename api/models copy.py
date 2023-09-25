@@ -27,10 +27,10 @@ class ReferenceBookCharClass(models.Model):
     subclass_avalible = models.BooleanField()
     description = models.TextField(max_length=3000, blank=True, null=True)
     ability_count = models.IntegerField(null=True, blank=True)
-    class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility')
-    class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')
-    class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery')
-    class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery')
+    class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility', null=True, blank=True)
+    class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill', null=True, blank=True)
+    class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery', null=True, blank=True)
+    class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery', null=True, blank=True)
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='charclass')
 
@@ -191,7 +191,6 @@ class WeaponItemEquip(models.Model):
     max_dmg = models.IntegerField()
     dmg_type = models.CharField(max_length=255)
     effective_range = models.IntegerField()
-    max_range = models.IntegerField()
     ranged_weapon = models.BooleanField()
     melee_weapon = models.BooleanField()
     onehanded = models.BooleanField()
@@ -237,7 +236,7 @@ class ItemEqipTemplate(models.Model):
     template_name = models.CharField(max_length=255)
 
     start_items = models.ManyToManyField(WeaponItemEquip, through="ItemCharStartEqipItem")
-    char_class = models.OneToOneField(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='start_items_template')
+    char_class = models.OneToOneField(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='start_items_template', blank=True)
 
 class ItemCharStartEqipItem(models.Model):
 

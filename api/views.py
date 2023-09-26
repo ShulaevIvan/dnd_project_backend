@@ -162,7 +162,10 @@ class DetailClassView(APIView):
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
-        
+        # print(query_class.start_items_template.start_weapons.all().values())
+        # print(query_class.start_items_template.start_instruments.all().values())
+
+        # print(query_class.start_items_template.start_items.all().values())
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,

@@ -1402,6 +1402,377 @@
             "template_name": "sorcerer_start_items",
             "char_class": 12
         }
+    },
+
+    {
+        "pk": 1,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 29,
+            "template_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 18,
+            "template_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 8,
+            "template_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 24,
+            "template_id": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 30,
+            "template_id": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 12,
+            "template_id": 3
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 7,
+            "template_id": 4
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 16,
+            "template_id": 5
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 9,
+            "template_id": 6
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 2,
+            "template_id": 6
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 2,
+            "template_id": 7
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 20,
+            "template_id": 8
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 13,
+            "template_id": 8
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 21,
+            "template_id": 10
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 20,
+            "template_id": 10
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 2,
+            "start_weapon_id": 20,
+            "template_id": 11
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 2,
+            "start_weapon_id": 18,
+            "template_id": 12
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.CharClassStartEqipWeapon",
+        "fields": {
+            "quantity": 1,
+            "start_weapon_id": 2,
+            "template_id": 12
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 18,
+            "template_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 7,
+            "template_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 21,
+            "template_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 24,
+            "template_id": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 25,
+            "template_id": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 22,
+            "template_id": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 23,
+            "template_id": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 25,
+            "template_id": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 21,
+            "template_id": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 1,
+            "start_instruments": 23,
+            "template_id": 9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 5,
+            "start_instruments": 21,
+            "template_id": 9
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 5,
+            "start_instruments": 1,
+            "template_id": 10
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.CharClassStartEqipInsrument",
+        "fields": {
+            "quantity": 5,
+            "start_instruments": 21,
+            "template_id": 11
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 2,
+            "template_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 4,
+            "template_id": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 15,
+            "template_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 2,
+            "template_id": 5
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 12,
+            "template_id": 6
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 2,
+            "template_id": 7
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 15,
+            "template_id": 9
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 4,
+            "template_id": 9
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 2,
+            "template_id": 10
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.CharClassStartEqipArmor",
+        "fields": {
+            "quantity": 1,
+            "start_armor_id": 12,
+            "template_id": 11
+        }
     }
+
 
 ]

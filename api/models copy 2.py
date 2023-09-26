@@ -234,42 +234,20 @@ class OtherItemEquip(models.Model):
     book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_other')
 
 class ItemEqipTemplate(models.Model):
-
     template_name = models.CharField(max_length=255)
 
-    start_weapons = models.ManyToManyField(WeaponItemEquip, through='CharClassStartEqipWeapon')
-    start_armor = models.ManyToManyField(ArmorItemEquip, through='CharClassStartEqipArmor')
-    start_instruments = models.ManyToManyField(InstrumentItemEquip, through='CharClassStartEqipInsrument')
-
+    start_items = models.ManyToManyField(WeaponItemEquip, through="ItemCharStartEqipItem")
     char_class = models.OneToOneField(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='start_items_template')
-    
-class CharClassStartEqipWeapon(models.Model):
+
+class ItemCharStartEqipItem(models.Model):
 
     quantity = models.IntegerField(default=1)
 
-    start_weapon_id = models.ForeignKey(WeaponItemEquip, on_delete=models.CASCADE, related_name='start_weapon_eqip')
-    template_id = models.ForeignKey(ItemEqipTemplate, on_delete=models.CASCADE, related_name='item_eqip_weapons')
-
-class CharClassStartEqipArmor(models.Model):
-
-    quantity = models.IntegerField(default=1)
-
-    start_armor_id = models.ForeignKey(ArmorItemEquip, on_delete=models.CASCADE, related_name='start_armor_eqip')
-    template_id = models.ForeignKey(ItemEqipTemplate, on_delete=models.CASCADE, related_name='item_eqip_armor')
-
-class CharClassStartEqipInsrument(models.Model):
-
-    quantity = models.IntegerField(default=1)
-
-    start_instruments = models.ForeignKey(InstrumentItemEquip, on_delete=models.CASCADE, related_name='start_other_eqip')
-    template_id = models.ForeignKey(ItemEqipTemplate, on_delete=models.CASCADE, related_name='item_eqip_instruments')
-
-class CharClassStartEqipOther(models.Model):
-
-    quantity = models.IntegerField(default=1)
-
-    start_other = models.ForeignKey(OtherItemEquip, on_delete=models.CASCADE, related_name='start_other_eqip')
-    template_id = models.ForeignKey(ItemEqipTemplate, on_delete=models.CASCADE, related_name='item_eqip_other')
+    start_weapon_id = models.ForeignKey(WeaponItemEquip, on_delete=models.CASCADE, related_name='start_weapon_eqip', blank=True, null=True)
+    start_armor_id = models.ForeignKey(ArmorItemEquip, on_delete=models.CASCADE, related_name='start_armor_eqip', blank=True, null=True)
+    start_instrument_id = models.ForeignKey(InstrumentItemEquip, on_delete=models.CASCADE, related_name='start_instrument_eqip', blank=True, null=True)
+    start_other_id = models.ForeignKey(OtherItemEquip, on_delete=models.CASCADE, related_name='start_other_eqip', blank=True, null=True)
+    template_id = models.ForeignKey(ItemEqipTemplate, on_delete=models.CASCADE, related_name='item_eqip_template')
 
 class ReferenceBookLanguges(models.Model):
     book_name = models.CharField(max_length=255)

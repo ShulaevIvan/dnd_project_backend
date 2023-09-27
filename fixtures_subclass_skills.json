@@ -1,0 +1,315 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":126,
+            "subclass_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":127,
+            "subclass_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":128,
+            "subclass_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":129,
+            "subclass_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":130,
+            "subclass_id": 2
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":131,
+            "subclass_id": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":132,
+            "subclass_id": 2
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":133,
+            "subclass_id": 2
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":134,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":135,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":136,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":137,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":138,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":139,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":140,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":141,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":142,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":143,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":144,
+            "subclass_id": 3
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":145,
+            "subclass_id": 4
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":146,
+            "subclass_id": 4
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":147,
+            "subclass_id": 4
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":148,
+            "subclass_id": 4
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":149,
+            "subclass_id": 4
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":150,
+            "subclass_id": 4
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":151,
+            "subclass_id": 5
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":152,
+            "subclass_id": 5
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":153,
+            "subclass_id": 5
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":154,
+            "subclass_id": 5
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":155,
+            "subclass_id": 5
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":156,
+            "subclass_id": 6
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":157,
+            "subclass_id": 6
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":158,
+            "subclass_id": 6
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":159,
+            "subclass_id": 6
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":160,
+            "subclass_id": 7
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":161,
+            "subclass_id": 7
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":162,
+            "subclass_id": 7
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":163,
+            "subclass_id": 7
+        }
+    },
+    {
+        "pk": 39,
+        "model": "api.ReferenceBookSubClassSkill",
+        "fields": {
+            "skill_id":164,
+            "subclass_id": 7
+        }
+    }
+    
+]

@@ -161,7 +161,7 @@ class DetailClassView(APIView):
 
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
-        query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)\
+        query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
         
         clear_data = {
             'id': query_class.id,
@@ -200,6 +200,12 @@ class DetailClassView(APIView):
             subclassdata['id'] = target_subclass.id
             subclassdata['name'] = target_subclass.name
             subclassdata['description'] = target_subclass.description
+            subclassdata['subclassSkills'] = [
+                {
+                    'id': skill_obj.skill_id.id, 
+                    'name': skill_obj.skill_id.name
+                } for skill_obj in target_subclass.char_subclass_skills.all()
+            ]
             subclassdata['mainClassId'] = query_class.id
             clear_data['description'] = target_subclass.description
             clear_data['subraceActive'] = True

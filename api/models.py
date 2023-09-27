@@ -45,6 +45,7 @@ class ReferenceBookCharClass(models.Model):
 class ReferenceBookCharSubClass(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(max_length=3000, blank=True)
+    subclass_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookSubClassSkill')
 
     main_class = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='subclass')
 
@@ -63,7 +64,6 @@ class ClassSaveThrow(models.Model):
     save_throw_id = models.ForeignKey(SaveThrowItem, on_delete=models.CASCADE, related_name='save_throw_item')
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_save_throw')
     
-
 class WeaponMasteryItem(models.Model):
     name = models.TextField(max_length=255, unique=True)
     range_weapon = models.BooleanField()
@@ -143,11 +143,17 @@ class ReferenceBookItemClassSkill(models.Model):
     skill_description = models.TextField(max_length=3000, null=True, blank=True)
 
     book_id = models.ForeignKey(ReferenceBookClassSkills, on_delete=models.CASCADE, related_name='class_skill')
+    
 
 class ReferenceBookClassSkill(models.Model):
 
     skill_id = models.ForeignKey(ReferenceBookItemClassSkill, on_delete=models.CASCADE, related_name='char_class_skills')
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='char_class_skills')
+
+class ReferenceBookSubClassSkill(models.Model):
+
+    skill_id = models.ForeignKey(ReferenceBookItemClassSkill, on_delete=models.CASCADE, related_name='char_subclass_skills')
+    subclass_id = models.ForeignKey(ReferenceBookCharSubClass, on_delete=models.CASCADE, related_name='char_subclass_skills')
 
 class ReferenceBookSkills(models.Model):
     book_name = models.CharField(max_length=255)
@@ -183,7 +189,6 @@ class ItemsEquipBook(models.Model):
     name = models.CharField(max_length=255)
 
     book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='items_eqip_book')
-
 
 class WeaponItemEquip(models.Model):
     name = models.CharField(max_length=255, unique=True)

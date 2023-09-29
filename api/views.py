@@ -203,14 +203,16 @@ class DetailClassView(APIView):
             subclassdata['subclassSkills'] = [
                 {
                     'id': skill_obj.skill_id.id, 
-                    'name': skill_obj.skill_id.name
+                    'name': skill_obj.skill_id.name,
+                    'levelRequired': skill_obj.skill_id.level_required,
+                    'description': skill_obj.skill_id.skill_description,
                 } for skill_obj in target_subclass.char_subclass_skills.all()
             ]
             subclassdata['mainClassId'] = query_class.id
             clear_data['description'] = target_subclass.description
             clear_data['subraceActive'] = True
             clear_data['subclassInfo'] = subclassdata
-
+            clear_data['subclassInfo'] = subclassdata
             clear_data.pop('subclassAvalible', None)
             clear_data.pop('subclasses', None)
             clear_data.pop('description', None)

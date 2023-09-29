@@ -144,7 +144,6 @@ class ReferenceBookItemClassSkill(models.Model):
 
     book_id = models.ForeignKey(ReferenceBookClassSkills, on_delete=models.CASCADE, related_name='class_skill')
     
-
 class ReferenceBookClassSkill(models.Model):
 
     skill_id = models.ForeignKey(ReferenceBookItemClassSkill, on_delete=models.CASCADE, related_name='char_class_skills')

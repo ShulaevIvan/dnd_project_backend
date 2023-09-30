@@ -1,0 +1,370 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ReferenceBookBackground",
+        "fields": {
+            "name": "background_book",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Артист",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Моряк",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Пират",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Чужеземец",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Беспризорник",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Мудрец",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Преступник",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Шарлатан",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Азартный игрок",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Благородный",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Народный герой",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Прислужник",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Гильдейский ремесленник",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Отшельник",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.BackgroundItem",
+        "fields": {
+            "name": "Солдат",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 2,
+            "background_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 17,
+            "background_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 1,
+            "background_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 13,
+            "background_id": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 1,
+            "background_id": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 13,
+            "background_id": 3
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 1,
+            "background_id": 4
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 14,
+            "background_id": 4
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 3,
+            "background_id": 5
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 4,
+            "background_id": 5
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 5,
+            "background_id": 6
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 6,
+            "background_id": 6
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 4,
+            "background_id": 7
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 15,
+            "background_id": 7
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 3,
+            "background_id": 8
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 15,
+            "background_id": 8
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 11,
+            "background_id": 9
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 15,
+            "background_id": 9
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 6,
+            "background_id": 10
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 18,
+            "background_id": 10
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 10,
+            "background_id": 11
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 14,
+            "background_id": 11
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 11,
+            "background_id": 12
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 9,
+            "background_id": 12
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 11,
+            "background_id": 13
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 18,
+            "background_id": 13
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 11,
+            "background_id": 14
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 9,
+            "background_id": 14
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 1,
+            "background_id": 15
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.BackgroundAbility",
+        "fields": {
+            "ability_id": 16,
+            "background_id": 15
+        }
+    }
+]

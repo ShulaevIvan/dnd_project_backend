@@ -208,6 +208,7 @@ class DetailClassView(APIView):
                     'description': skill_obj.skill_id.skill_description,
                 } for skill_obj in target_subclass.char_subclass_skills.all()
             ]
+
             subclassdata['mainClassId'] = query_class.id
             clear_data['description'] = target_subclass.description
             clear_data['subraceActive'] = True
@@ -334,6 +335,21 @@ class DetailRaceView(APIView):
         
         return Response(clear_data)
     
+class CharacterBackgroundView(APIView):
+
+    def get(self, request):
+        query = get_object_or_404(ReferenceBook, id=1)
+        clear_data = dict()
+        clear_data = [
+            {
+                'id': background_obj.id, 
+                'name': background_obj.name,
+                'bounce_abilities': background_obj.abilities.all().values(),
+            } for background_obj in query.background.background_item.all()
+        ]
+
+
+        return Response(clear_data)
 
 class CalculateStatsView(APIView):
 
@@ -354,3 +370,4 @@ def generate_user_password():
     password = secrets.token_urlsafe(6)
 
     return password
+

@@ -289,6 +289,58 @@ class ReferenceBookLangugeItemRace(models.Model):
     race_id = models.ForeignKey(ReferenceBookCharRace, on_delete=models.CASCADE, related_name='race_languges')
     languge_id = models.ForeignKey(ReferenceBookLangugeItem, on_delete=models.CASCADE, related_name='race_languges')
 
+class ReferenceBookBackground(models.Model):
+    name = models.CharField(max_length=255)
+
+    book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='background')
+
+class BackgroundItem(models.Model):
+    name = models.CharField(max_length=255)
+    weapon_mastery = models.ManyToManyField('WeaponMasteryItem', through='BackgroundWeaponSkill')
+    abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='BackgroundAbility')
+    weapons = models.ManyToManyField('WeaponItemEquip', through='BackgroundWeaponEqip')
+    armor = models.ManyToManyField('ArmorItemEquip', through='BackgroundArmorEqip')
+    instruments = models.ManyToManyField('InstrumentItemEquip', through='BackgroundInstrumentEqip')
+
+    book_id = models.ForeignKey(ReferenceBookBackground, on_delete=models.CASCADE, related_name='background_item')
+
+
+class BackgroundAbility(models.Model):
+
+    ability_id = models.ForeignKey(ReferenceBookAbilityItem, on_delete=models.CASCADE, related_name='background_ability')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_ability')
+
+class BackgroundWeaponSkill(models.Model):
+    weapon_id = models.ForeignKey(WeaponMasteryItem, on_delete=models.CASCADE, related_name='background_weapon_mastery')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_weapon_skill')
+
+class BackgroundWeaponEqip(models.Model):
+
+    weapon_id = models.ForeignKey(WeaponItemEquip, on_delete=models.CASCADE, related_name='background_weapon_eqip')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_weapon')
+
+class BackgroundArmorEqip(models.Model):
+
+    armor_id = models.ForeignKey(ArmorItemEquip, on_delete=models.CASCADE, related_name='background_armor_eqip')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_armor')
+
+class BackgroundInstrumentEqip(models.Model):
+
+    instrument_id = models.ForeignKey(InstrumentItemEquip, on_delete=models.CASCADE, related_name='background_instrument_eqip')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_instrument')
+
+
+class BackgroundAttrs(models.Model):
+    str_attr = models.IntegerField()
+    dex_attr = models.IntegerField()
+    con_attr = models.IntegerField()
+    int_attr = models.IntegerField()
+    wis_attr = models.IntegerField()
+    cha_attr = models.IntegerField()
+
+    background_id = models.OneToOneField(BackgroundItem, on_delete=models.CASCADE, related_name='background_attrs')
+
+
 class InstrumentsMenu(models.Model):
     menu_name = models.CharField(max_length=255, unique=True)
 

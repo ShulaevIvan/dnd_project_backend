@@ -75,7 +75,7 @@
         "pk": 9,
         "model": "api.ReferenceBookLangugeItem",
         "fields": {
-            "name": "Player Choise lang",
+            "name": "Дополнительный язык на выбор",
             "lang_book": 1
         }
     },

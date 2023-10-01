@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
-from .models import ReferenceBookCharRace
+from .models import ReferenceBookCharRace, ReferenceBookBackground
 from .serializers import DetailRaceViewSerializer
 from itertools import chain
 from rest_framework.response import Response
@@ -340,16 +340,42 @@ class CharacterBackgroundView(APIView):
     def get(self, request):
         query = get_object_or_404(ReferenceBook, id=1)
         clear_data = dict()
+
         clear_data = [
             {
                 'id': background_obj.id, 
                 'name': background_obj.name,
-                'bounce_abilities': background_obj.abilities.all().values(),
+                'description': background_obj.description,
             } for background_obj in query.background.background_item.all()
         ]
 
 
         return Response(clear_data)
+
+class DetailBackgroundView(APIView):
+
+    def get(self, request, background_id):
+        query = get_object_or_404(ReferenceBookBackground, id=1)
+        clear_data = [
+            {
+                'id': background_obj.id,
+                'name': background_obj.name,
+                'description': background_obj.description,
+                'items': background_obj.non_combat_items_eqip,
+                'weaponMastery': background_obj.weapon_mastery.all().values(),
+                'armorMastery': background_obj.armor_mastery.all().values(),
+                'instrumentMastery': background_obj.instrument_mastery.all().values(),
+                'weapons': background_obj.weapons.all().values(),
+                'armor': background_obj.armor.all().values(),
+                'instruments': background_obj.armor.all().values(),
+                'bounceAbilities': background_obj.abilities.all().values(),
+                'languages': background_obj.languages.all().values(),
+                
+            } for background_obj in query.background_item.all().filter(id=background_id)
+        ]
+
+        return Response(clear_data)
+
 
 class CalculateStatsView(APIView):
 

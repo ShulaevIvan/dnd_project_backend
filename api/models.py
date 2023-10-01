@@ -31,6 +31,7 @@ class ReferenceBookCharClass(models.Model):
     class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')
     class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery')
     class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery')
+    class_instrument_mastery = models.ManyToManyField('InstrumentMasteryItem', through='InstrumentClassMastery')
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='charclass')
 
@@ -89,6 +90,17 @@ class ArmorMasteryItem(models.Model):
 class ArmorCharMastery(models.Model):
     mastery_id = models.ForeignKey(ArmorMasteryItem, on_delete=models.CASCADE, related_name='char_armor_mastery')
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='char_armor_mastery')
+
+class InstrumentMasteryItem(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField(max_length=3000)
+
+    mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='instrument_mastery')
+
+class InstrumentClassMastery(models.Model):
+
+    mastery_id = models.ForeignKey(InstrumentMasteryItem, on_delete=models.CASCADE, related_name='char_instrument_mastery')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='char_instrument_mastery')
 
 class ReferenceBookCharRace(models.Model):
     char_race_name = models.CharField(max_length=255, unique=True)
@@ -296,8 +308,15 @@ class ReferenceBookBackground(models.Model):
 
 class BackgroundItem(models.Model):
     name = models.CharField(max_length=255)
+    description = models.TextField(max_length=3000)
+    non_combat_items_eqip = models.TextField(max_length=3000)
     weapon_mastery = models.ManyToManyField('WeaponMasteryItem', through='BackgroundWeaponSkill')
+    armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='BackgroundArmorSkill')
+    instrument_mastery = models.ManyToManyField('InstrumentMasteryItem', through='BackgroundInstrumentSkill')
+    
+    background_skills = models.ManyToManyField('BackgroundSkillItem', through='BackgroundSkill')
     abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='BackgroundAbility')
+    languages = models.ManyToManyField('ReferenceBookLangugeItem', through='BackgroundLanguge')
     weapons = models.ManyToManyField('WeaponItemEquip', through='BackgroundWeaponEqip')
     armor = models.ManyToManyField('ArmorItemEquip', through='BackgroundArmorEqip')
     instruments = models.ManyToManyField('InstrumentItemEquip', through='BackgroundInstrumentEqip')
@@ -305,14 +324,39 @@ class BackgroundItem(models.Model):
     book_id = models.ForeignKey(ReferenceBookBackground, on_delete=models.CASCADE, related_name='background_item')
 
 
+class BackgroundLanguge(models.Model):
+    language_id = models.ForeignKey(ReferenceBookLangugeItem, on_delete=models.CASCADE, related_name='background_language')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_language')
+
 class BackgroundAbility(models.Model):
 
     ability_id = models.ForeignKey(ReferenceBookAbilityItem, on_delete=models.CASCADE, related_name='background_ability')
     background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_ability')
 
+class BackgroundSkillItem(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField(max_length=3000)
+
+
+class BackgroundSkill(models.Model):
+
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_skill')
+    skill_id = models.ForeignKey(BackgroundSkillItem, on_delete=models.CASCADE, related_name='background_skill')
+
 class BackgroundWeaponSkill(models.Model):
-    weapon_id = models.ForeignKey(WeaponMasteryItem, on_delete=models.CASCADE, related_name='background_weapon_mastery')
+
+    weapon_mastery_id = models.ForeignKey(WeaponMasteryItem, on_delete=models.CASCADE, related_name='background_weapon_mastery')
     background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_weapon_skill')
+
+class BackgroundArmorSkill(models.Model):
+
+    armor_mastery_id = models.ForeignKey(ArmorMasteryItem, on_delete=models.CASCADE, related_name='background_armor_mastery')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_armor_skill')
+
+class BackgroundInstrumentSkill(models.Model):
+
+    instrument_mastery_id = models.ForeignKey(InstrumentMasteryItem, on_delete=models.CASCADE, related_name='background_instrument_mastery')
+    background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_instrument_skill')
 
 class BackgroundWeaponEqip(models.Model):
 

@@ -72,6 +72,14 @@
         }
     },
     {
+        "pk": 9,
+        "model": "api.ReferenceBookLangugeItem",
+        "fields": {
+            "name": "Player Choise lang",
+            "lang_book": 1
+        }
+    },
+    {
         "pk": 1,
         "model": "api.ReferenceBookLangugeItemRace",
         "fields": {

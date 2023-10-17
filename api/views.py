@@ -4,8 +4,8 @@ from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
-from .models import ReferenceBookCharRace, ReferenceBookBackground
-from .serializers import DetailRaceViewSerializer
+from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills
+
 from itertools import chain
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -376,6 +376,18 @@ class DetailBackgroundView(APIView):
         ]
 
         return Response(clear_data)
+    
+class ReferenceBookAbilitesView(APIView):
+
+    def get(self, request):
+        query = get_object_or_404(ReferenceBookSkills, id=1).abilities.all()
+        abilites = [{
+            "id": abil['id'],
+            "name": abil['name'],
+            "abilityType": abil['ability_type'],
+        }  for abil in query.values()]
+
+        return Response(abilites)
 
 
 class CalculateStatsView(APIView):

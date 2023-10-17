@@ -4,6 +4,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Атлетика",
+            "ability_type": "str",
             "skill_book": 1
         }
     },
@@ -12,6 +13,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Акробатика",
+            "ability_type": "dex",
             "skill_book": 1
         }
     },
@@ -20,6 +22,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Ловкость рук",
+            "ability_type": "dex",
             "skill_book": 1
         }
     },
@@ -28,6 +31,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Скрытность",
+            "ability_type": "dex",
             "skill_book": 1
         }
     },
@@ -36,6 +40,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Магия",
+            "ability_type": "int",
             "skill_book": 1
         }
     },
@@ -44,6 +49,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "История",
+            "ability_type": "int",
             "skill_book": 1
         }
     },
@@ -52,6 +58,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Расследование",
+            "ability_type": "int",
             "skill_book": 1
         }
     },
@@ -60,6 +67,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Природа",
+            "ability_type": "int",
             "skill_book": 1
         }
     },
@@ -68,6 +76,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Религия",
+            "ability_type": "int",
             "skill_book": 1
         }
     },
@@ -76,6 +85,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Обращение с животными",
+            "ability_type": "wis",
             "skill_book": 1
         }
     },
@@ -84,6 +94,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Проницательность",
+            "ability_type": "wis",
             "skill_book": 1
         }
     },
@@ -92,6 +103,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Медицина",
+            "ability_type": "wis",
             "skill_book": 1
         }
     },
@@ -100,6 +112,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Восприятие",
+            "ability_type": "wis",
             "skill_book": 1
         }
     },
@@ -108,6 +121,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Выживание",
+            "ability_type": "wis",
             "skill_book": 1
         }
     },
@@ -116,6 +130,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Обман",
+            "ability_type": "cha",
             "skill_book": 1
         }
     },
@@ -124,6 +139,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Запугивание",
+            "ability_type": "cha",
             "skill_book": 1
         }
     },
@@ -132,6 +148,7 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Выступление",
+            "ability_type": "cha",
             "skill_book": 1
         }
     },
@@ -140,23 +157,8 @@
         "model": "api.ReferenceBookAbilityItem",
         "fields": {
             "name": "Убеждение",
+            "ability_type": "cha",
             "skill_book": 1
-        }
-    },
-    {
-        "pk": 19,
-        "model": "api.ReferenceBookAbilityItem",
-        "fields": {
-            "name": "all",
-            "skill_book": 1
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.ReferenceBookClassAbility",
-        "fields": {
-            "class_id": 1,
-            "ablility_id": 19
         }
     },
     {

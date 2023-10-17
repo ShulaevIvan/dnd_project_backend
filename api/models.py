@@ -192,13 +192,12 @@ class ReferenceBookItemSkillRace(models.Model):
 
 class ReferenceBookAbilityItem(models.Model):
     name = models.CharField(max_length=255)
+    ability_type = models.CharField(max_length=5)
     skill_book = models.ForeignKey(ReferenceBookSkills, on_delete=models.CASCADE, related_name='abilities')
 
 class ReferenceBookClassAbility(models.Model):
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_ability')
     ablility_id = models.ForeignKey(ReferenceBookAbilityItem, on_delete=models.CASCADE, related_name='ability')
-
-
 
 class ItemsEquipBook(models.Model):
     name = models.CharField(max_length=255)

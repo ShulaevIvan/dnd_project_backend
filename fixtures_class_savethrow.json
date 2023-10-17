@@ -11,7 +11,7 @@
         "pk": 1,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "сила",
+            "name": "str",
 
             "mastery_book_id": 3
         }
@@ -20,7 +20,7 @@
         "pk": 2,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "ловкость",
+            "name": "dex",
 
             "mastery_book_id": 3
         }
@@ -29,7 +29,7 @@
         "pk": 3,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "Телосложение",
+            "name": "con",
 
             "mastery_book_id": 3
         }
@@ -38,7 +38,7 @@
         "pk": 4,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "Интелект",
+            "name": "int",
 
             "mastery_book_id": 3
         }
@@ -47,7 +47,7 @@
         "pk": 5,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "Мудрость",
+            "name": "wis",
 
             "mastery_book_id": 3
         }
@@ -56,7 +56,7 @@
         "pk": 6,
         "model": "api.SaveThrowItem",
         "fields": {
-            "name": "Харизма",
+            "name": "cha",
 
             "mastery_book_id": 3
         }

@@ -130,7 +130,7 @@ class ReferenceBookClassView(APIView):
         clear_data = []
 
         for class_obj in query_class:
-            
+
             clear_class_data = {}
             clear_class_data['class_data'] = {
                 'id': class_obj.id,
@@ -171,6 +171,7 @@ class DetailClassView(APIView):
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
             'classAbilityPoints': query_class.ability_count,
+            'classMainStats': [{'id': main_stat.class_attr_id.id, 'name': main_stat.class_attr_id.name }for main_stat in query_class.class_attr.all()],
             'classAbilities': [{'id': ability.ablility_id.id, 'name': ability.ablility_id.name} for ability in query_class.class_ability.all()],
             'classSkills': [
                 {

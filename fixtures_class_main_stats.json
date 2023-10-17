@@ -1,0 +1,273 @@
+[
+    {
+        "pk": 1,
+        "model": "api.ClassAttrsBook",
+        "fields": {
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ClassMainAttrItem",
+        "fields": {
+            "name": "str",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ClassMainAttrItem",
+        "fields": {
+            "name": "dex",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ClassMainAttrItem",
+        "fields": {
+            "name": "con",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ClassMainAttrItem",
+        "fields": {
+            "name": "int",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ClassMainAttrItem",
+        "fields": {
+            "name": "wis",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ClassMainAttrItem",
+        "fields": {
+            "name": "cha",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 6,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 1,
+            "class_id": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 1,
+            "class_id": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 3
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 4,
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 5,
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 5,
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 8
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 5,
+            "class_id": 8
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 1,
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 10
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 10
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 6,
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 2,
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.ClassMainAttr",
+        "fields": {
+            "class_attr_id": 3,
+            "class_id": 12
+        }
+    }
+]

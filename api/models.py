@@ -29,6 +29,7 @@ class ReferenceBookCharClass(models.Model):
     ability_count = models.IntegerField(null=True, blank=True)
     class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility')
     class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')
+    class_main_stats = models.ManyToManyField('ClassMainAttrItem', through='ClassMainAttr')
     class_mastery = models.ManyToManyField('WeaponMasteryItem', through='WeaponCharMastery')
     class_armor_mastery = models.ManyToManyField('ArmorMasteryItem', through='ArmorCharMastery')
     class_instrument_mastery = models.ManyToManyField('InstrumentMasteryItem', through='InstrumentClassMastery')
@@ -46,6 +47,7 @@ class ReferenceBookCharClass(models.Model):
 class ReferenceBookCharSubClass(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(max_length=3000, blank=True)
+    subclass_main_stats = models.ManyToManyField('ClassMainAttrItem', through='SubclassMainAttr')
     subclass_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookSubClassSkill')
 
     main_class = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='subclass')
@@ -195,6 +197,8 @@ class ReferenceBookAbilityItem(models.Model):
 class ReferenceBookClassAbility(models.Model):
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_ability')
     ablility_id = models.ForeignKey(ReferenceBookAbilityItem, on_delete=models.CASCADE, related_name='ability')
+
+
 
 class ItemsEquipBook(models.Model):
     name = models.CharField(max_length=255)
@@ -373,8 +377,8 @@ class BackgroundInstrumentEqip(models.Model):
     instrument_id = models.ForeignKey(InstrumentItemEquip, on_delete=models.CASCADE, related_name='background_instrument_eqip')
     background_id = models.ForeignKey(BackgroundItem, on_delete=models.CASCADE, related_name='background_instrument')
 
-
 class BackgroundAttrs(models.Model):
+
     str_attr = models.IntegerField()
     dex_attr = models.IntegerField()
     con_attr = models.IntegerField()
@@ -383,6 +387,29 @@ class BackgroundAttrs(models.Model):
     cha_attr = models.IntegerField()
 
     background_id = models.OneToOneField(BackgroundItem, on_delete=models.CASCADE, related_name='background_attrs')
+
+
+class ClassAttrsBook(models.Model):
+
+    book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='class_attrs_book')
+
+
+class ClassMainAttrItem(models.Model):
+
+    name = models.CharField(max_length=255, unique=True)
+
+    book_id = models.ForeignKey(ClassAttrsBook, on_delete=models.CASCADE, related_name='class_attr_item')
+
+class ClassMainAttr(models.Model):
+
+    class_attr_id = models.ForeignKey(ClassMainAttrItem, on_delete=models.CASCADE, related_name='class_attr_item')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_attr')
+
+class SubclassMainAttr(models.Model):
+
+    subclass_attr_id = models.ForeignKey(ClassMainAttrItem, on_delete=models.CASCADE, related_name='subclass_attr_item')
+    subclass_id = models.ForeignKey(ReferenceBookCharSubClass, on_delete=models.CASCADE, related_name='subclass_attr')
+
 
 
 class InstrumentsMenu(models.Model):

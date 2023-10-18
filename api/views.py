@@ -388,6 +388,33 @@ class ReferenceBookAbilitesView(APIView):
         }  for abil in query.values()]
 
         return Response(abilites)
+    
+class ReferenceBookInstrumentsSkillView(APIView):
+
+    def get(self, request):
+        query = get_object_or_404(ReferenceBook, id=1)
+        instruments = [{
+            'id': instrument_item.id, 
+            'name': instrument_item.name,
+            'description': instrument_item.description,
+        } for instrument_item in query.items_eqip_book.item_instruments.all()]
+
+        return Response(instruments)
+
+class ReferenceBookArmorSkillsView(APIView):
+
+    query = get_object_or_404(ReferenceBook, id=1)
+
+class ReferenceBookArmorView(APIView):
+    
+    def get(self, request):
+        query = get_object_or_404(ReferenceBook, id=1)
+        armor = [{
+            'id': armor_obj.id,
+            'name': armor_obj.name,
+        } for armor_obj in query.items_eqip_book.item_armor.all()]
+
+        return Response(armor)
 
 
 class CalculateStatsView(APIView):

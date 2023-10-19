@@ -402,8 +402,15 @@ class ReferenceBookInstrumentsSkillView(APIView):
         return Response(instruments)
 
 class ReferenceBookArmorSkillsView(APIView):
+    
+    def get(self, request):
 
-    query = get_object_or_404(ReferenceBook, id=1)
+        query = get_object_or_404(ReferenceBook, id=1).mastery_book.all().filter(id=2)
+        print(query)
+        armor_mastery = [{'name': mastery_obj.armor_mastery.all().values()} for mastery_obj in query]
+
+        return Response({'status': armor_mastery})
+
 
 class ReferenceBookArmorView(APIView):
     

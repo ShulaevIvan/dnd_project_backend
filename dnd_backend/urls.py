@@ -18,7 +18,7 @@ from django.urls import path
 from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
 from api.views import ReferenceBookView, ReferenceBookClassView, DetailClassView, ReferenceBookRaceView, DetailRaceView, \
 CharacterBackgroundView, DetailBackgroundView, CalculateStatsView, InstrumentsView, ReferenceBookAbilitesView, ReferenceBookInstrumentsSkillView, \
-ReferenceBookArmorView
+ReferenceBookArmorSkillsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,7 +34,7 @@ urlpatterns = [
     path('api/reference_book/background/', CharacterBackgroundView.as_view()),
     path('api/reference_book/abilites/', ReferenceBookAbilitesView.as_view()),
     path('api/reference_book/instruments/', ReferenceBookInstrumentsSkillView.as_view()),
-    path('api/reference_book/armor/', ReferenceBookArmorView.as_view()),
+    path('api/reference_book/armor/', ReferenceBookArmorSkillsView.as_view()),
     path('api/reference_book/background/<int:background_id>/', DetailBackgroundView.as_view()),
     path('api/instruments/', InstrumentsView.as_view()),
     path('api/calculator/stats/', CalculateStatsView.as_view()),

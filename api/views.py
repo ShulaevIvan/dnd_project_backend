@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
-from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills
+from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery
 
 from itertools import chain
 from rest_framework.response import Response
@@ -392,36 +392,89 @@ class ReferenceBookAbilitesView(APIView):
 class ReferenceBookInstrumentsSkillView(APIView):
 
     def get(self, request):
-        query = get_object_or_404(ReferenceBook, id=1)
+        query = get_object_or_404(ReferenceBookMastery, id=3)
         instruments = [{
-            'id': instrument_item.id, 
-            'name': instrument_item.name,
-            'description': instrument_item.description,
-        } for instrument_item in query.items_eqip_book.item_instruments.all()]
+            'id': instrument_obj.id, 
+            'name': instrument_obj.name,
+            'description': instrument_obj.description
+        }for instrument_obj in query.instrument_mastery.all()]
 
         return Response(instruments)
-
-class ReferenceBookArmorSkillsView(APIView):
     
+class ReferenceBookArmorSkillView(APIView):
+
     def get(self, request):
-
-        query = get_object_or_404(ReferenceBook, id=1).mastery_book.all().filter(id=2)
-        print(query)
-        armor_mastery = [{'name': mastery_obj.armor_mastery.all().values()} for mastery_obj in query]
-
-        return Response({'status': armor_mastery})
-
-
-class ReferenceBookArmorView(APIView):
-    
-    def get(self, request):
-        query = get_object_or_404(ReferenceBook, id=1)
+        query = get_object_or_404(ReferenceBookMastery, id=2)
+            
         armor = [{
-            'id': armor_obj.id,
+            'id': armor_obj.id, 
             'name': armor_obj.name,
-        } for armor_obj in query.items_eqip_book.item_armor.all()]
+        } for armor_obj in query.armor_mastery.all()]
 
         return Response(armor)
+    
+class ReferenceBookWeaponSkillView(APIView):
+
+    def get(self, request):
+        query = get_object_or_404(ReferenceBookMastery, id=1)
+        weapons = [{
+            'id': weapon_obj.id, 
+            'name': weapon_obj.name,
+        }for weapon_obj in query.mastery_skill.all()]
+
+        return Response(weapons)
+
+
+class ReferenceBookMasteryView(APIView):
+    
+    def get(self, request):
+
+        param = request.GET.get('mastery')
+        fundamentals_param = request.GET.get('fundamental')
+        if (fundamentals_param):
+            fundamentals_param = True
+
+        if param and param == 'armor':
+            query = get_object_or_404(ReferenceBookMastery, id=2)
+            
+            armor = [{
+                'id': armor_obj.id, 
+                'name': armor_obj.name,
+            } for armor_obj in query.armor_mastery.all()]
+
+
+            return Response(armor)
+        
+        elif param and param == 'weapons':
+            query = get_object_or_404(ReferenceBookMastery, id=1)
+            weapons = [{
+                'id': weapon_obj.id, 
+                'name': weapon_obj.name,
+            }for weapon_obj in query.mastery_skill.all()]
+
+            return Response(weapons)
+        
+        elif param and param == 'instruments':
+            query = get_object_or_404(ReferenceBookMastery, id=3)
+            instrument = [{
+                'id': instrument_obj.id, 
+                'name': instrument_obj.name,
+                'description': instrument_obj.description
+            }for instrument_obj in query.instrument_mastery.all()]
+
+            return Response(instrument)
+        
+        armor = get_object_or_404(ReferenceBookMastery,id=2)
+        weapon = get_object_or_404(ReferenceBookMastery,id=1)
+        instrument = get_object_or_404(ReferenceBookMastery,id=3)
+
+        all_mastery = {
+            'armor': armor.armor_mastery.all().values(),
+            'weapons': weapon.mastery_skill.all().values(),
+            'instruments': instrument.instrument_mastery.all().values()
+        }
+
+        return Response(all_mastery)
 
 
 class CalculateStatsView(APIView):

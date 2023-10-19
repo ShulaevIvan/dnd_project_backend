@@ -74,6 +74,7 @@ class WeaponMasteryItem(models.Model):
     warrior_weapon = models.BooleanField()
     exotic_weapon = models.BooleanField()
     simple_weapon = models.BooleanField()
+    fundamental_skill = models.BooleanField(null=True, blank=True)
     
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='mastery_skill')
 
@@ -86,6 +87,7 @@ class WeaponCharMastery(models.Model):
 
 class ArmorMasteryItem(models.Model):
     name = models.TextField(max_length=255, unique=True)
+    fundamental_skill = models.BooleanField(null=True, blank=True)
 
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='armor_mastery')
 
@@ -96,6 +98,7 @@ class ArmorCharMastery(models.Model):
 class InstrumentMasteryItem(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(max_length=3000)
+    fundamental_skill = models.BooleanField(null=True, blank=True)
 
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='instrument_mastery')
 

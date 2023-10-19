@@ -507,6 +507,7 @@
             "warrior_weapon": false,
             "exotic_weapon": false,
             "simple_weapon": true,
+            "fundamental_skill": true,
 
             "mastery_book_id": 1
         }
@@ -521,6 +522,7 @@
             "warrior_weapon": true,
             "exotic_weapon": false,
             "simple_weapon": false,
+            "fundamental_skill": true,
 
             "mastery_book_id": 1
         }
@@ -535,6 +537,7 @@
             "warrior_weapon": false,
             "exotic_weapon": true,
             "simple_weapon": false,
+            "fundamental_skill": true,
 
             "mastery_book_id": 1
         }

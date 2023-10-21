@@ -42,6 +42,7 @@
         "model": "api.ArmorMasteryItem",
         "fields": {
             "name": "Щиты",
+            "fundamental_skill": true,
             
             "mastery_book_id": 2
         }

@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
 from api.views import ReferenceBookView, ReferenceBookClassView, DetailClassView, ReferenceBookRaceView, DetailRaceView, \
-CharacterBackgroundView, DetailBackgroundView, CalculateStatsView, InstrumentsView, ReferenceBookAbilitesView,ReferenceBookMasteryView
+CharacterBackgroundView, DetailBackgroundView, CalculateStatsView, InstrumentsView, ReferenceBookAbilitesView,ReferenceBookMasteryView, \
+ReferenceBookLanguagesView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,6 +34,7 @@ urlpatterns = [
     path('api/reference_book/background/', CharacterBackgroundView.as_view()),
     path('api/reference_book/abilites/', ReferenceBookAbilitesView.as_view()),
     path('api/reference_book/mastery/', ReferenceBookMasteryView.as_view()),
+    path('api/reference_book/languages/', ReferenceBookLanguagesView.as_view()),
     path('api/reference_book/background/<int:background_id>/', DetailBackgroundView.as_view()),
     path('api/instruments/', InstrumentsView.as_view()),
     path('api/calculator/stats/', CalculateStatsView.as_view()),

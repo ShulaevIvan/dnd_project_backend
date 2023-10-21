@@ -431,6 +431,7 @@ class ReferenceBookMasteryView(APIView):
 
         param = request.GET.get('mastery')
         fundamentals_param = request.GET.get('fundamental')
+
         if (fundamentals_param):
             fundamentals_param = True
 
@@ -471,10 +472,19 @@ class ReferenceBookMasteryView(APIView):
         all_mastery = {
             'armor': armor.armor_mastery.all().values(),
             'weapons': weapon.mastery_skill.all().values(),
-            'instruments': instrument.instrument_mastery.all().values()
+            'instruments': instrument.instrument_mastery.all().values(),
         }
 
         return Response(all_mastery)
+    
+class ReferenceBookLanguagesView(APIView):
+
+    def get(self, request):
+        
+        query = get_object_or_404(ReferenceBook, id=1)
+        languges = [{'id': lang_obj.id, 'name': lang_obj.name} for lang_obj in query.book_languges.lang_item.all().exclude(id=9)]
+
+        return Response(languges)
 
 
 class CalculateStatsView(APIView):

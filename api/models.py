@@ -178,6 +178,8 @@ class ReferenceBookSkills(models.Model):
 class ReferenceBookSubraceItemSkill(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
+    skill_type = models.CharField(max_length=100)
+    skill_value = models.IntegerField(blank=True, null=True)
     skill_book = models.ForeignKey(ReferenceBookSkills, on_delete=models.CASCADE, related_name='subrace_skill')
 
 class ReferenceBookItemSkillSubrace(models.Model):
@@ -187,6 +189,8 @@ class ReferenceBookItemSkillSubrace(models.Model):
 class ReferenceBookItemSkill(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
+    skill_type = models.CharField(max_length=100)
+    skill_value = models.IntegerField(blank=True, null=True)
     skill_book = models.ForeignKey(ReferenceBookSkills, on_delete=models.CASCADE, related_name='race_skill')
 
 class ReferenceBookItemSkillRace(models.Model):

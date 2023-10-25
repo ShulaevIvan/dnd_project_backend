@@ -190,6 +190,7 @@ class ReferenceBookItemSkill(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     skill_type = models.CharField(max_length=100)
+    skill_data = models.CharField(null=True, blank=True)
     skill_value = models.IntegerField(blank=True, null=True)
     skill_book = models.ForeignKey(ReferenceBookSkills, on_delete=models.CASCADE, related_name='race_skill')
 

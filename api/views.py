@@ -185,6 +185,7 @@ class DetailClassView(APIView):
             'classSaveThrows': [{'id': throw.save_throw_id.id, 'name': throw.save_throw_id.name} for throw in query_class.class_save_throw.all()],
             'classWeaponMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.weapon_mastery.all()],
             'classArmorMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.char_armor_mastery.all()],
+            'classInstrumentMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.char_instrument_mastery.all()],
             'startEqip': {
                 'weapons': [weapon_obj for weapon_obj in query_class.start_items_template.start_weapons.all().values()],
                 'armor': [armor_obj for armor_obj in query_class.start_items_template.start_armor.all().values()],

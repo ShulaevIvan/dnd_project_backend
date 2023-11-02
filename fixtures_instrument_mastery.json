@@ -243,14 +243,6 @@
             "mastery_id": 1,
             "class_id": 10
         }
-    },
-    {
-        "pk": 6,
-        "model": "api.InstrumentClassMastery",
-        "fields": {
-            "mastery_id": 1,
-            "class_id": 10
-        }
     }
 
 ]

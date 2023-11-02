@@ -210,7 +210,7 @@
             "name": "Обострённые чувства",
             "description": "Вы владеете навыком Внимательность.",
             "skill_type": "ability",
-            "skill_data": "Внимательность",
+            "skill_data": "Восприятие",
             "skill_value": 1,
             "skill_book_id": 1
         }

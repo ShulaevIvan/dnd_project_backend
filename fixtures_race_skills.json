@@ -208,7 +208,7 @@
         "model": "api.ReferenceBookItemSkill",
         "fields": {
             "name": "Обострённые чувства",
-            "description": "Вы владеете навыком Внимательность.",
+            "description": "Вы владеете навыком Восприятие.",
             "skill_type": "ability",
             "skill_data": "Восприятие",
             "skill_value": 1,

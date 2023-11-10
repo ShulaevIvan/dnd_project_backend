@@ -27,6 +27,7 @@ class ReferenceBookCharClass(models.Model):
     subclass_avalible = models.BooleanField()
     description = models.TextField(max_length=3000, blank=True, null=True)
     ability_count = models.IntegerField(null=True, blank=True)
+    spellcaster = models.BooleanField(null=True, blank=True)
     class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility')
     class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')
     class_main_stats = models.ManyToManyField('ClassMainAttrItem', through='ClassMainAttr')
@@ -45,12 +46,36 @@ class ReferenceBookCharClass(models.Model):
         return self.char_classname
     
 class ReferenceBookCharSubClass(models.Model):
+
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(max_length=3000, blank=True)
+    spellcaster = models.BooleanField(null=True, blank=True)
     subclass_main_stats = models.ManyToManyField('ClassMainAttrItem', through='SubclassMainAttr')
     subclass_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookSubClassSkill')
 
     main_class = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='subclass')
+
+class MainSpellbook(models.Model):
+    name = models.CharField(max_length=255)
+
+    book_id = models.OneToOneField(ReferenceBook, on_delete=models.CASCADE, related_name='main_spellbook')
+
+class ClassSpellbook(models.Model):
+    name = models.CharField(max_length=255)
+    spells = models.ManyToManyField('SpellItem', through='ClassSpellItem')
+    class_id = models.OneToOneField(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_spellbook')
+
+class SpellItem(models.Model):
+    name = models.CharField(max_length=255)
+    spell_type = models.CharField(max_length=255)
+    spell_level = models.IntegerField(null=True, blank=True)
+    spellbook_id = models.ForeignKey(MainSpellbook, on_delete=models.CASCADE, related_name='spell_item')
+
+class ClassSpellItem(models.Model):
+
+    spellbook_id = models.ForeignKey(ClassSpellbook, on_delete=models.CASCADE, related_name='class_spellbook')
+    spell_id = models.ForeignKey(SpellItem, on_delete=models.CASCADE, related_name='class_spell')
+
 
 class ReferenceBookMastery(models.Model):
     name = models.CharField(max_length=255)

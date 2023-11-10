@@ -1,0 +1,3610 @@
+[
+    {
+        "pk": 1,
+        "model": "api.MainSpellbook",
+        "fields": {
+            "book_name": "main_spellbook",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Брызги кислоты",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Волшебная рука",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дружба",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дубинка",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Защита от оружия",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Злая насмешка",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Искусство друидов",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Леденящее прикосновение",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Луч холода",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Луч холода",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Малая иллюзия",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Меткий удар",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Мистический заряд",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Огненный снаряд",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Пляшущие огоньки",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Починка",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Свет",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Священное пламя",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сообщение",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сопротивление",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сотворение пламени",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Терновый кнут",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Указание",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Уход за умирающим",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Фокусы",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Чудотворство",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Электрошок",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ядовитые брызги",
+            "spell_level": 0,
+            "spell_type": "charm",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Адское возмездие",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Безмолвный образ",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Благословение",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Божественное благоволение",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ведьмин снаряд",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Волна грома",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Волшебная стрела",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов на дуэль",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Героизм",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 39,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Гневная кара",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 40,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Град шипов",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 41,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Громовая кара",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 42,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Диссонирующий шёпот",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 43,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Доспех Агатиса",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 44,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Доспехи мага",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 45,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дружба с животными",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 46,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Жуткий смех Таши",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 47,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Защита от добра и зла",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 48,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Лечащее слово",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 49,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Лечение ран",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 50,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Луч болезни",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 51,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Маскировка",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 52,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Метка охотника",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 53,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Нанесение ран",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 54,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Невидимое письмо",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 55,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Невидимый слуга",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 56,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Обнаружение болезней и яда",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 57,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Обнаружение добра и зла",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 58,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Обнаружение магии",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 59,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Огонь фей",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 60,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Опознание",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 61,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Опутывание",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 62,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Опутывающий удар",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 63,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Очарование личности",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 64,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Очищение пищи и питья",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 65,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Падение пёрышком",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 66,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Палящая кара",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 67,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск фамильяра",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 68,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Понимание языков",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 69,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Порча",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 70,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поспешное отступление",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 71,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Приказ",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 72,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Прыжок",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 73,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Псевдожизнь",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 74,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Разговор с животными",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 75,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Руки Хадара",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 76,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сверкающие брызги",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 77,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сглаз",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 78,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сигнал тревоги",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 79,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Скольжение",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 80,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Скороход",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 81,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сотворение или уничтожение вод",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 82,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Тензеров парящий диск",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 83,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Туманное облако",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 84,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Убежище",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 85,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Усыпление",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 86,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Цветной шарик",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 87,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Чудо-ягоды",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 88,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Щит",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 88,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Щит веры",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 89,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Щит веры",
+            "spell_level": 1,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 90,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Бесследное передвижение",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 91,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Божественное оружие",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 92,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вечный огонь",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 93,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Видение невидимого",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 94,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Внушение",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 95,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Волшебный замок",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 96,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Воображаемая сила",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 97,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Гадание",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 98,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Глухота/слепота",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 99,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Горящий клинок",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 100,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дребезги",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 101,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дубовая кора",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 102,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Животные чувства",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 103,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Завеса стрел",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 104,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Защита от яда",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 105,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Клеймящая кара",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 106,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Корона безумия",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 107,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Левитация",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 108,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Лунный луч",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 109,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Луч слабости",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 110,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Магическое оружие",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 111,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Малое восстановление",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 112,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Малое восстановление",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 113,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Мельфова кислотная стрела",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 114,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Молебен лечения",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 115,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Невидимость",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 116,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Нетленные останки",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 117,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Нистулова ложная магия",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 118,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Облако кинжалов",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 119,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Область истины",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 120,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Обнаружение мыслей",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 121,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Открывание",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 122,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Отражения",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 123,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Охраняющая связь",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 124,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Палящий луч",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 125,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Паук",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 126,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Паутина",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 127,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подмога",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 128,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск животных или растений",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 129,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск ловушек",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 130,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск ловушек",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 131,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск предмета",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 132,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск скакуна",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 132,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Порыв ветра",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 133,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Почтовое животное",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 134,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Пылающий шар",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 135,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Размытый образ",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 136,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Речь златоуста",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 137,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Смена обличья",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 138,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Тёмное зрение",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 139,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Тишина",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 140,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Трюк с верёвкой",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 141,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Туманный шаг",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 142,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Тьма",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 142,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Увеличение/уменьшение",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 143,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Удержание личности",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 144,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Улучшение характеристики",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 145,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Умиротворение",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 146,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Шипы",
+            "spell_level": 2,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 147,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Аура живучести",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 148,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Возрождение",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 149,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Восставший труп",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 150,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов животных",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 151,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов заграждения",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 152,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Газообразная форма",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 153,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Гипнотический узор",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 154,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Голод Хадара",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 155,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дневной свет",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 156,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Духовные стражи",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 157,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Замедление",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 158,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Защита от энергии",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 159,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Зловонное облако",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 160,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Контрзаклинание",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 161,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Леомундова хижина",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 162,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Магический круг",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 163,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Мантия крестоносца",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 164,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Маяк надежды",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 165,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Мерцание",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 166,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Метель",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 167,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Множественное лечащее слово",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 168,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Молниевая стрела",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 169,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Молния",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 170,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Необнаружимость",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 171,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Образ",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 172,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Огненный шар",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 173,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ослепляющая кара",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 174,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Охранные руны",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 175,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подводное дыхание",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 176,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подсматривание",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 177,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Полёт",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 178,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Послание",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 179,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Призрачный скакун",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 180,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Призыв молнии",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 181,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Прикосновение вампира",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 182,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Прикосновение вампира",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 183,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Притворная смерть",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 184,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Проклятие",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 185,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Разговор с мёртвыми",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 186,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Разговор с растениями",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 187,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Рассеивание магии",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 188,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Рост растений",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 189,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Слияние с камнем",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 190,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Снятие проклятья",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 191,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сотворение пищи и воды",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 192,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Стена ветров",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 193,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Стихийное оружие",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 194,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ужас",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 195,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ускорение",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 196,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Хождение по воде",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 197,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Языки",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 198,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Языки",
+            "spell_level": 3,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 199,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Аура жизни",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 200,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Аура очищения",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 201,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Верный пёс Морденкайнена",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 202,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Власть над водами",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 203,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Воображаемый убийца",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 204,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов лесных обитателей",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 205,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов малых элементалей",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 206,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Высшая невидимость",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 207,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Гигантское насекомое",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 208,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Град",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 209,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Защита от смерти",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 210,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изгнание",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 211,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изготовление",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 212,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изменение формы камня",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 213,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Кабинет Морденкайнена",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 214,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Каменная кожа",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 215,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Леомундов потайной сундук",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 216,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Магический глаз",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 217,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Мираж",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 218,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Оглушающая кара",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 219,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Огненная стена",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 220,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Огненный щит",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 221,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Отилюков упругий шар",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 222,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Переносящая дверь",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 223,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подчинение зверя",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 224,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск существа",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 225,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Превращение",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 226,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Предсказание",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 227,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Принуждение",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 228,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Свобода перемещения",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 229,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Смятение",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 230,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Страж веры",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 231,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Усыхание",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 232,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Цепкая лоза",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 233,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Эвардовы чёрные щупальца",
+            "spell_level": 4,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 234,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Быстрый колчан",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 235,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вещий сон",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 236,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов залпа",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 237,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов элементаля",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 238,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Высшее восстановление",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 239,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Длань Бигби",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 240,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Древесный путь",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 241,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Заражение",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 242,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Знание легенд",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 243,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изгоняющая кара",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 244,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изменение памяти",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 245,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Каменная стена",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 246,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Конус холода",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 247,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Круг силы",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 248,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ментальная связь Рэри",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 249,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Множественное лечение ран",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 250,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Наблюдение",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 251,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Нашествие насекомых",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 252,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Небесный огонь",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 253,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Обет",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 254,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Облако смерти",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 255,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Общение",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 256,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Общение с природойе",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 257,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Оживление",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 258,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Оживление вещей",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 259,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Планарные узы",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 260,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подчинение личности",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 261,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Преграда жизни",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 262,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Притворство",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 263,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Пробуждение разума",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 264,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Разрушительная волна",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 265,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Рассеивание добра и зла",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 266,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Реинкарнация",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 267,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Связь с иным миром",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 268,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Святилище",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 269,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Силовая стена",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 270,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Создание прохода",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 271,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сотворение",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 272,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Телекинез",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 273,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Удержание чудовища",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 274,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Фальшивый двойник",
+            "spell_level": 5,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 275,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Волшебный сосуд",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 276,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов феи",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 277,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Движение почвы",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 278,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Дромиджево появление",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 279,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Заданная иллюзия",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 280,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Запрет",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 281,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Истинное зрение",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 282,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Круг смерти",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 283,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Ледяная стена",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 284,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Магические врата",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 285,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Множественное внушение",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 286,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Неудержимая пляска Отто",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 287,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Окаменение",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 288,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Отилюков ледяной шар",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 289,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Пир героев",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 290,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Планарный союзник",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 291,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Пляшущая молния",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 292,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поиск пути",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 293,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Поражение",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 294,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Предосторожность",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 295,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Путешествие через растения",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 296,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Разящее око",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 297,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Распад",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 298,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Слово возврата",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 299,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Солнечный луч",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 300,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сотворение нежити",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 301,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Стена клинков",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 302,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Стражи",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 303,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сфера неуязвимости",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 304,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Терновая стена",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 305,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Хождение по ветру",
+            "spell_level": 6,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 306,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Божественное слово",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 307,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Великолепный особняк Морденкайнена",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 308,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Воскрешение",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 309,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Вызов небожителя",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 310,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Знак",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 311,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изменение тяготения",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 312,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Изоляция",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 313,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Меч Морденкайнена",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 314,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Огненная буря",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 315,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Перст смерти",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 316,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подобие",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 317,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Проекция",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 318,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Радужные брызги",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 319,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Регенерация",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 320,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Таинственный мираж",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 321,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Телепортация",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 322,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Узилище",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 323,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Уход в иной мир",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 324,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Эфирность",
+            "spell_level": 7,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 325,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Антипатия/симпатия",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 326,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Аура святости",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 327,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Власть над погодой",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 328,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Воспламеняющаяся туча",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 329,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Двойник",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 330,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Демиплан",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 331,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Землетрясение",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 332,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Лабиринт",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 333,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Находчивость",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 334,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Подчинение чудовища",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 335,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Превращение в животных",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 336,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Преграда магии",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 337,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Слабоумие",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 338,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Слово силы: Оглушение",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 339,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Сокрытие разума",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 340,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Солнечный ожог",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 341,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Телепатия",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 342,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Цунами",
+            "spell_level": 8,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 343,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Врата",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 344,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Гроза гнева",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 345,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Заточение",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 346,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Исполнение желаний",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 347,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Истинное воскрешение",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 348,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Истинное превращение",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 349,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Метеоритный дождь",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 350,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Множественное полное исцеление",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 351,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Остановка времени",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 352,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Полное превращение",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 353,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Предвидение",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 354,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Проекция в астрал",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 355,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Радужная стена",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 356,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Слово силы: Исцеление",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 357,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Слово силы: Смерть",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+    {
+        "pk": 358,
+        "model": "api.SpellItem",
+        "fields": {
+            "name": "Смертный ужас",
+            "spell_level": 9,
+            "spell_type": "spell",
+            "spellbook_id": 1
+        }
+    },
+]

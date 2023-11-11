@@ -68,6 +68,7 @@ class ClassSpellbook(models.Model):
 class SpellItem(models.Model):
     name = models.CharField(max_length=255)
     spell_type = models.CharField(max_length=255)
+    school = models.CharField(max_length=255)
     spell_level = models.IntegerField(null=True, blank=True)
     spellbook_id = models.ForeignKey(MainSpellbook, on_delete=models.CASCADE, related_name='spell_item')
 

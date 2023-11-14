@@ -478,6 +478,8 @@ class ReferenceBookMasteryView(APIView):
 
         return Response(all_mastery)
     
+
+    
 class ReferenceBookLanguagesView(APIView):
 
     def get(self, request):

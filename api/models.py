@@ -67,15 +67,18 @@ class ClassSpellbook(models.Model):
 
 class SpellItem(models.Model):
     name = models.CharField(max_length=255)
+    spell_level = models.IntegerField(null=True)
     spell_type = models.CharField(max_length=255)
     school = models.CharField(max_length=255, null=True, blank=True)
     action_cost = models.IntegerField()
-    bonuce_action = models.BooleanField(null=True, blank=True)
-    duratation = models.CharField(max_length=255)
-    distance = models.IntegerField(null=True, blank=True)
-    concentration = models.BooleanField(null=True, blank=True)
-    spell_level = models.IntegerField(null=True, blank=True)
+    bonuce_action = models.BooleanField()
+    duratation = models.IntegerField(null=True,)
+    duratation_value = models.CharField(max_length=255)
+    spell_target = models.CharField(max_length=255)
+    distance = models.IntegerField(null=True,)
+    concentration = models.BooleanField()
     description = models.TextField(max_length=3000)
+
     spellbook_id = models.ForeignKey(MainSpellbook, on_delete=models.CASCADE, related_name='spell_item')
 
 class ClassSpellItem(models.Model):

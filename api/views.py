@@ -139,6 +139,7 @@ class ReferenceBookClassView(APIView):
                 'minHitsLvl': class_obj.min_hits_lvl,
                 'maxHitsLvl': class_obj.max_hits_lvl,
                 'hitsByLvl': class_obj.hits_by_lvl,
+                'spellcaster': class_obj.spellcaster,
                 'subclassAvalible': class_obj.subclass_avalible,
                 'classSaveThrows': [{'id': throw.save_throw_id.id, 'name': throw.save_throw_id.name} for throw in class_obj.class_save_throw.all()],
                 'description': class_obj.description
@@ -162,7 +163,6 @@ class DetailClassView(APIView):
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
-        
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,
@@ -170,6 +170,7 @@ class DetailClassView(APIView):
             'minHitsLvl': query_class.min_hits_lvl,
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
+            'spellcaster': query_class.spellcaster,
             'classAbilityPoints': query_class.ability_count,
             'classMainStats': [{'id': main_stat.class_attr_id.id, 'name': main_stat.class_attr_id.name }for main_stat in query_class.class_attr.all()],
             'classAbilities': [{'id': ability.ablility_id.id, 'name': ability.ablility_id.name} for ability in query_class.class_ability.all()],
@@ -181,6 +182,23 @@ class DetailClassView(APIView):
                     'description': class_skill.skill_id.skill_description,
                 } 
                 for class_skill in query_class.char_class_skills.all()
+            ],
+            'classSpells': [
+                {
+                    'id': spell_obj.id, 
+                    'name': spell_obj.name,
+                    'spellLevel': spell_obj.spell_level,
+                    'school': spell_obj.school,
+                    'actionCost': spell_obj.action_cost,
+                    'bonuceAction': spell_obj.bonuce_action,
+                    'duratation': spell_obj. duratation,
+                    'duratationValue': spell_obj.duratation_value,
+                    'spellTarget': spell_obj.spell_target,
+                    'spellDistance': spell_obj.distance,
+                    'concentrationTime': spell_obj.concentration,
+                    'description': spell_obj.description
+                } 
+                for spell_obj in query_class.class_spellbook.spells.all()
             ],
             'classSaveThrows': [{'id': throw.save_throw_id.id, 'name': throw.save_throw_id.name} for throw in query_class.class_save_throw.all()],
             'classWeaponMastery': [{'id': class_obj.mastery_id.id, 'name': class_obj.mastery_id.name} for class_obj in query_class.weapon_mastery.all()],
@@ -377,6 +395,20 @@ class DetailBackgroundView(APIView):
         ]
 
         return Response(clear_data)
+    
+class ReferenceBookSpellsView(APIView):
+
+    def get(self, request):
+        all_spells = get_object_or_404(ReferenceBook, id=1).main_spellbook.spell_item.all()
+
+        return Response(all_spells.values())
+    
+class DetailSpellView(APIView):
+
+    def get(self, request, spell_id):
+        spell = get_object_or_404(ReferenceBook, id=1).main_spellbook.spell_item.filter(id=spell_id)
+        
+        return Response(spell.values())
     
 class ReferenceBookAbilitesView(APIView):
 

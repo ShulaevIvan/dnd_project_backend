@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "api.MainSpellbook",
         "fields": {
-            "name": "main_spellbook",
+            "name": "bard_spellbook",
             "book_id": 1
         }
     },

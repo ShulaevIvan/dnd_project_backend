@@ -2651,7 +2651,7 @@
         }
     },
     {
-        "pk": 359,
+        "pk": 360,
         "model": "api.SpellItem",
         "fields": {
             "name": "Тьма",

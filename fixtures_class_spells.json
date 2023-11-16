@@ -5158,6 +5158,1831 @@
             "spell_id": 358,
             "spellbook_id": 7
         }
+    },
+    {
+        "pk": 629,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 32,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 630,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 33,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 631,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 37,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 632,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 38,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 633,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 39,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 634,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 41,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 635,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 47,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 636,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 48,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 637,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 56,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 638,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 57,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 639,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 58,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 640,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 64,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 641,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 66,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 642,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 71,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 643,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 88,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 644,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 104,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 645,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 105,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 646,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 110,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 647,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 111,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 648,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 114,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 649,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 116,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 650,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 119,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 651,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 123,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 652,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 127,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 653,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 131,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 654,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 132,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 655,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 147,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 656,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 148,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 657,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 156,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 658,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 162,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 659,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 163,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 660,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 173,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 661,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 187,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 662,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 190,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 663,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 191,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 664,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 193,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 665,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 199,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 666,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 200,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 667,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 209,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 668,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 210,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 669,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 218,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 670,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 224,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 671,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 243,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 672,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 247,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 673,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 253,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 674,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 257,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 675,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 264,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 676,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 265,
+            "spellbook_id": 9
+        }
+    },
+    {
+        "pk": 677,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 40,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 678,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 45,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 679,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 49,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 680,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 52,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 681,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 56,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 682,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 58,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 683,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 61,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 685,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 66,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 686,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 72,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 687,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 74,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 688,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 78,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 689,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 80,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 690,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 83,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 691,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 87,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 692,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 90,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 693,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 101,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 694,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 102,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 695,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 103,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 696,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 104,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 697,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 110,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 698,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 111,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 699,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 127,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 700,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 128,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 701,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 129,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 702,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 131,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 703,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 359,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 704,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 133,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 705,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 138,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 706,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 139,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 707,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 144,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 708,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 146,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 707,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 148,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 708,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 150,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 709,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 151,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 710,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 155,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 711,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 158,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 712,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 168,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 713,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 175,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 714,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 186,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 715,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 188,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 716,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 189,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 718,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 204,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 719,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 214,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 720,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 223,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 721,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 224,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 722,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 228,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 723,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 232,
+            "spellbook_id": 11
+        }
+    },
+    {
+        "pk": 724,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 1,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 725,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 2,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 726,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 3,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 727,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 5,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 728,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 8,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 729,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 9,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 730,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 10,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 731,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 12,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 732,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 14,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 733,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 15,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 734,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 16,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 735,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 17,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 736,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 19,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 737,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 25,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 738,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 27,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 739,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 29,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 740,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 31,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 741,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 34,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 742,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 35,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 743,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 36,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 744,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 44,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 745,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 50,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 746,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 51,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 747,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 58,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 748,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 63,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 749,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 65,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 750,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 68,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 751,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 70,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 752,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 72,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 753,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 73,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 754,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 76,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 755,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 79,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 756,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 83,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 757,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 85,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 758,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 86,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 759,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 88,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 760,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 93,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 761,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 94,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 762,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 96,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 763,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 98,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 764,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 99,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 765,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 100,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 766,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 106,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 767,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 107,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 768,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 110,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 769,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 115,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 770,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 118,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 771,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 120,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 772,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 121,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 773,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 122,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 774,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 124,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 775,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 125,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 776,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 126,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 777,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 359,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 778,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 134,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 779,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 135,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 780,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 137,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 781,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 138,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 782,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 137,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 783,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 360,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 784,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 142,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 785,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 143,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 786,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 144,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 787,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 152,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 788,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 153,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 789,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 155,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 790,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 157,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 791,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 158,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 792,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 159,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 793,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 160,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 794,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 165,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 795,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 166,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 796,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 169,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 797,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 171,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 798,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 172,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 799,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 175,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 800,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 176,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 801,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 177,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 802,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 181,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 803,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 187,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 804,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 194,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 805,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 195,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 806,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 196,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 807,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 197,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 808,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 206,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 809,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 208,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 810,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 210,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 811,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 214,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 812,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 219,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 813,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 220,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 814,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 222,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 815,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 223,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 816,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 225,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 817,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 229,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 818,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 231,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 819,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 239,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 820,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 245,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 821,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 246,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 822,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 251,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 823,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 254,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 824,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 258,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 825,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 260,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 826,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 271,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 827,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 272,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 828,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 273,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 829,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 277,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 830,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 281,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 831,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 282,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 832,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 284,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 833,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 285,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 834,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 287,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 835,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 288,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 836,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 291,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 837,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 296,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 838,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 297,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 839,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 299,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 840,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 303,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 841,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 311,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 842,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 314,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 843,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 321,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 844,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 323,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 845,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 324,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 846,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 328,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 847,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 330,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 848,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 331,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 849,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 334,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 850,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 338,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 851,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 340,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 852,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 343,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 853,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 346,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 854,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 349,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 855,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 351,
+            "spellbook_id": 12
+        }
+    },
+    {
+        "pk": 856,
+        "model": "api.ClassSpellItem",
+        "fields": {
+            "spell_id": 357,
+            "spellbook_id": 12
+        }
     }
+
 
 ]

@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
-from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery
+from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery, ClassSpellbook
 
 from itertools import chain
 from rest_framework.response import Response
@@ -399,7 +399,17 @@ class DetailBackgroundView(APIView):
 class ReferenceBookSpellsView(APIView):
 
     def get(self, request):
-        all_spells = get_object_or_404(ReferenceBook, id=1).main_spellbook.spell_item.all()
+        spell_lvl = request.GET.get('level')
+        char_class_id = request.GET.get('class')
+
+        if spell_lvl:
+            all_spells = get_object_or_404(ReferenceBook, id=1).main_spellbook.spell_item.filter(spell_level=spell_lvl)
+        elif char_class_id and spell_lvl:
+            all_spells = get_object_or_404(ClassSpellbook, id=char_class_id).spells.filter(spell_level=spell_lvl)
+        elif char_class_id:
+            all_spells = get_object_or_404(ClassSpellbook, id=char_class_id).spells.all()
+        else:
+            all_spells = get_object_or_404(ReferenceBook, id=1).main_spellbook.spell_item.all()
 
         return Response(all_spells.values())
     

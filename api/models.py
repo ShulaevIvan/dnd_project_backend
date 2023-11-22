@@ -28,6 +28,7 @@ class ReferenceBookCharClass(models.Model):
     description = models.TextField(max_length=3000, blank=True, null=True)
     ability_count = models.IntegerField(null=True, blank=True)
     spellcaster = models.BooleanField(null=True, blank=True)
+    spell_сells = models.ManyToManyField('SpellCell', through='ClassSpellCell')
     class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility')
     class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')
     class_main_stats = models.ManyToManyField('ClassMainAttrItem', through='ClassMainAttr')
@@ -86,6 +87,17 @@ class ClassSpellItem(models.Model):
     spellbook_id = models.ForeignKey(ClassSpellbook, on_delete=models.CASCADE, related_name='class_spellbook')
     spell_id = models.ForeignKey(SpellItem, on_delete=models.CASCADE, related_name='class_spell')
 
+class SpellCell(models.Model):
+    spell_level = models.IntegerField()
+
+
+class ClassSpellCell(models.Model):
+    max_spells = models.IntegerField()
+    spell_cells_avalible = models.IntegerField()
+    level_required = models.IntegerField()
+    charm_spells = models.IntegerField()
+    cell_id = models.ForeignKey(SpellCell, on_delete=models.CASCADE, related_name='spell_cell')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_cell_spell')
 
 class ReferenceBookMastery(models.Model):
     name = models.CharField(max_length=255)

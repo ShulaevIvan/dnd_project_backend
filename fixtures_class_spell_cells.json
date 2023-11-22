@@ -1,0 +1,305 @@
+[
+    {
+        "pk": 1,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.SpellCell",
+        "fields": {
+            "spell_level": 9
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 4,
+            "spell_cells_avalible": 2,
+            "charm_spells": 2,
+            "level_required": 1,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 3,
+            "spell_cells_avalible": 5,
+            "charm_spells": 2,
+            "level_required": 2,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 6,
+            "spell_cells_avalible": 4,
+            "charm_spells": 2,
+            "level_required": 3,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 7,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 4,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 8,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 5,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 9,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 6,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 10,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 7,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 11,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 8,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 12,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 9,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 14,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 10,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 15,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 11,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 15,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 12,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 16,
+            "spell_cells_avalible": 4,
+            "charm_spells": 3,
+            "level_required": 13,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 18,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 14,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 19,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 15,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 19,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 16,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 20,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 17,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 19,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 22,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 18,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 20,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 22,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 19,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "api.ClassSpellCell",
+        "fields": {
+            "max_spells": 22,
+            "spell_cells_avalible": 4,
+            "charm_spells": 4,
+            "level_required": 20,
+            "cell_id": 1,
+            "class_id": 1
+        }
+    }
+]

@@ -163,6 +163,7 @@ class DetailClassView(APIView):
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
+        
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,
@@ -171,6 +172,16 @@ class DetailClassView(APIView):
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
             'spellcaster': query_class.spellcaster,
+            'spellcells': [
+                {
+                    'id': cell_obj.id,
+                    'charLevelRequired': cell_obj.level_required,
+                    'spellLevel': cell_obj.cell_id.spell_level,
+                    'maxSpellsAvalible': cell_obj.max_spells,
+                    'charmSpellAvalible': cell_obj.charm_spells,
+                    'maxSpellCells':  cell_obj.spell_cells_avalible, 
+                } for cell_obj in query_class.class_cell_spell.all()
+            ],
             'classAbilityPoints': query_class.ability_count,
             'classMainStats': [{'id': main_stat.class_attr_id.id, 'name': main_stat.class_attr_id.name }for main_stat in query_class.class_attr.all()],
             'classAbilities': [{'id': ability.ablility_id.id, 'name': ability.ablility_id.name} for ability in query_class.class_ability.all()],

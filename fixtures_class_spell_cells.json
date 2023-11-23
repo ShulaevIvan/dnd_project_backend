@@ -1,305 +1,2464 @@
 [
     {
         "pk": 1,
-        "model": "api.SpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "spell_level": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 2
-        }
-    },
-    {
-        "pk": 3,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 3
-        }
-    },
-    {
-        "pk": 4,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 4
-        }
-    },
-    {
-        "pk": 5,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 5
-        }
-    },
-    {
-        "pk": 6,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 6
-        }
-    },
-    {
-        "pk": 7,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 7
-        }
-    },
-    {
-        "pk": 8,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 8
-        }
-    },
-    {
-        "pk": 9,
-        "model": "api.SpellCell",
-        "fields": {
-            "spell_level": 9
-        }
-    },
-    {
-        "pk": 1,
-        "model": "api.ClassSpellCell",
-        "fields": {
-            "max_spells": 4,
-            "spell_cells_avalible": 2,
-            "charm_spells": 2,
             "level_required": 1,
-            "cell_id": 1,
+            "modifer": 2,
+            "max_spells": 4,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 2,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 3,
-            "spell_cells_avalible": 5,
-            "charm_spells": 2,
             "level_required": 2,
-            "cell_id": 1,
+            "modifer": 2,
+            "max_spells": 5,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 3,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 6,
-            "spell_cells_avalible": 4,
-            "charm_spells": 2,
             "level_required": 3,
-            "cell_id": 1,
+            "modifer": 2,
+            "max_spells": 6,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 4,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 7,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 4,
-            "cell_id": 1,
+            "modifer": 3,
+            "max_spells": 7,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 5,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 8,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 5,
-            "cell_id": 1,
+            "modifer": 3,
+            "max_spells": 8,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 6,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 9,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 6,
-            "cell_id": 1,
+            "modifer": 3,
+            "max_spells": 9,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 7,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 10,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 7,
-            "cell_id": 1,
+            "modifer": 3,
+            "max_spells": 10,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 8,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 11,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 8,
-            "cell_id": 1,
+            "modifer": 3,
+            "max_spells": 11,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 9,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 12,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 9,
-            "cell_id": 1,
+            "modifer": 4,
+            "max_spells": 12,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 10,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 14,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 10,
-            "cell_id": 1,
+            "modifer": 4,
+            "max_spells": 14,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 11,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 15,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 11,
-            "cell_id": 1,
+            "modifer": 4,
+            "max_spells": 15,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 12,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 15,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 12,
-            "cell_id": 1,
+            "modifer": 4,
+            "max_spells": 15,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 13,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 16,
-            "spell_cells_avalible": 4,
-            "charm_spells": 3,
             "level_required": 13,
-            "cell_id": 1,
+            "modifer": 5,
+            "max_spells": 16,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 14,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 18,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
             "level_required": 14,
-            "cell_id": 1,
+            "modifer": 5,
+            "max_spells": 18,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 15,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 19,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
             "level_required": 15,
-            "cell_id": 1,
+            "modifer": 5,
+            "max_spells": 19,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
             "class_id": 1
         }
     },
     {
         "pk": 16,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 19,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
             "level_required": 16,
-            "cell_id": 1,
+            "modifer": 5,
+            "max_spells": 19,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "max_spells": 20,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
             "class_id": 1
         }
     },
     {
         "pk": 18,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 20,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
-            "level_required": 17,
-            "cell_id": 1,
+            "level_required": 18,
+            "modifer": 6,
+            "max_spells": 22,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
             "class_id": 1
         }
     },
     {
         "pk": 19,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
+            "level_required": 19,
+            "modifer": 6,
             "max_spells": 22,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
-            "level_required": 18,
-            "cell_id": 1,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
             "class_id": 1
         }
     },
     {
         "pk": 20,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
+            "level_required": 20,
+            "modifer": 6,
             "max_spells": 22,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
-            "level_required": 19,
-            "cell_id": 1,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 2,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
             "class_id": 1
         }
     },
     {
         "pk": 21,
-        "model": "api.ClassSpellCell",
+        "model": "api.CellPattern",
         "fields": {
-            "max_spells": 22,
-            "spell_cells_avalible": 4,
-            "charm_spells": 4,
+            "level_required": 1,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 22,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 23,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 24,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 25,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 27,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 7,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 28,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 29,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 4,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 30,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 31,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 32,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 33,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 34,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 35,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 36,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 37,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 38,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 39,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 40,
+        "model": "api.CellPattern",
+        "fields": {
             "level_required": 20,
-            "cell_id": 1,
-            "class_id": 1
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 2,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 4
+        }
+    },
+    {
+        "pk": 41,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 1,
+            "modifer": 2,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 42,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 43,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 44,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 45,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 46,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 47,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 7,
+            "modifer": 3,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 48,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 49,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 3,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 50,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 51,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 52,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 53,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 54,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 55,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 56,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 57,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 58,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 59,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 60,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 20,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 2,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 5
+        }
+    },
+    {
+        "pk": 61,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 1,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 62,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 63,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 64,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 65,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 66,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 67,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 7,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 68,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 69,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 4,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 70,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 71,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 72,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 73,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 74,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 75,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 76,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 77,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 78,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 78,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 80,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 20,
+            "modifer": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 2,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 6
+        }
+    },
+    {
+        "pk": 81,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 1,
+            "modifer": 2,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 82,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 83,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 84,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 85,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 86,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 87,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 7,
+            "modifer": 3,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 88,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 89,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 90,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 91,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 92,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 93,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 94,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 95,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 96,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 97,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 98,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 99,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 100,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 20,
+            "modifer": 6,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 9
+        }
+    },
+    {
+        "pk": 100,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 1,
+            "modifer": 2,
+            "max_spells": 0,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 101,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "max_spells": 2,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 103,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "max_spells": 3,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 104,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "max_spells": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 105,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "max_spells": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 106,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "max_spells": 4,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 107,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "max_spells": 5,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 108,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "max_spells": 5,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 109,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 4,
+            "max_spells": 6,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 110,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "max_spells": 6,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 111,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "max_spells": 7,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 112,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "max_spells": 7,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 113,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "max_spells": 8,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 114,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "max_spells": 8,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 114,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "max_spells": 8,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 115,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "max_spells": 9,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 116,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "max_spells": 9,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 117,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "max_spells": 10,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 118,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "max_spells": 10,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 119,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "max_spells": 11,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
+        }
+    },
+    {
+        "pk": 120,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 20,
+            "modifer": 6,
+            "max_spells": 11,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 11
         }
     }
+
 ]

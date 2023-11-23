@@ -28,7 +28,7 @@ class ReferenceBookCharClass(models.Model):
     description = models.TextField(max_length=3000, blank=True, null=True)
     ability_count = models.IntegerField(null=True, blank=True)
     spellcaster = models.BooleanField(null=True, blank=True)
-    # spell_сells = models.ManyToManyField('SpellCell', through='ClassSpellCell')
+    spell_сells = models.ManyToManyField('SpellCell', through='ClassSpellCell')
     class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility')
     class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')
     class_main_stats = models.ManyToManyField('ClassMainAttrItem', through='ClassMainAttr')
@@ -87,24 +87,17 @@ class ClassSpellItem(models.Model):
     spellbook_id = models.ForeignKey(ClassSpellbook, on_delete=models.CASCADE, related_name='class_spellbook')
     spell_id = models.ForeignKey(SpellItem, on_delete=models.CASCADE, related_name='class_spell')
 
-class CellPattern(models.Model):
+class SpellCell(models.Model):
+    spell_level = models.IntegerField()
+
+
+class ClassSpellCell(models.Model):
+    max_spells = models.IntegerField()
+    spell_cells_avalible = models.IntegerField()
     level_required = models.IntegerField()
-    modifer = models.IntegerField()
-    max_spells = models.IntegerField(null=True, blank=True)
-    max_special_spells = models.IntegerField(null=True, blank=True)
-    level_0_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_1_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_2_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_3_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_4_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_5_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_6_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_7_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_8_cells_qnt = models.IntegerField(null=True, blank=True)
-    level_9_cells_qnt = models.IntegerField(null=True, blank=True)
-
-    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='cells_pattern')
-
+    charm_spells = models.IntegerField()
+    cell_id = models.ForeignKey(SpellCell, on_delete=models.CASCADE, related_name='spell_cell')
+    class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='class_cell_spell')
 
 class ReferenceBookMastery(models.Model):
     name = models.CharField(max_length=255)

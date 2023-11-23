@@ -163,7 +163,7 @@ class DetailClassView(APIView):
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
-
+        
         clear_data = {
             'id': query_class.id,
             'className': query_class.char_classname,
@@ -172,19 +172,15 @@ class DetailClassView(APIView):
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
             'spellcaster': query_class.spellcaster,
-            'spellCells': [{
-                'level_required': cellObj.level_required,
-                'cellLvl0': cellObj.level_0_cells_qnt,
-                'cellLvl1': cellObj.level_1_cells_qnt,
-                'cellLvl2': cellObj.level_2_cells_qnt,
-                'cellLvl3': cellObj.level_3_cells_qnt,
-                'cellLvl4': cellObj.level_4_cells_qnt,
-                'cellLvl5': cellObj.level_5_cells_qnt,
-                'cellLvl6': cellObj.level_6_cells_qnt,
-                'cellLvl7': cellObj.level_7_cells_qnt,
-                'cellLvl8': cellObj.level_8_cells_qnt,
-                'cellLvl9': cellObj.level_9_cells_qnt,
-            } for cellObj in query_class.cells_pattern.all()],
+            'spellcells': [
+                {
+                    'id': cell_obj.id,
+                    'charLevelRequired': cell_obj.level_required,
+                    'spellLevel': cell_obj.cell_id.spell_level,
+                    'maxSpellsAvalible': cell_obj.max_spells,
+                    'maxSpellCells':  cell_obj.spell_cells_avalible, 
+                } for cell_obj in query_class.class_cell_spell.all()
+            ],
             'classAbilityPoints': query_class.ability_count,
             'classMainStats': [{'id': main_stat.class_attr_id.id, 'name': main_stat.class_attr_id.name }for main_stat in query_class.class_attr.all()],
             'classAbilities': [{'id': ability.ablility_id.id, 'name': ability.ablility_id.name} for ability in query_class.class_ability.all()],

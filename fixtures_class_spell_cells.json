@@ -2459,6 +2459,889 @@
 
             "class_id": 11
         }
+    },
+    {
+        "pk": 121,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 1,
+            "modifer": 2,
+            "max_spells": 2,
+            "sorcery_points":0,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 122,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "max_spells": 3,
+            "sorcery_points": 2,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 3,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 123,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "max_spells": 4,
+            "sorcery_points": 3,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 124,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "max_spells": 5,
+            "sorcery_points": 4,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 125,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "max_spells": 6,
+            "sorcery_points": 5,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 126,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "max_spells": 7,
+            "sorcery_points": 6,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 127,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 7,
+            "modifer": 3,
+            "max_spells": 8,
+            "sorcery_points": 7,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 1,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 128,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "max_spells": 9,
+            "sorcery_points": 8,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 129,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 4,
+            "max_spells": 10,
+            "sorcery_points": 9,
+            "level_0_cells_qnt": 5,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 1,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 130,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "max_spells": 11,
+            "sorcery_points": 10,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 131,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "max_spells": 12,
+            "sorcery_points": 11,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 132,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "max_spells": 12,
+            "sorcery_points": 12,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 133,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "max_spells": 13,
+            "sorcery_points": 13,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 134,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "max_spells": 13,
+            "sorcery_points": 14,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 135,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "max_spells": 14,
+            "sorcery_points": 15,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 136,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "max_spells": 14,
+            "sorcery_points": 16,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 137,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 6,
+            "max_spells": 15,
+            "sorcery_points": 17,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 138,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "max_spells": 15,
+            "sorcery_points": 18,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 1,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 139,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "max_spells": 15,
+            "sorcery_points": 19,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 1,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 140,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 20,
+            "modifer": 6,
+            "max_spells": 15,
+            "sorcery_points": 20,
+            "level_0_cells_qnt": 6,
+            "level_1_cells_qnt": 4,
+            "level_2_cells_qnt": 3,
+            "level_3_cells_qnt": 3,
+            "level_4_cells_qnt": 3,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 2,
+            "level_7_cells_qnt": 2,
+            "level_8_cells_qnt": 1,
+            "level_9_cells_qnt": 1,
+
+            "class_id": 12
+        }
+    },
+    {
+        "pk": 141,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 1,
+            "modifer": 2,
+            "max_spells": 2,
+            "spell_invocation": 0,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 1,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 142,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 2,
+            "modifer": 2,
+            "max_spells": 3,
+            "spell_invocation": 2,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 2,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 143,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 3,
+            "modifer": 2,
+            "max_spells": 4,
+            "spell_invocation": 2,
+            "level_0_cells_qnt": 0,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    }, 
+    {
+        "pk": 144,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 4,
+            "modifer": 2,
+            "max_spells": 5,
+            "spell_invocation": 2,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 2,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 145,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 5,
+            "modifer": 3,
+            "max_spells": 6,
+            "spell_invocation": 3,
+            "level_0_cells_qnt": 2,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 146,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 6,
+            "modifer": 3,
+            "max_spells": 7,
+            "spell_invocation": 4,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 2,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 147,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 7,
+            "modifer": 3,
+            "max_spells": 8,
+            "spell_invocation": 4,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 148,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 8,
+            "modifer": 3,
+            "max_spells": 9,
+            "spell_invocation": 4,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 2,
+            "level_5_cells_qnt": 0,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 149,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 9,
+            "modifer": 4,
+            "max_spells": 10,
+            "spell_invocation": 5,
+            "level_0_cells_qnt": 3,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 150,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 10,
+            "modifer": 4,
+            "max_spells": 10,
+            "spell_invocation": 5,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 2,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 151,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 11,
+            "modifer": 4,
+            "max_spells": 11,
+            "spell_invocation": 5,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 152,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 12,
+            "modifer": 4,
+            "max_spells": 11,
+            "spell_invocation": 6,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 153,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 13,
+            "modifer": 5,
+            "max_spells": 12,
+            "spell_invocation": 6,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 154,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 14,
+            "modifer": 5,
+            "max_spells": 12,
+            "spell_invocation": 6,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 155,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 15,
+            "modifer": 5,
+            "max_spells": 13,
+            "spell_invocation": 7,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 156,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 16,
+            "modifer": 5,
+            "max_spells": 13,
+            "spell_invocation": 7,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 3,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 157,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 17,
+            "modifer": 5,
+            "max_spells": 14,
+            "spell_invocation": 7,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 4,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 158,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 18,
+            "modifer": 6,
+            "max_spells": 14,
+            "spell_invocation": 8,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 4,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 159,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 19,
+            "modifer": 6,
+            "max_spells": 15,
+            "spell_invocation": 8,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 4,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
+    },
+    {
+        "pk": 160,
+        "model": "api.CellPattern",
+        "fields": {
+            "level_required": 20,
+            "modifer": 6,
+            "max_spells": 15,
+            "spell_invocation": 8,
+            "level_0_cells_qnt": 4,
+            "level_1_cells_qnt": 0,
+            "level_2_cells_qnt": 0,
+            "level_3_cells_qnt": 0,
+            "level_4_cells_qnt": 0,
+            "level_5_cells_qnt": 4,
+            "level_6_cells_qnt": 0,
+            "level_7_cells_qnt": 0,
+            "level_8_cells_qnt": 0,
+            "level_9_cells_qnt": 0,
+
+            "class_id": 7
+        }
     }
+
+
+
 
 ]

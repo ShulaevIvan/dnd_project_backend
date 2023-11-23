@@ -91,6 +91,7 @@ class CellPattern(models.Model):
     level_required = models.IntegerField()
     modifer = models.IntegerField()
     max_spells = models.IntegerField(null=True, blank=True)
+    sorcery_points = models.IntegerField(null=True, blank=True)
     max_special_spells = models.IntegerField(null=True, blank=True)
     level_0_cells_qnt = models.IntegerField(null=True, blank=True)
     level_1_cells_qnt = models.IntegerField(null=True, blank=True)

@@ -162,7 +162,9 @@ class DetailClassView(APIView):
 
     def get(self, reuqest, class_id):
         subclass_req = reuqest.GET.get('subclass')
+        spells_cells_req = reuqest.GET.get('lvl')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
+        print(spells_cells_req)
 
         clear_data = {
             'id': query_class.id,
@@ -172,6 +174,26 @@ class DetailClassView(APIView):
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
             'spellcaster': query_class.spellcaster,
+            'spellCells': [
+                {
+                    'id': cell_pattern.id,
+                    'levelRequired': cell_pattern.level_required,
+                    'modifer': cell_pattern.modifer,
+                    'maxSpells': cell_pattern.max_spells,
+                    'maxSpecialSpells': cell_pattern.max_special_spells,
+                    'sorceryPoints': cell_pattern.sorcery_points,
+                    'spellInvocation': cell_pattern.spell_invocation,
+                    'cellsLevel0': cell_pattern.level_0_cells_qnt,
+                    'cellsLevel1': cell_pattern.level_1_cells_qnt,
+                    'cellsLevel2': cell_pattern.level_2_cells_qnt,
+                    'cellsLevel3': cell_pattern.level_3_cells_qnt,
+                    'cellsLevel4': cell_pattern.level_4_cells_qnt,
+                    'cellsLevel5': cell_pattern.level_5_cells_qnt,
+                    'cellsLevel6': cell_pattern.level_6_cells_qnt,
+                    'cellsLevel7': cell_pattern.level_7_cells_qnt,
+                    'cellsLevel8': cell_pattern.level_8_cells_qnt,
+                    'cellsLevel9': cell_pattern.level_9_cells_qnt,
+                } for cell_pattern in query_class.cells_pattern.all()],
             'classAbilityPoints': query_class.ability_count,
             'classMainStats': [{'id': main_stat.class_attr_id.id, 'name': main_stat.class_attr_id.name }for main_stat in query_class.class_attr.all()],
             'classAbilities': [{'id': ability.ablility_id.id, 'name': ability.ablility_id.name} for ability in query_class.class_ability.all()],

@@ -425,6 +425,7 @@
         "fields": {
             "level_required": 1,
             "modifer": 2,
+            "max_spells": 6,
             "level_0_cells_qnt": 3,
             "level_1_cells_qnt": 2,
             "level_2_cells_qnt": 0,
@@ -445,6 +446,7 @@
         "fields": {
             "level_required": 2,
             "modifer": 2,
+            "max_spells": 8,
             "level_0_cells_qnt": 3,
             "level_1_cells_qnt": 3,
             "level_2_cells_qnt": 0,
@@ -465,6 +467,7 @@
         "fields": {
             "level_required": 3,
             "modifer": 2,
+            "max_spells": 10,
             "level_0_cells_qnt": 3,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 2,
@@ -485,6 +488,7 @@
         "fields": {
             "level_required": 4,
             "modifer": 2,
+            "max_spells": 12,
             "level_0_cells_qnt": 4,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -505,6 +509,7 @@
         "fields": {
             "level_required": 5,
             "modifer": 3,
+            "max_spells": 14,
             "level_0_cells_qnt": 4,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -525,6 +530,7 @@
         "fields": {
             "level_required": 6,
             "modifer": 3,
+            "max_spells": 16,
             "level_0_cells_qnt": 4,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -545,6 +551,7 @@
         "fields": {
             "level_required": 7,
             "modifer": 3,
+            "max_spells": 18,
             "level_0_cells_qnt": 4,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -565,6 +572,7 @@
         "fields": {
             "level_required": 8,
             "modifer": 3,
+            "max_spells": 20,
             "level_0_cells_qnt": 4,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -585,6 +593,7 @@
         "fields": {
             "level_required": 9,
             "modifer": 4,
+            "max_spells": 22,
             "level_0_cells_qnt": 4,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -605,6 +614,7 @@
         "fields": {
             "level_required": 10,
             "modifer": 4,
+            "max_spells": 24,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -625,6 +635,7 @@
         "fields": {
             "level_required": 11,
             "modifer": 4,
+            "max_spells": 26,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -645,6 +656,7 @@
         "fields": {
             "level_required": 12,
             "modifer": 4,
+            "max_spells": 28,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -665,6 +677,7 @@
         "fields": {
             "level_required": 13,
             "modifer": 5,
+            "max_spells": 30,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -685,6 +698,7 @@
         "fields": {
             "level_required": 14,
             "modifer": 5,
+            "max_spells": 32,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -705,6 +719,7 @@
         "fields": {
             "level_required": 15,
             "modifer": 5,
+            "max_spells": 34,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -725,6 +740,7 @@
         "fields": {
             "level_required": 16,
             "modifer": 5,
+            "max_spells": 36,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -745,6 +761,7 @@
         "fields": {
             "level_required": 17,
             "modifer": 6,
+            "max_spells": 38,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -765,6 +782,7 @@
         "fields": {
             "level_required": 18,
             "modifer": 6,
+            "max_spells": 40,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -785,6 +803,7 @@
         "fields": {
             "level_required": 19,
             "modifer": 6,
+            "max_spells": 42,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,
@@ -805,6 +824,7 @@
         "fields": {
             "level_required": 20,
             "modifer": 6,
+            "max_spells": 44,
             "level_0_cells_qnt": 5,
             "level_1_cells_qnt": 4,
             "level_2_cells_qnt": 3,

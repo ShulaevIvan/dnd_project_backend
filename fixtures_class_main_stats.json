@@ -170,7 +170,7 @@
         "pk": 15,
         "model": "api.ClassMainAttr",
         "fields": {
-            "class_attr_id": 2,
+            "class_attr_id": 3,
             "class_id": 7
         }
     },
@@ -178,7 +178,7 @@
         "pk": 16,
         "model": "api.ClassMainAttr",
         "fields": {
-            "class_attr_id": 3,
+            "class_attr_id": 6,
             "class_id": 7
         }
     },

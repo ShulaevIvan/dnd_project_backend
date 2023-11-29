@@ -174,6 +174,7 @@ class DetailClassView(APIView):
             'maxHitsLvl': query_class.max_hits_lvl,
             'hitsByLvl': query_class.hits_by_lvl,
             'spellcaster': query_class.spellcaster,
+            'spellcasterMainStat': query_class.spellcaster_main_stat,
             'spellCells': [
                 {
                     'id': cell_pattern.id,

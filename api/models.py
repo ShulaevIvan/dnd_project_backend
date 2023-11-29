@@ -28,7 +28,7 @@ class ReferenceBookCharClass(models.Model):
     description = models.TextField(max_length=3000, blank=True, null=True)
     ability_count = models.IntegerField(null=True, blank=True)
     spellcaster = models.BooleanField(null=True, blank=True)
-    spellCasterMainStat = models.CharField(max_length=3, blank=True, null=True)
+    spellcaster_main_stat = models.CharField(max_length=3, blank=True, null=True)
     # spell_сells = models.ManyToManyField('SpellCell', through='ClassSpellCell')
     class_abilities = models.ManyToManyField('ReferenceBookAbilityItem', through='ReferenceBookClassAbility')
     class_skills = models.ManyToManyField('ReferenceBookItemClassSkill', through='ReferenceBookClassSkill')

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from users.views import UserCharacterView
 from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
 from api.views import ReferenceBookView, ReferenceBookClassView, DetailClassView, ReferenceBookRaceView, DetailRaceView, \
 CharacterBackgroundView, DetailBackgroundView, CalculateStatsView, InstrumentsView, ReferenceBookAbilitesView,ReferenceBookMasteryView, \
@@ -40,4 +41,5 @@ urlpatterns = [
     path('api/reference_book/background/<int:background_id>/', DetailBackgroundView.as_view()),
     path('api/instruments/', InstrumentsView.as_view()),
     path('api/calculator/stats/', CalculateStatsView.as_view()),
+    path('api/users/<int:user_id>/', UserCharacterView.as_view()),
 ]

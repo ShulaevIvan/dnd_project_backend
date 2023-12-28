@@ -29,6 +29,7 @@ class UserRegisterView(APIView):
             'password': request.data.get('userPassword'),
             'email': request.data.get('email'),
         }
+        print(register_data)
 
         serializer = RegisterDndUser(data=register_data)
         if serializer.is_valid():
@@ -41,11 +42,11 @@ class UserRegisterView(APIView):
             register_user.set_password(register_data['password'])
             register_user.save()
 
-            send_mail(
-                'Register data dnd', 
-                f'Hello your register data is Login{register_user.email} Password {register_data["password"]}', 
-                'demonvans@yandex.ru', [f'{register_data["email"]}'], fail_silently=False
-            )
+            # send_mail(
+            #     'Register data dnd', 
+            #     f'Hello your register data is Login{register_user.email} Password {register_data["password"]}', 
+            #     'demonvans@yandex.ru', [f'{register_data["email"]}'], fail_silently=False
+            # )
 
             return Response('user_created', status=status.HTTP_201_CREATED)
         

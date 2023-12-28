@@ -1,3 +1,18 @@
 from django.shortcuts import render
 
-# Create your views here.
+from users.models import DndUser, UserCharacter
+from django.shortcuts import get_object_or_404
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+class UserCharacterView(APIView):
+
+    def get(self, request, user_id):
+        query = get_object_or_404(DndUser, id=user_id)
+
+        if query.email:
+            return Response('test', status=status.HTTP_200_OK)
+        
+    def post(self, request, user_id):
+        pass

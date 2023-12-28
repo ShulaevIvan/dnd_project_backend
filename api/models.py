@@ -483,3 +483,6 @@ class InstrumentItem(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
     menu_id = models.ForeignKey(InstrumentsMenu, on_delete=models.CASCADE, related_name='instrument')
+
+
+    

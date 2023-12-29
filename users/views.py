@@ -15,4 +15,6 @@ class UserCharacterView(APIView):
             return Response('test', status=status.HTTP_200_OK)
         
     def post(self, request, user_id):
-        pass
+        print(request.data)
+
+        return Response(request.data, status=status.HTTP_201_CREATED)

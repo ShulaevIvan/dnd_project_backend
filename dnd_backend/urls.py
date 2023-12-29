@@ -35,11 +35,11 @@ urlpatterns = [
     path('api/reference_book/background/', CharacterBackgroundView.as_view()),
     path('api/reference_book/abilites/', ReferenceBookAbilitesView.as_view()),
     path('api/reference_book/spells/', ReferenceBookSpellsView.as_view()),
-     path('api/reference_book/spells/<int:spell_id>/', DetailSpellView.as_view()),
+    path('api/reference_book/spells/<int:spell_id>/', DetailSpellView.as_view()),
     path('api/reference_book/mastery/', ReferenceBookMasteryView.as_view()),
     path('api/reference_book/languages/', ReferenceBookLanguagesView.as_view()),
     path('api/reference_book/background/<int:background_id>/', DetailBackgroundView.as_view()),
     path('api/instruments/', InstrumentsView.as_view()),
     path('api/calculator/stats/', CalculateStatsView.as_view()),
-    path('api/users/<int:user_id>/', UserCharacterView.as_view()),
+    path('api/users/<int:user_id>/characters/', UserCharacterView.as_view()),
 ]

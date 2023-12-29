@@ -22,6 +22,7 @@ class UserCharacter(models.Model):
     character_class = models.CharField(max_length=255)
     character_subclass = models.CharField(null=True, blank=True)
     character_background = models.CharField(max_length=255)
+    
     dnd_user = models.ForeignKey(DndUser, on_delete=models.CASCADE, related_name='character')
 
 class UserCharacterClass(models.Model):

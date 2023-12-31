@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, logout
 from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
-from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu
+from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu, CharacterName
 from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery, ClassSpellbook
 
 from itertools import chain
@@ -11,6 +11,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 import json
 import secrets
+import random
+import re
 
 from .serializers import RegisterDndUser
 from users.models import DndUser
@@ -29,7 +31,6 @@ class UserRegisterView(APIView):
             'password': request.data.get('userPassword'),
             'email': request.data.get('email'),
         }
-        print(register_data)
 
         serializer = RegisterDndUser(data=register_data)
         if serializer.is_valid():
@@ -576,4 +577,37 @@ def generate_user_password():
     password = secrets.token_urlsafe(6)
 
     return password
+
+class RandomCharacterNameView(APIView):
+
+    def get(self, request, gender):
+        number = request.GET.get('num')
+        data = {}
+        random_names = []
+        
+        if gender != 'all' and gender != 'male' and 'gender'and gender != 'female':
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        
+        if number and int(number):
+            if gender == 'all':
+                names_list = list(CharacterName.objects.all())
+            else:
+                names_list = list(CharacterName.objects.all().filter(gender=gender))
+
+            for i in range(int(number)):
+                random_names.append(
+                    {
+                        'name': names_list[random.randint(0, len(names_list))].name, 
+                        'gender': names_list[random.randint(0, len(names_list))].gender
+                    }
+                )
+        else:
+            if gender == 'all':
+                query = CharacterName.objects.all().order_by('?').first()
+            else:
+                query = CharacterName.objects.filter(gender=gender).order_by('?').first()
+            random_names.append({'name': query.name, gender: query.gender})
+ 
+        return Response(random_names, status=status.HTTP_200_OK)
+        
 

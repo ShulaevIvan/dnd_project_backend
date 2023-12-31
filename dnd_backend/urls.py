@@ -19,7 +19,7 @@ from users.views import UserCharacterView
 from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
 from api.views import ReferenceBookView, ReferenceBookClassView, DetailClassView, ReferenceBookRaceView, DetailRaceView, \
 CharacterBackgroundView, DetailBackgroundView, CalculateStatsView, InstrumentsView, ReferenceBookAbilitesView,ReferenceBookMasteryView, \
-ReferenceBookLanguagesView, ReferenceBookSpellsView, DetailSpellView
+ReferenceBookLanguagesView, ReferenceBookSpellsView, DetailSpellView, RandomCharacterNameView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -41,5 +41,6 @@ urlpatterns = [
     path('api/reference_book/background/<int:background_id>/', DetailBackgroundView.as_view()),
     path('api/instruments/', InstrumentsView.as_view()),
     path('api/calculator/stats/', CalculateStatsView.as_view()),
+    path('api/services/namegen/<str:gender>/', RandomCharacterNameView.as_view()),
     path('api/users/<int:user_id>/characters/', UserCharacterView.as_view()),
 ]

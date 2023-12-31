@@ -485,4 +485,6 @@ class InstrumentItem(models.Model):
     menu_id = models.ForeignKey(InstrumentsMenu, on_delete=models.CASCADE, related_name='instrument')
 
 
-    
+class CharacterName(models.Model):
+    name = models.CharField(max_length=255)
+    gender = models.CharField(null=True, blank=True)

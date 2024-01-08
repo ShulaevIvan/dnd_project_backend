@@ -15,7 +15,18 @@ class UserCharacterView(APIView):
         query = get_object_or_404(DndUser, id=user_id)
 
         if query.email:
-            user_characters = query.character.all().values()
+            user_characters = [
+                {
+                    'id': character['id'],
+                    'name': character['character_name'],
+                    'description': character['character_description'],
+                    'avatar': character['character_avatar'],
+                    'lvl': character['character_level'],
+                    'race': character['character_race'],
+                    'class': character['character_class'],
+                    'background': character['character_background'],
+                    
+                } for character in query.character.all().values()]
             
             return Response(user_characters, status=status.HTTP_200_OK)
         
@@ -45,3 +56,13 @@ class UserCharacterView(APIView):
         # print(char_serializer.is_valid(raise_exception=True))
 
         return Response(request.data, status=status.HTTP_201_CREATED)
+    
+    def delete(self, request, user_id):
+        target_character_id = request.data.get('characterId')
+        target_character_name = request.data.get('characterName')
+        
+        target_character = get_object_or_404(UserCharacter, id=target_character_id, character_name=target_character_name)
+        target_character.delete().save()
+
+
+        return Response({'status': 'ok'}, status=status.HTTP_204_NO_CONTENT)

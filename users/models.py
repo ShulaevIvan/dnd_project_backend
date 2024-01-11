@@ -22,11 +22,17 @@ class UserCharacter(models.Model):
     character_class = models.CharField(max_length=255)
     character_subclass = models.CharField(null=True, blank=True)
     character_background = models.CharField(max_length=255)
-    
+
     dnd_user = models.ForeignKey(DndUser, on_delete=models.CASCADE, related_name='character')
 
-class UserCharacterClass(models.Model):
-    name = models.CharField(max_length=255)
-    class_level = models.IntegerField()
+class UserCharacterStats(models.Model):
+    name = models.CharField(max_length=255, null=True, blank = True)
 
-    user_character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='user_character_class')
+    character_id = models.OneToOneField(UserCharacter, on_delete=models.CASCADE, primary_key=True)
+
+class UserCharacterStatItem(models.Model):
+    name = models.CharField(max_length=10)
+    value = models.IntegerField()
+    modifer = models.IntegerField()
+
+    user_character_stats = models.ForeignKey(UserCharacterStats, on_delete=models.CASCADE, related_name='char_stat')

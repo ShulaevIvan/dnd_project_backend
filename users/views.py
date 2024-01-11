@@ -1,11 +1,13 @@
 from django.shortcuts import render
 
-from users.models import DndUser, UserCharacter
+from users.models import DndUser, UserCharacter, UserCharacterStats, UserCharacterStatItem
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+
 from pprint import pprint
+import re
 
 from .serializers import UserCharacterSerializer
 
@@ -13,8 +15,9 @@ class UserCharacterView(APIView):
 
     def get(self, request, user_id):
         query = get_object_or_404(DndUser, id=user_id)
-
+        
         if query.email:
+
             user_characters = [
                 {
                     'id': character['id'],
@@ -25,7 +28,15 @@ class UserCharacterView(APIView):
                     'race': character['character_race'],
                     'class': character['character_class'],
                     'background': character['character_background'],
-                    
+                    'stats': [
+                        {
+                        'name': statObj['name'],
+                        'value': statObj['value'],
+                        'modifer': statObj['modifer'],
+
+                        }
+                        for statObj in UserCharacterStats.objects.get(character_id=character['id']).char_stat.all().values()
+                    ],
                 } for character in query.character.all().values()]
             
             return Response(user_characters, status=status.HTTP_200_OK)
@@ -39,9 +50,12 @@ class UserCharacterView(APIView):
             'character_race' : request.data.get('charRace'),
             'character_class':  request.data.get('charClass'),
             'character_subclass': 'test false',
-            'character_background': request.data.get('charBackground')
+            'character_background': request.data.get('charBackground'),
+            'character_stats': request.data.get('charStats'),
+            'character_abilities': request.data.get('charAbilities'),
         }
-        query = UserCharacter.objects.get_or_create(
+
+        created_character, created = UserCharacter.objects.get_or_create(
             dnd_user_id=user_id,
             character_name=character_data['character_name'],
             character_description=character_data['character_description'],
@@ -52,8 +66,18 @@ class UserCharacterView(APIView):
             character_subclass=character_data['character_subclass'],
             character_background=character_data['character_background'],
         )
-        # char_serializer = UserCharacterSerializer(data=character_data, many=True)
-        # print(char_serializer.is_valid(raise_exception=True))
+
+        UserCharacterStats.objects.update_or_create(name=character_data['character_name'], character_id=created_character)
+        char_stats = UserCharacterStats.objects.get(character_id=created_character.id)
+
+        for stat_obj in character_data['character_stats']:
+            UserCharacterStatItem.objects.update_or_create(
+                name = stat_obj['statParam'],
+                value = int(stat_obj['value']),
+                modifer = int(stat_obj['modifer']),
+
+                user_character_stats = char_stats
+            )
 
         return Response(request.data, status=status.HTTP_201_CREATED)
     

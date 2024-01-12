@@ -3,3 +3,4 @@ users/__pycache__
 users/migrations
 api/__pycache__
 api/migrations
+app_data/*

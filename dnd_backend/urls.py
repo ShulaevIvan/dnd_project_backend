@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os
 from django.contrib import admin
 from django.urls import path
 from users.views import UserCharacterView
@@ -44,3 +45,6 @@ urlpatterns = [
     path('api/services/namegen/<str:gender>/', RandomCharacterNameView.as_view()),
     path('api/users/<int:user_id>/characters/', UserCharacterView.as_view()),
 ]
+
+if not os.path.exists(f'{os.getcwd()}/app_data'):
+    os.mkdir(f'{os.getcwd()}/app_data')

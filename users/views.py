@@ -1,13 +1,14 @@
 from django.shortcuts import render
 
-from users.models import DndUser, UserCharacter, UserCharacterStats, UserCharacterStatItem
+from users.models import DndUser, UserCharacter, UserCharacterStats, UserCharacterStatItem, UserCharacterAbilities, UserCharacterAbilityItem
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from pprint import pprint
-import re
+import os
+import base64
 
 from .serializers import UserCharacterSerializer
 
@@ -37,6 +38,15 @@ class UserCharacterView(APIView):
                         }
                         for statObj in UserCharacterStats.objects.get(character_id=character['id']).char_stat.all().values()
                     ],
+                    'abilities': [
+                        {
+                        'name': ability_obj['name'],
+                        'value': ability_obj['value'],
+                        'type': ability_obj['ability_type'],
+
+                        }
+                        for ability_obj in UserCharacterAbilities.objects.get(character_id=character['id']).char_abilities.all().values()
+                    ],
                 } for character in query.character.all().values()]
             
             return Response(user_characters, status=status.HTTP_200_OK)
@@ -45,7 +55,7 @@ class UserCharacterView(APIView):
         character_data = {
             'character_name': request.data.get('charName'),
             'character_description': request.data.get('charDescription'),
-            'character_avatar': 'test',
+            'character_avatar': request.data.get('charAvatar'),
             'character_level': request.data.get('charLvl'),
             'character_race' : request.data.get('charRace'),
             'character_class':  request.data.get('charClass'),
@@ -54,6 +64,8 @@ class UserCharacterView(APIView):
             'character_stats': request.data.get('charStats'),
             'character_abilities': request.data.get('charAbilities'),
         }
+
+        # print(character_data['character_avatar'])
 
         created_character, created = UserCharacter.objects.get_or_create(
             dnd_user_id=user_id,
@@ -68,7 +80,10 @@ class UserCharacterView(APIView):
         )
 
         UserCharacterStats.objects.update_or_create(name=character_data['character_name'], character_id=created_character)
+        UserCharacterAbilities.objects.update_or_create(name=character_data['character_name'], character_id=created_character)
+
         char_stats = UserCharacterStats.objects.get(character_id=created_character.id)
+        char_abilities = UserCharacterAbilities.objects.get(character_id=created_character.id)
 
         for stat_obj in character_data['character_stats']:
             UserCharacterStatItem.objects.update_or_create(
@@ -76,8 +91,28 @@ class UserCharacterView(APIView):
                 value = int(stat_obj['value']),
                 modifer = int(stat_obj['modifer']),
 
-                user_character_stats = char_stats
+                user_character_stats = char_stats,
             )
+
+        for ability_obj in character_data['character_abilities']:
+            UserCharacterAbilityItem.objects.update_or_create(
+                name = ability_obj['name'],
+                value = int(ability_obj['value']),
+                ability_type = ability_obj['abilityType'],
+
+                user_character_abilities = char_abilities,
+            )
+
+        
+        image_folder_path = f'{os.getcwd()}/app_data/{created_character.character_name}_id_{created_character.id}/'
+
+        if not os.path.exists(f'{os.getcwd()}/app_data/{created_character.character_name}_id_{created_character.id}'):
+            os.mkdir(f'{os.getcwd()}/app_data/{created_character.character_name}_id_{created_character.id}')
+        
+        if character_data['character_avatar']:
+
+            with open(f'{image_folder_path}{character_data["character_avatar"]["name"]}', 'wb') as file:
+                file.write(base64.b64decode(character_data["character_avatar"]['data']))
 
         return Response(request.data, status=status.HTTP_201_CREATED)
     

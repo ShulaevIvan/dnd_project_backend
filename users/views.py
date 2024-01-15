@@ -138,9 +138,13 @@ class UserCharacterView(APIView):
 class UserCharacterControl(APIView):
 
     def get(self, request, user_id, character_id):
-        avatar = request.GET.get('avatar')
+        avatar_id = request.GET.get('avatar')
         
-        if avatar:
-            print('test')
+        if avatar_id:
+            query = get_object_or_404(UserCharacter, character_avatar_id=avatar_id)
 
-        return Response({'status': 'ok'})
+        return Response({
+            'file_name': query.character_avatar_name,
+            'file_data': query.character_avatar_data, 
+            'file_ext': query.character_avatar_ext,
+        })

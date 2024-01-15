@@ -147,4 +147,5 @@ class UserCharacterControl(APIView):
             'file_name': query.character_avatar_name,
             'file_data': query.character_avatar_data, 
             'file_ext': query.character_avatar_ext,
+            'file_type': 'test',
         })

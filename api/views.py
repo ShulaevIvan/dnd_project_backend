@@ -166,7 +166,6 @@ class DetailClassView(APIView):
         subclass_req = reuqest.GET.get('subclass')
         spells_cells_req = reuqest.GET.get('lvl')
         query_class = get_object_or_404(ReferenceBookCharClass, id=class_id)
-        print(spells_cells_req)
 
         clear_data = {
             'id': query_class.id,
@@ -449,14 +448,33 @@ class DetailSpellView(APIView):
 class ReferenceBookAbilitesView(APIView):
 
     def get(self, request):
-        query = get_object_or_404(ReferenceBookSkills, id=1).abilities.all()
-        abilites = [{
-            "id": abil['id'],
-            "name": abil['name'],
-            "abilityType": abil['ability_type'],
-        }  for abil in query.values()]
+        ability = request.GET.get('ability')
 
-        return Response(abilites)
+        if ability:
+            if not ability[0].isupper():
+                ability = f'{ability[0].upper()}{ability[1:len(ability)]}'
+
+            query = get_object_or_404(ReferenceBookSkills, id=1).abilities.filter(name=ability)
+            ability = [{
+                "id": abil['id'],
+                "name": abil['name'],
+                "abilityType": abil['ability_type'],
+                "description": abil['ability_description'],
+            }  for abil in query.values()]
+
+            return Response(ability, status=status.HTTP_200_OK)
+
+        if not ability:
+            query = get_object_or_404(ReferenceBookSkills, id=1).abilities.all()
+
+            abilites = [{
+                "id": abil['id'],
+                "name": abil['name'],
+                "abilityType": abil['ability_type'],
+                "description": abil['ability_description'],
+            }  for abil in query.values()]
+
+            return Response(abilites, status=status.HTTP_200_OK)
     
 class ReferenceBookInstrumentsSkillView(APIView):
 

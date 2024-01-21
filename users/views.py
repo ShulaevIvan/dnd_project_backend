@@ -44,7 +44,6 @@ class UserCharacterView(APIView):
                         'name': ability_obj['name'],
                         'value': ability_obj['value'],
                         'type': ability_obj['ability_type'],
-
                         }
                         for ability_obj in UserCharacterAbilities.objects.get(character_id=character['id']).char_abilities.all().values()
                     ],

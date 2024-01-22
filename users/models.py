@@ -28,6 +28,7 @@ class UserCharacter(models.Model):
 
     dnd_user = models.ForeignKey(DndUser, on_delete=models.CASCADE, related_name='character')
 
+
 class UserCharacterStats(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
 
@@ -40,6 +41,7 @@ class UserCharacterStatItem(models.Model):
 
     user_character_stats = models.ForeignKey(UserCharacterStats, on_delete=models.CASCADE, related_name='char_stat')
 
+
 class UserCharacterAbilities(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
 
@@ -51,3 +53,35 @@ class UserCharacterAbilityItem(models.Model):
     ability_type = models.CharField(max_length=10)
 
     user_character_abilities = models.ForeignKey(UserCharacterAbilities, on_delete=models.CASCADE, related_name='char_abilities')
+
+class UserCharacterSkills(models.Model):
+    name = models.CharField(max_length=255)
+    skill_data = models.TextField(blank=True, null=True)
+    skill_type = models.CharField(max_length=255, null=True, blank=True)
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_skills')
+
+class UserCharacterSavethrows(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_savethrows')
+
+class UserCharacterLanguages(models.Model):
+    name = models.CharField(max_length=255)
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_languages')
+
+class UserCharacterArmorMastery(models.Model):
+    name = models.CharField(max_length=255)
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_armor_mastery')
+
+class UserCharacterWeaponMastery(models.Model):
+    name = models.CharField(max_length=255)
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_weapon_mastery')
+
+class UserCharacterInstrumentMastery(models.Model):
+    name = models.CharField(max_length=255)
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_instrument_mastery')

@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
-from users.models import DndUser, UserCharacter, UserCharacterStats, UserCharacterStatItem, UserCharacterAbilities, UserCharacterAbilityItem
+from users.models import DndUser, UserCharacter, UserCharacterStats, UserCharacterStatItem, UserCharacterAbilities, \
+UserCharacterAbilityItem, UserCharacterSavethrows, UserCharacterLanguages, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
+UserCharacterInstrumentMastery, UserCharacterSkills
+
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
@@ -32,21 +35,56 @@ class UserCharacterView(APIView):
                     'background': character['character_background'],
                     'stats': [
                         {
-                        'name': statObj['name'],
-                        'value': statObj['value'],
-                        'modifer': statObj['modifer'],
-
+                            'name': statObj['name'],
+                            'value': statObj['value'],
+                            'modifer': statObj['modifer'],
                         }
                         for statObj in UserCharacterStats.objects.get(character_id=character['id']).char_stat.all().values()
                     ],
                     'abilities': [
                         {
-                        'name': ability_obj['name'],
-                        'value': ability_obj['value'],
-                        'type': ability_obj['ability_type'],
+                            'name': ability_obj['name'],
+                            'value': ability_obj['value'],
+                            'type': ability_obj['ability_type'],
                         }
                         for ability_obj in UserCharacterAbilities.objects.get(character_id=character['id']).char_abilities.all().values()
                     ],
+                    'skills': [
+                        {
+                            'name': skill_obj['name'],
+                        } for skill_obj in UserCharacter.objects.get(id=character['id']).char_skills.all().values()
+                    ],
+                    'savethrows': [
+                        {
+                            'name': savethrow['name']
+                        } 
+                        for savethrow in UserCharacter.objects.get(id=character['id']).char_savethrows.all().values()
+                    ],
+                    'languages': [
+                        {
+                            'name': language['name']
+                        } 
+                        for language in UserCharacter.objects.get(id=character['id']).char_languages.all().values()
+                    ],
+                    'armor_mastery': [
+                        {
+                            'name': armor_mastery['name']
+                        } 
+                        for armor_mastery in UserCharacter.objects.get(id=character['id']).char_armor_mastery.all().values()
+                    ],
+                    'weapon_mastery': [
+                        {
+                            'name': weapon_mastery['name']
+                        } 
+                        for weapon_mastery in UserCharacter.objects.get(id=character['id']).char_weapon_mastery.all().values()
+                    ],
+                    'instrument_mastery': [
+                        {
+                            'name': instrument_mastery['name']
+                        } 
+                        for instrument_mastery in UserCharacter.objects.get(id=character['id']).char_instrument_mastery.all().values()
+                    ],
+
                 } for character in query.character.all().values()]
             
             return Response(user_characters, status=status.HTTP_200_OK)
@@ -60,7 +98,13 @@ class UserCharacterView(APIView):
             'character_level': request.data.get('charLvl'),
             'character_race' : request.data.get('charRace'),
             'character_class':  request.data.get('charClass'),
+            'character_skills': request.data.get('charSkills'),
             'character_subclass': 'test false',
+            'character_savethrows': request.data.get('charSavethrows'),
+            'character_languages': request.data.get('charArmorMastery'),
+            'character_armor_mastery': request.data.get('charArmorMastery'),
+            'character_weapon_mastery': request.data.get('charWeaponMastery'),
+            'character_instrument_mastery': request.data.get('charInstrumentMastery'),
             'character_background': request.data.get('charBackground'),
             'character_stats': request.data.get('charStats'),
             'character_abilities': request.data.get('charAbilities'),
@@ -76,6 +120,27 @@ class UserCharacterView(APIView):
             character_subclass=character_data['character_subclass'],
             character_background=character_data['character_background'],
         )
+
+        for savethrow in character_data['character_savethrows']:
+            UserCharacterSavethrows.objects.update_or_create(character_id=created_character, name=savethrow['name'])
+
+        for language in character_data['character_languages']:
+            UserCharacterLanguages.objects.update_or_create(character_id=created_character, name=language['name'])
+
+        if len(character_data['character_armor_mastery']) > 0:   
+            for armorMastery in character_data['character_armor_mastery']:
+                UserCharacterArmorMastery.objects.update_or_create(character_id=created_character, name=armorMastery['name'])
+
+        if len(character_data['character_weapon_mastery']) > 0:   
+            for weapon_mastery in character_data['character_weapon_mastery']:
+                UserCharacterWeaponMastery.objects.update_or_create(character_id=created_character, name=weapon_mastery['name'])
+
+        if len(character_data['character_instrument_mastery']) > 0:   
+            for instrument_mastery in character_data['character_instrument_mastery']:
+                UserCharacterInstrumentMastery.objects.update_or_create(character_id=created_character, name=instrument_mastery['name'])
+        
+        for skill in character_data['character_skills']:
+            UserCharacterSkills.objects.update_or_create(character_id=created_character, name=skill['name'])
 
         UserCharacterStats.objects.update_or_create(name=character_data['character_name'], character_id=created_character)
         UserCharacterAbilities.objects.update_or_create(name=character_data['character_name'], character_id=created_character)

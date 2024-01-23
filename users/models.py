@@ -29,44 +29,33 @@ class UserCharacter(models.Model):
     dnd_user = models.ForeignKey(DndUser, on_delete=models.CASCADE, related_name='character')
 
 
-class UserCharacterStats(models.Model):
-    name = models.CharField(max_length=255, null=True, blank=True)
-
-    character_id = models.OneToOneField(UserCharacter, on_delete=models.CASCADE, primary_key=True)
-
-class UserCharacterStatItem(models.Model):
+class UserCharacterStat(models.Model):
     name = models.CharField(max_length=10)
     value = models.IntegerField()
     modifer = models.IntegerField()
 
-    user_character_stats = models.ForeignKey(UserCharacterStats, on_delete=models.CASCADE, related_name='char_stat')
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_stats')
 
-
-class UserCharacterAbilities(models.Model):
-    name = models.CharField(max_length=255, null=True, blank=True)
-
-    character_id = models.OneToOneField(UserCharacter, on_delete=models.CASCADE, primary_key=True)
-
-class UserCharacterAbilityItem(models.Model):
+class UserCharacterAbility(models.Model):
     name = models.CharField(max_length=100)
     value = models.IntegerField()
     ability_type = models.CharField(max_length=10)
 
-    user_character_abilities = models.ForeignKey(UserCharacterAbilities, on_delete=models.CASCADE, related_name='char_abilities')
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_abilities')
 
-class UserCharacterSkills(models.Model):
+class UserCharacterSkill(models.Model):
     name = models.CharField(max_length=255)
     skill_data = models.TextField(blank=True, null=True)
     skill_type = models.CharField(max_length=255, null=True, blank=True)
 
     character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_skills')
 
-class UserCharacterSavethrows(models.Model):
+class UserCharacterSavethrow(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
 
     character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_savethrows')
 
-class UserCharacterLanguages(models.Model):
+class UserCharacterLanguage(models.Model):
     name = models.CharField(max_length=255)
 
     character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_languages')

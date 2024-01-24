@@ -106,6 +106,13 @@ class UserCharacterView(APIView):
             'character_background': request.data.get('charBackground'),
             'character_stats': request.data.get('charStats'),
             'character_abilities': request.data.get('charAbilities'),
+            'character_armor_class': request.data.get('charArmorClass'),
+            'character_max_hits': request.data.get('charMaxHits'),
+            'character_hit_dice': request.data.get('charHitDice'),
+            'character_initiative': request.data.get('charInitiative'),
+            'character_speed': request.data.get('charSpeed'),
+            'character_mastery': request.data.get('charMasteryBonuce'),
+            'passive_preseption': request.data.get('charPassivePresep'),
         }
 
         created_character, created = UserCharacter.objects.update_or_create(

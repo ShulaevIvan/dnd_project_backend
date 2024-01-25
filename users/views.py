@@ -33,6 +33,17 @@ class UserCharacterView(APIView):
                     'race': character['character_race'],
                     'class': character['character_class'],
                     'background': character['character_background'],
+                    'base_armor': character['character_base_armor'],
+                    'hit_dice': character['character_hit_dice'],
+                    'max_hits': character['character_max_hits'],
+                    'initiative': character['character_initiative'],
+                    'move_speed': character['character_speed'],
+                    'passive_presep': character['character_passive_preseption'],
+                    'passive_presep': character['character_passive_preseption'],
+                    'worldview': character['character_worldview'],
+                    'char_size': character['character_size'],
+                    'char_weight': character['character_weight'],
+
                     'stats': [
                         {
                             'name': ability_obj['name'],
@@ -99,7 +110,7 @@ class UserCharacterView(APIView):
             'character_skills': request.data.get('charSkills'),
             'character_subclass': 'test false',
             'character_savethrows': request.data.get('charSavethrows'),
-            'character_languages': request.data.get('charArmorMastery'),
+            'character_languages': request.data.get('charLanguages'),
             'character_armor_mastery': request.data.get('charArmorMastery'),
             'character_weapon_mastery': request.data.get('charWeaponMastery'),
             'character_instrument_mastery': request.data.get('charInstrumentMastery'),
@@ -112,18 +123,31 @@ class UserCharacterView(APIView):
             'character_initiative': request.data.get('charInitiative'),
             'character_speed': request.data.get('charSpeed'),
             'character_mastery': request.data.get('charMasteryBonuce'),
-            'passive_preseption': request.data.get('charPassivePresep'),
+            'character_passive_preseption': request.data.get('charPassivePresep'),
+            'character_worldview': request.data.get('charWorldView'),
+            'character_weight': request.data.get('charWeight'),
+            'character_size': request.data.get('charSize'),
         }
 
         created_character, created = UserCharacter.objects.update_or_create(
-            dnd_user_id=user_id,
-            character_name=character_data['character_name'],
-            character_description=character_data['character_description'],
-            character_level=character_data['character_level'],
-            character_race=character_data['character_race'],
-            character_class=character_data['character_class'],
-            character_subclass=character_data['character_subclass'],
-            character_background=character_data['character_background'],
+            dnd_user_id = user_id,
+            character_name = character_data['character_name'],
+            character_description = character_data['character_description'],
+            character_level = character_data['character_level'],
+            character_race = character_data['character_race'],
+            character_class = character_data['character_class'],
+            character_subclass = character_data['character_subclass'],
+            character_background = character_data['character_background'],
+            character_base_armor = character_data['character_armor_class'],
+            character_max_hits = character_data['character_max_hits'],
+            character_hit_dice = character_data['character_hit_dice'],
+            character_initiative = character_data['character_initiative'],
+            character_speed = character_data['character_speed'],
+            character_mastery = character_data['character_mastery'],
+            character_passive_preseption = character_data['character_passive_preseption'],
+            character_worldview = character_data['character_worldview'],
+            character_size = character_data['character_size'],
+            character_weight = character_data['character_weight'],
         )
 
         for skill in character_data['character_skills']:
@@ -149,6 +173,7 @@ class UserCharacterView(APIView):
             UserCharacterSavethrow.objects.update_or_create(character_id=created_character, name=savethrow['name'])
 
         for language in character_data['character_languages']:
+            print(language)
             UserCharacterLanguage.objects.update_or_create(character_id=created_character, name=language['name'])
 
         if len(character_data['character_armor_mastery']) > 0:   

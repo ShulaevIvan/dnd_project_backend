@@ -16,6 +16,7 @@ class DndUser(AbstractUser):
 class UserCharacter(models.Model):
     character_name = models.CharField(max_length=255)
     character_description = models.TextField(max_length = 30000, blank=True, null=True)
+    character_age = models.IntegerField(null=True, blank=True)
     character_level = models.IntegerField()
     character_race = models.CharField(max_length=255)
     character_class = models.CharField(max_length=255)
@@ -33,11 +34,16 @@ class UserCharacter(models.Model):
     character_avatar_ext = models.CharField(null=True, blank=True)
     character_avatar_id = models.TextField(null=True, blank=True)
     character_worldview = models.TextField(null=True, blank=True)
-    character_weight = models.IntegerField(null=True, blank=True)
+    character_weight = models.CharField(null=True, blank=True, max_length=255)
     character_size = models.IntegerField(null=True, blank=True)
 
     dnd_user = models.ForeignKey(DndUser, on_delete=models.CASCADE, related_name='character')
 
+class UserCharacterSubclass(models.Model):
+    name = models.CharField(max_length=255)
+    subclass_id = models.IntegerField()
+
+    character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_subclasses')
 
 class UserCharacterStat(models.Model):
     name = models.CharField(max_length=10)

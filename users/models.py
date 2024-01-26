@@ -37,6 +37,9 @@ class UserCharacter(models.Model):
     character_weight = models.CharField(null=True, blank=True, max_length=255)
     character_size = models.IntegerField(null=True, blank=True)
 
+    character_created_time = models.DateTimeField(auto_now_add=True, editable=False)
+    character_modifed_time = models.DateTimeField(null=True, blank=True)
+
     dnd_user = models.ForeignKey(DndUser, on_delete=models.CASCADE, related_name='character')
 
 class UserCharacterSubclass(models.Model):

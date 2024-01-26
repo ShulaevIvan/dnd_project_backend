@@ -13,6 +13,7 @@ from pprint import pprint
 import os
 import base64
 import uuid
+import datetime
 
 from .serializers import UserCharacterSerializer
 
@@ -26,6 +27,8 @@ class UserCharacterView(APIView):
             user_characters = [
                 {
                     'id': character['id'],
+                    'creation_time': character['character_created_time'],
+                    'modifed_time': character['character_modifed_time'],
                     'name': character['character_name'],
                     'description': character['character_description'],
                     'avatar': character['character_avatar_id'],
@@ -129,6 +132,12 @@ class UserCharacterView(APIView):
             'character_size': request.data.get('charSize'),
         }
 
+        character_exists = UserCharacter.objects.get(
+            dnd_user_id = user_id, 
+            character_name = character_data['character_name'],
+            character_level = character_data['character_level']
+        )
+
         created_character, created = UserCharacter.objects.update_or_create(
             dnd_user_id = user_id,
             character_name = character_data['character_name'],
@@ -149,6 +158,14 @@ class UserCharacterView(APIView):
             character_size = character_data['character_size'],
             character_weight = character_data['character_weight'],
         )
+        if character_exists:
+            UserCharacter.objects.filter(
+                dnd_user_id = created_character.dnd_user_id,
+                character_name = created_character.character_name,
+                character_level = created_character.character_level,
+            ).update(
+                character_modifed_time=datetime.datetime.now()
+            ).save()
 
         for skill in character_data['character_skills']:
             UserCharacterSkill.objects.update_or_create(character_id=created_character, name=skill['name'])

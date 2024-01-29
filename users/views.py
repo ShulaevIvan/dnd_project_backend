@@ -27,8 +27,8 @@ class UserCharacterView(APIView):
             user_characters = [
                 {
                     'id': character['id'],
-                    'creation_time': character['character_created_time'],
-                    'modifed_time': character['character_modifed_time'],
+                    'creationTime': character['character_created_time'],
+                    'modifedTime': character['character_modifed_time'],
                     'name': character['character_name'],
                     'description': character['character_description'],
                     'avatar': character['character_avatar_id'],
@@ -36,16 +36,15 @@ class UserCharacterView(APIView):
                     'race': character['character_race'],
                     'class': character['character_class'],
                     'background': character['character_background'],
-                    'base_armor': character['character_base_armor'],
-                    'hit_dice': character['character_hit_dice'],
-                    'max_hits': character['character_max_hits'],
+                    'baseArmor': character['character_base_armor'],
+                    'hitDice': character['character_hit_dice'],
+                    'maxHits': character['character_max_hits'],
                     'initiative': character['character_initiative'],
-                    'move_speed': character['character_speed'],
-                    'passive_presep': character['character_passive_preseption'],
-                    'passive_presep': character['character_passive_preseption'],
+                    'moveSpeed': character['character_speed'],
+                    'passivePresep': character['character_passive_preseption'],
                     'worldview': character['character_worldview'],
-                    'char_size': character['character_size'],
-                    'char_weight': character['character_weight'],
+                    'charSize': character['character_size'],
+                    'charWeight': character['character_weight'],
 
                     'stats': [
                         {
@@ -78,19 +77,19 @@ class UserCharacterView(APIView):
                         } 
                         for language in UserCharacter.objects.get(id=character['id']).char_languages.all().values()
                     ],
-                    'armor_mastery': [
+                    'armorMastery': [
                         {
                             'name': armor_mastery['name']
                         } 
                         for armor_mastery in UserCharacter.objects.get(id=character['id']).char_armor_mastery.all().values()
                     ],
-                    'weapon_mastery': [
+                    'weaponMastery': [
                         {
                             'name': weapon_mastery['name']
                         } 
                         for weapon_mastery in UserCharacter.objects.get(id=character['id']).char_weapon_mastery.all().values()
                     ],
-                    'instrument_mastery': [
+                    'instrumentMastery': [
                         {
                             'name': instrument_mastery['name']
                         } 
@@ -132,7 +131,7 @@ class UserCharacterView(APIView):
             'character_size': request.data.get('charSize'),
         }
 
-        character_exists = UserCharacter.objects.get(
+        character_exists = UserCharacter.objects.filter(
             dnd_user_id = user_id, 
             character_name = character_data['character_name'],
             character_level = character_data['character_level']
@@ -165,7 +164,7 @@ class UserCharacterView(APIView):
                 character_level = created_character.character_level,
             ).update(
                 character_modifed_time=datetime.datetime.now()
-            ).save()
+            )
 
         for skill in character_data['character_skills']:
             UserCharacterSkill.objects.update_or_create(character_id=created_character, name=skill['name'])
@@ -190,7 +189,6 @@ class UserCharacterView(APIView):
             UserCharacterSavethrow.objects.update_or_create(character_id=created_character, name=savethrow['name'])
 
         for language in character_data['character_languages']:
-            print(language)
             UserCharacterLanguage.objects.update_or_create(character_id=created_character, name=language['name'])
 
         if len(character_data['character_armor_mastery']) > 0:   
@@ -246,9 +244,13 @@ class UserCharacterControl(APIView):
         if avatar_id:
             query = get_object_or_404(UserCharacter, character_avatar_id=avatar_id)
 
+            return Response({
+                'file_name': query.character_avatar_name,
+                'file_data': query.character_avatar_data, 
+                'file_ext': query.character_avatar_ext,
+                'file_type': 'test',
+            })
+        
         return Response({
-            'file_name': query.character_avatar_name,
-            'file_data': query.character_avatar_data, 
-            'file_ext': query.character_avatar_ext,
-            'file_type': 'test',
+            'status': 'not found'
         })

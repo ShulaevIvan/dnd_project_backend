@@ -2,9 +2,12 @@ from django.shortcuts import render
 
 from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, \
 UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
-UserCharacterInstrumentMastery, UserCharacterSkill
+UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell
+
+from api.models import SpellItem
 
 from django.shortcuts import get_object_or_404
+from django.core.serializers import serialize
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -14,8 +17,8 @@ import os
 import base64
 import uuid
 import datetime
-
-from .serializers import UserCharacterSerializer
+import json
+from .serializers import UserCharacterSpellSerializer
 
 class UserCharacterView(APIView):
 
@@ -64,6 +67,11 @@ class UserCharacterView(APIView):
                         {
                             'name': skill_obj['name'],
                         } for skill_obj in UserCharacter.objects.get(id=character['id']).char_skills.all().values()
+                    ],
+                    'spells': [
+                        {
+                            'spell_id': spell['skill_id']
+                        } for spell in UserCharacter.objects.get(id=character['id']).char_spells.all().values()
                     ],
                     'savethrows': [
                         {
@@ -129,6 +137,7 @@ class UserCharacterView(APIView):
             'character_worldview': request.data.get('charWorldView'),
             'character_weight': request.data.get('charWeight'),
             'character_size': request.data.get('charSize'),
+            'character_spells': request.data.get('charSpells'),
         }
 
         character_exists = UserCharacter.objects.filter(
@@ -157,6 +166,7 @@ class UserCharacterView(APIView):
             character_size = character_data['character_size'],
             character_weight = character_data['character_weight'],
         )
+
         if character_exists:
             UserCharacter.objects.filter(
                 dnd_user_id = created_character.dnd_user_id,
@@ -165,6 +175,10 @@ class UserCharacterView(APIView):
             ).update(
                 character_modifed_time=datetime.datetime.now()
             )
+        
+        if character_data['character_spells']:
+            for spell in character_data['character_spells']:
+                UserCharacterSpell.objects.update_or_create(character_id=created_character, skill_id=spell['id'])
 
         for skill in character_data['character_skills']:
             UserCharacterSkill.objects.update_or_create(character_id=created_character, name=skill['name'])
@@ -254,3 +268,21 @@ class UserCharacterControl(APIView):
         return Response({
             'status': 'not found'
         })
+    
+class UserCharacterSpells(APIView):
+
+    class Meta:
+        serializer_class = UserCharacterSpellSerializer
+
+    def get(self, request, user_id, character_id):
+        all_params = request.query_params
+        
+        if all_params.get('spell') == 'all':
+            query_spells = get_object_or_404(UserCharacter, id=character_id, dnd_user_id=user_id).char_spells.all().values('skill_id')
+            spell_data = [UserCharacterSpellSerializer(SpellItem.objects.filter(id=spell_obj['skill_id']), many=True).data[0] for spell_obj in query_spells]
+            
+            return Response({'spells': spell_data})
+        
+
+    
+    

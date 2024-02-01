@@ -70,7 +70,7 @@ class UserCharacterSkill(models.Model):
     character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_skills')
 
 class UserCharacterSpell(models.Model):
-    skill_id = models.IntegerField()
+    spell_id = models.IntegerField()
 
     character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_spells')
 

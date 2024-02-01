@@ -70,7 +70,7 @@ class UserCharacterView(APIView):
                     ],
                     'spells': [
                         {
-                            'spell_id': spell['skill_id']
+                            'spell_id': spell['spell_id']
                         } for spell in UserCharacter.objects.get(id=character['id']).char_spells.all().values()
                     ],
                     'savethrows': [
@@ -178,7 +178,7 @@ class UserCharacterView(APIView):
         
         if character_data['character_spells']:
             for spell in character_data['character_spells']:
-                UserCharacterSpell.objects.update_or_create(character_id=created_character, skill_id=spell['id'])
+                UserCharacterSpell.objects.update_or_create(character_id=created_character, spell_id=spell['id'])
 
         for skill in character_data['character_skills']:
             UserCharacterSkill.objects.update_or_create(character_id=created_character, name=skill['name'])
@@ -278,8 +278,8 @@ class UserCharacterSpells(APIView):
         all_params = request.query_params
         
         if all_params.get('spell') == 'all':
-            query_spells = get_object_or_404(UserCharacter, id=character_id, dnd_user_id=user_id).char_spells.all().values('skill_id')
-            spell_data = [UserCharacterSpellSerializer(SpellItem.objects.filter(id=spell_obj['skill_id']), many=True).data[0] for spell_obj in query_spells]
+            query_spells = get_object_or_404(UserCharacter, id=character_id, dnd_user_id=user_id).char_spells.all().values('spell_id')
+            spell_data = [UserCharacterSpellSerializer(SpellItem.objects.filter(id=spell_obj['spell_id']), many=True).data[0] for spell_obj in query_spells]
             
             return Response({'spells': spell_data})
         

@@ -179,7 +179,6 @@ class ReferenceBookCharRace(models.Model):
 
     book_id = models.ForeignKey(ReferenceBook, on_delete=models.CASCADE, related_name='char_race')
 
-
 class ReferenceBookSubRace(models.Model):
     subrace_name = models.CharField(max_length=255)
     subrace_active = models.BooleanField()

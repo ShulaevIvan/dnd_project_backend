@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu, CharacterName
-from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery, ClassSpellbook
+from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery, ClassSpellbook, ReferenceBookClassSkills
 
 from itertools import chain
 from rest_framework.response import Response
@@ -445,6 +445,25 @@ class DetailSpellView(APIView):
         
         return Response(spell.values())
     
+class ReferenceBookSkillsView(APIView):
+    
+    def get(self, request):
+        target_skill = request.GET.get('skill')
+        result_data = []
+        data = {
+            'race_skills': get_object_or_404(ReferenceBookSkills, id=1).race_skill.all().values(),
+            'subrace_skills': get_object_or_404(ReferenceBookSkills, id=1).subrace_skill.all().values(),
+            'class_skills': get_object_or_404(ReferenceBookClassSkills, id=1).class_skill.all().values(),
+        }
+        if target_skill:
+            for skill_arr in data.values():
+                if len(skill_arr) > 0:
+                    result_data.append([skill for skill in skill_arr if skill['name'].lower() == target_skill.lower()])
+            
+            return Response({'skills': filter(lambda arr: arr, result_data)})
+
+        return Response({'skills': data})
+    
 class ReferenceBookAbilitesView(APIView):
 
     def get(self, request):
@@ -511,7 +530,6 @@ class ReferenceBookWeaponSkillView(APIView):
 
         return Response(weapons)
 
-
 class ReferenceBookMasteryView(APIView):
     
     def get(self, request):
@@ -564,8 +582,6 @@ class ReferenceBookMasteryView(APIView):
 
         return Response(all_mastery)
     
-
-    
 class ReferenceBookLanguagesView(APIView):
 
     def get(self, request):
@@ -575,14 +591,6 @@ class ReferenceBookLanguagesView(APIView):
 
         return Response(languges)
 
-
-class CalculateStatsView(APIView):
-
-    def post(self, request):
-        print(request)
-        return Response({'status': 'ok'})
-
-
 class InstrumentsView(APIView):
     
     def get(self, request):
@@ -591,10 +599,6 @@ class InstrumentsView(APIView):
 
         return Response({'instruments': clear_data})
 
-def generate_user_password():
-    password = secrets.token_urlsafe(6)
-
-    return password
 
 class RandomCharacterNameView(APIView):
 
@@ -628,4 +632,7 @@ class RandomCharacterNameView(APIView):
  
         return Response(random_names, status=status.HTTP_200_OK)
         
+def generate_user_password():
+    password = secrets.token_urlsafe(6)
 
+    return password

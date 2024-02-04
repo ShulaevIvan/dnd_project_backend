@@ -460,9 +460,9 @@ class ReferenceBookSkillsView(APIView):
                 if len(skill_arr) > 0:
                     result_data.append([skill for skill in skill_arr if skill['name'].lower() == target_skill.lower()])
             
-            return Response({'skills': filter(lambda arr: arr, result_data)})
+            return Response(*filter(lambda arr: arr, result_data), status=status.HTTP_200_OK)
 
-        return Response({'skills': data})
+        return Response(data, status=status.HTTP_200_OK)
     
 class ReferenceBookAbilitesView(APIView):
 

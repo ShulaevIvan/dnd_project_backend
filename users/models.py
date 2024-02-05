@@ -98,3 +98,24 @@ class UserCharacterInstrumentMastery(models.Model):
     name = models.CharField(max_length=255)
 
     character_id = models.ForeignKey(UserCharacter, on_delete=models.CASCADE, related_name='char_instrument_mastery')
+
+class UserCharacterInventory(models.Model):
+    items = models.ManyToManyField('CharacterInventoryItem', through='UserCharacterInventoryItem')
+
+    character_id = models.OneToOneField(UserCharacter, on_delete=models.CASCADE, primary_key=True, related_name='char_inventory')
+
+class UserCharacterInventroryMoney(models.Model):
+    gold = models.IntegerField(null=True, blank=True)
+    silver = models.IntegerField(null=True, blank=True)
+    bronze = models.IntegerField(null=True, blank=True)
+
+    inventory_id = models.OneToOneField(UserCharacterInventory, on_delete=models.CASCADE, primary_key=True, related_name='money')
+
+class CharacterInventoryItem(models.Model):
+    name = models.CharField(max_length=255)
+
+class UserCharacterInventoryItem(models.Model):
+    quantity = models.IntegerField()
+
+    item_id = models.ForeignKey(CharacterInventoryItem, on_delete=models.CASCADE, related_name='character_inventory_item')
+    character_id = models.ForeignKey(UserCharacterInventory, on_delete=models.CASCADE, related_name='character_inventory_item')

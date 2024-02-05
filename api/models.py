@@ -144,6 +144,7 @@ class WeaponCharMastery(models.Model):
 
 class ArmorMasteryItem(models.Model):
     name = models.TextField(max_length=255, unique=True)
+    description = models.TextField(null=True, blank=True)
     fundamental_skill = models.BooleanField(null=True, blank=True)
 
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='armor_mastery')

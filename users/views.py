@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, \
 UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
-UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell
+UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventroryMoney, CharacterInventoryItem, \
+UserCharacterInventoryItem, UserCharacterInventroryMoney
 
 from api.models import SpellItem
 
@@ -103,7 +104,22 @@ class UserCharacterView(APIView):
                         } 
                         for instrument_mastery in UserCharacter.objects.get(id=character['id']).char_instrument_mastery.all().values()
                     ],
+                     'inventory': {
+                        'inventoryItems': [
+                            {
+                                'item': CharacterInventoryItem.objects.filter(id=inventory_item['id']).values(),
+                                'quantity': inventory_item['quantity']
+                            }
+                            for inventory_item in UserCharacterInventory.objects.get(character_id=character['id']).character_inventory_item.all().values()
+                        ],
+                        'inventory_gold': {
+                            'gold': UserCharacterInventory.objects.get(character_id=character['id']).money.gold,
+                            'silver': UserCharacterInventory.objects.get(character_id=character['id']).money.silver,
+                            'bronze': UserCharacterInventory.objects.get(character_id=character['id']).money.bronze
+                        }
 
+                    }
+                   
                 } for character in query.character.all().values()]
             
             return Response(user_characters, status=status.HTTP_200_OK)
@@ -138,8 +154,8 @@ class UserCharacterView(APIView):
             'character_weight': request.data.get('charWeight'),
             'character_size': request.data.get('charSize'),
             'character_spells': request.data.get('charSpells'),
+            'character_inventory': request.data.get('charInventory'),
         }
-
         character_exists = UserCharacter.objects.filter(
             dnd_user_id = user_id, 
             character_name = character_data['character_name'],
@@ -167,6 +183,31 @@ class UserCharacterView(APIView):
             character_weight = character_data['character_weight'],
         )
 
+        inventory, created_inventory = UserCharacterInventory.objects.get_or_create(character_id=created_character)
+        
+        if character_data['character_inventory'].get('weapons'):
+            for weapon_obj in character_data['character_inventory']['weapons']:
+                item, created_item = CharacterInventoryItem.objects.get_or_create(name=weapon_obj['name'])
+                UserCharacterInventoryItem.objects.update_or_create(item_id=item, character_id=inventory, quantity=1)
+                
+            for armor_obj in character_data['character_inventory']['armor']:
+                item, created_item = CharacterInventoryItem.objects.get_or_create(name=armor_obj['name'])
+                UserCharacterInventoryItem.objects.update_or_create(item_id=item, character_id=inventory, quantity=1)
+
+            for instrument_obj in character_data['character_inventory']['instruments']:
+                item, created_item = CharacterInventoryItem.objects.get_or_create(name=instrument_obj['name'])
+                UserCharacterInventoryItem.objects.update_or_create(item_id=item, character_id=inventory, quantity=1)
+
+
+        
+        if character_data['character_inventory'].get('currency'):
+            UserCharacterInventroryMoney.objects.update_or_create(
+                gold=character_data['character_inventory']['currency']['money']['gold'],
+                silver=character_data['character_inventory']['currency']['money']['silver'],
+                bronze=character_data['character_inventory']['currency']['money']['bronze'],
+                inventory_id=inventory
+            )
+        
         if character_exists:
             UserCharacter.objects.filter(
                 dnd_user_id = created_character.dnd_user_id,

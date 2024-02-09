@@ -104,7 +104,7 @@ class UserCharacterView(APIView):
                         } 
                         for instrument_mastery in UserCharacter.objects.get(id=character['id']).char_instrument_mastery.all().values()
                     ],
-                     'inventory': {
+                    'inventory': {
                         'inventoryItems': [
                             {
                                 'item': CharacterInventoryItem.objects.filter(id=inventory_item['id']).values(),
@@ -117,7 +117,6 @@ class UserCharacterView(APIView):
                             'silver': UserCharacterInventory.objects.get(character_id=character['id']).money.silver,
                             'bronze': UserCharacterInventory.objects.get(character_id=character['id']).money.bronze
                         }
-
                     }
                    
                 } for character in query.character.all().values()]
@@ -312,7 +311,6 @@ class UserCharacterControl(APIView):
             if not query_user_character.exists():
                 return Response({'status': 'not found'}, status=status.HTTP_404_NOT_FOUND)
             
-            print(UserCharacter.objects.get(id=1).char_stats.all().values())
             view_data = [
                 {
                     'id': character_obj['id'],
@@ -335,7 +333,18 @@ class UserCharacterControl(APIView):
                         'value': stat['value'],
                         'modifer': stat['modifer'],
                     } for stat in UserCharacter.objects.get(id=character_obj['id']).char_stats.all().values()],
-                    'savethrows': [{'name': savethrow['name']} for savethrow in UserCharacter.objects.get(id=character_obj['id']).char_savethrows.all().values()],
+                    'savethrows': [
+                        {
+                            'name': savethrow['name'],
+                        } for savethrow in UserCharacter.objects.get(id=character_obj['id']).char_savethrows.all().values()
+                    ],
+                    'languages': [
+                        {
+                            'id': lang['id'], 
+                            'name': lang['name'],
+                        } 
+                        for lang in UserCharacter.objects.get(id=character_obj['id']).char_languages.all().values()
+                    ],
                     'hitDice': character_obj['character_hit_dice'],
                     'maxHits': character_obj['character_max_hits'],
                     'armor': character_obj['character_base_armor'],
@@ -355,6 +364,20 @@ class UserCharacterControl(APIView):
                         'name': SpellItem.objects.get(id=spell['id']).description,
 
                     } for spell in UserCharacter.objects.get(id=character_id).char_spells.all().values()],
+                    'inventory': {
+                        'inventoryItems': [
+                            {
+                                'item': CharacterInventoryItem.objects.filter(id=inventory_item['id']).values(),
+                                'quantity': inventory_item['quantity']
+                            }
+                            for inventory_item in UserCharacterInventory.objects.get(character_id=character_obj['id']).character_inventory_item.all().values()
+                        ],
+                        'inventory_gold': {
+                            'gold': UserCharacterInventory.objects.get(character_id=character_obj['id']).money.gold,
+                            'silver': UserCharacterInventory.objects.get(character_id=character_obj['id']).money.silver,
+                            'bronze': UserCharacterInventory.objects.get(character_id=character_obj['id']).money.bronze
+                        }
+                    },
                     'created': character_obj['character_created_time'],
                     'mofied': character_obj['character_modifed_time'],
                 } for character_obj in query_user_character.values()

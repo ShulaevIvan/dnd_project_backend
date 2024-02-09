@@ -16,7 +16,7 @@ Including another URLconf
 import os
 from django.contrib import admin
 from django.urls import path
-from users.views import UserCharacterView, UserCharacterControl, UserCharacterSpells
+from users.views import UserCharacterView, UserCharacterControl, UserCharacterSpellsView, UserCharacterInventoryView
 from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
 from api.views import ReferenceBookView, ReferenceBookClassView, DetailClassView, ReferenceBookRaceView, DetailRaceView, \
 CharacterBackgroundView, DetailBackgroundView, InstrumentsView, ReferenceBookAbilitesView,ReferenceBookMasteryView, \
@@ -45,7 +45,8 @@ urlpatterns = [
     path('api/services/namegen/<str:gender>/', RandomCharacterNameView.as_view()),
     path('api/users/<int:user_id>/characters/', UserCharacterView.as_view()),
     path('api/users/<int:user_id>/characters/<int:character_id>/', UserCharacterControl.as_view()),
-    path('api/users/<int:user_id>/characters/<int:character_id>/spells/', UserCharacterSpells.as_view()),
+    path('api/users/<int:user_id>/characters/<int:character_id>/spells/', UserCharacterSpellsView.as_view()),
+    path('api/users/<int:user_id>/characters/<int:character_id>/inventory/', UserCharacterInventoryView.as_view())
 ]
 
 if not os.path.exists(f'{os.getcwd()}/app_data'):

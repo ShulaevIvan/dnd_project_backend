@@ -113,6 +113,7 @@ class UserCharacterInventroryMoney(models.Model):
 
 class CharacterInventoryItem(models.Model):
     name = models.CharField(max_length=255)
+    item_type =models.CharField(null=True, blank=True)
 
 class UserCharacterInventoryItem(models.Model):
     quantity = models.IntegerField()

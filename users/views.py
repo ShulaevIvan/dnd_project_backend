@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, \
+from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, UserCharacterSubclass, \
 UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
 UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventroryMoney, CharacterInventoryItem, \
 UserCharacterInventoryItem, UserCharacterInventroryMoney
@@ -187,15 +187,15 @@ class UserCharacterView(APIView):
         
         if character_data['character_inventory'].get('weapons'):
             for weapon_obj in character_data['character_inventory']['weapons']:
-                item, created_item = CharacterInventoryItem.objects.get_or_create(name=weapon_obj['name'])
+                item, created_item = CharacterInventoryItem.objects.get_or_create(name=weapon_obj['name'], item_type='weapon')
                 UserCharacterInventoryItem.objects.update_or_create(item_id=item, character_id=inventory, quantity=1)
                 
             for armor_obj in character_data['character_inventory']['armor']:
-                item, created_item = CharacterInventoryItem.objects.get_or_create(name=armor_obj['name'])
+                item, created_item = CharacterInventoryItem.objects.get_or_create(name=armor_obj['name'], item_type='armor')
                 UserCharacterInventoryItem.objects.update_or_create(item_id=item, character_id=inventory, quantity=1)
 
             for instrument_obj in character_data['character_inventory']['instruments']:
-                item, created_item = CharacterInventoryItem.objects.get_or_create(name=instrument_obj['name'])
+                item, created_item = CharacterInventoryItem.objects.get_or_create(name=instrument_obj['name'], item_type='instrument')
                 UserCharacterInventoryItem.objects.update_or_create(item_id=item, character_id=inventory, quantity=1)
 
 
@@ -294,8 +294,9 @@ class UserCharacterView(APIView):
 class UserCharacterControl(APIView):
 
     def get(self, request, user_id, character_id):
+        params = request.query_params
         avatar_id = request.GET.get('avatar')
-        
+
         if avatar_id:
             query = get_object_or_404(UserCharacter, character_avatar_id=avatar_id)
 
@@ -306,11 +307,66 @@ class UserCharacterControl(APIView):
                 'file_type': 'test',
             })
         
+        if not params:
+            query_user_character = UserCharacter.objects.filter(dnd_user=user_id, id=character_id)
+            if not query_user_character.exists():
+                return Response({'status': 'not found'}, status=status.HTTP_404_NOT_FOUND)
+            
+            print(UserCharacter.objects.get(id=1).char_stats.all().values())
+            view_data = [
+                {
+                    'id': character_obj['id'],
+                    'avatar': character_obj['character_avatar_id'],
+                    'name': character_obj['character_name'],
+                    'description': character_obj['character_description'],
+                    'level': character_obj['character_level'],
+                    'race': character_obj['character_race'],
+                    'class': character_obj['character_class'],
+                    'subclass': character_obj['character_subclass'],
+                    'background': character_obj['character_background'],
+                    'worldview': character_obj['character_worldview'],
+                    'weight': character_obj['character_weight'],
+                    'weight': character_obj['character_weight'],
+                    'age': character_obj['character_age'],
+                    'weight': character_obj['character_weight'],
+                    'size': character_obj['character_size'],
+                    'stats': [{
+                        'name': stat['name'],
+                        'value': stat['value'],
+                        'modifer': stat['modifer'],
+                    } for stat in UserCharacter.objects.get(id=character_obj['id']).char_stats.all().values()],
+                    'savethrows': [{'name': savethrow['name']} for savethrow in UserCharacter.objects.get(id=character_obj['id']).char_savethrows.all().values()],
+                    'hitDice': character_obj['character_hit_dice'],
+                    'maxHits': character_obj['character_max_hits'],
+                    'armor': character_obj['character_base_armor'],
+                    'initiative': character_obj['character_initiative'],
+                    'speed': character_obj['character_speed'],
+                    'masteryPoints': character_obj['character_mastery'],
+                    'passivePreseption': character_obj['character_passive_preseption'],
+                    'abilities': [{
+                        'name': ability['name'],
+                        'value': ability['value'],
+                        'type': ability['ability_type'],
+                    } for ability in UserCharacter.objects.get(id=character_obj['id']).char_abilities.all().values()],
+                    'spells': [{
+                        'id': spell['id'],
+                        'spell_id': SpellItem.objects.get(id=spell['id']).id,
+                        'name': SpellItem.objects.get(id=spell['id']).name,
+                        'name': SpellItem.objects.get(id=spell['id']).description,
+
+                    } for spell in UserCharacter.objects.get(id=character_id).char_spells.all().values()],
+                    'created': character_obj['character_created_time'],
+                    'mofied': character_obj['character_modifed_time'],
+                } for character_obj in query_user_character.values()
+            ][0]
+            return Response({'character': view_data}, status=status.HTTP_200_OK)
+        
+
         return Response({
             'status': 'not found'
         })
     
-class UserCharacterSpells(APIView):
+class UserCharacterSpellsView(APIView):
 
     class Meta:
         serializer_class = UserCharacterSpellSerializer
@@ -323,7 +379,18 @@ class UserCharacterSpells(APIView):
             spell_data = [UserCharacterSpellSerializer(SpellItem.objects.filter(id=spell_obj['spell_id']), many=True).data[0] for spell_obj in query_spells]
             
             return Response({'spells': spell_data})
-        
+
+class UserCharacterInventoryView(APIView):
+
+    def get(self, request, user_id, character_id):
+
+        params = request.query_params
+
+        if params.get('weapons'):
+           
+            return Response({'status': 'weapons'})
+
+        return Response({'status': 'ok'})
 
     
     

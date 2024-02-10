@@ -5,7 +5,7 @@ UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCh
 UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventroryMoney, CharacterInventoryItem, \
 UserCharacterInventoryItem, UserCharacterInventroryMoney
 
-from api.models import SpellItem
+from api.models import SpellItem, ItemsEquipBook
 
 from django.shortcuts import get_object_or_404
 from django.core.serializers import serialize
@@ -14,6 +14,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from pprint import pprint
+import re
 import os
 import base64
 import uuid
@@ -112,7 +113,7 @@ class UserCharacterView(APIView):
                             }
                             for inventory_item in UserCharacterInventory.objects.get(character_id=character['id']).character_inventory_item.all().values()
                         ],
-                        'inventory_gold': {
+                        'inventoryGold': {
                             'gold': UserCharacterInventory.objects.get(character_id=character['id']).money.gold,
                             'silver': UserCharacterInventory.objects.get(character_id=character['id']).money.silver,
                             'bronze': UserCharacterInventory.objects.get(character_id=character['id']).money.bronze
@@ -372,7 +373,7 @@ class UserCharacterControl(APIView):
                             }
                             for inventory_item in UserCharacterInventory.objects.get(character_id=character_obj['id']).character_inventory_item.all().values()
                         ],
-                        'inventory_gold': {
+                        'inventoryGold': {
                             'gold': UserCharacterInventory.objects.get(character_id=character_obj['id']).money.gold,
                             'silver': UserCharacterInventory.objects.get(character_id=character_obj['id']).money.silver,
                             'bronze': UserCharacterInventory.objects.get(character_id=character_obj['id']).money.bronze
@@ -408,12 +409,34 @@ class UserCharacterInventoryView(APIView):
     def get(self, request, user_id, character_id):
 
         params = request.query_params
+        item_filter = params.get('filter')
+        inventory_data = {}
+        all_items = {
+            'weapons': ItemsEquipBook.objects.get(id=1).item_weapons.all().values(),
+            'armor': ItemsEquipBook.objects.get(id=1).item_armor.all().values(),
+            'instruments': ItemsEquipBook.objects.get(id=1).item_instruments.all().values(),
+        }
+        if item_filter:
+            inventory_data = {
+                'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
+            }
+            return Response({'items': inventory_data})
+
+        if params.get('item'):
+            item_name = params.get('item')
+            target_item = [weapon for weapon in  all_items['weapons'] if weapon['name'] == item_name]
+            print(target_item)
+            
+            # for i in all_items['weapons'].values():
+            #     print(i['name'])
+            return Response({'status': all_items['weapons']})
 
         if params.get('weapons'):
            
             return Response({'status': 'weapons'})
-
-        return Response({'status': 'ok'})
+        
+        if not params:
+            return Response({'status': inventory_data})
 
     
     

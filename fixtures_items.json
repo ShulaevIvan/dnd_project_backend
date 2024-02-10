@@ -30,7 +30,7 @@
         "pk": 2,
         "model": "api.WeaponItemEquip",
         "fields": {
-            "name": "Арбалет, лёгкий",
+            "name": "Арбалет лёгкий",
             "description": "Арбалет — это простое механическое оружие, активируемое нажатием на спусковой крючок, чтобы отпустить защёлку на тетиве, посылая болт к цели.",
             "ranged_weapon": true,
             "melee_weapon": false,
@@ -50,7 +50,7 @@
         "pk": 3,
         "model": "api.WeaponItemEquip",
         "fields": {
-            "name": "Арбалет, ручной",
+            "name": "Арбалет ручной",
             "ranged_weapon": true,
             "melee_weapon": false,
             "onehanded": true,
@@ -70,7 +70,7 @@
         "pk": 4,
         "model": "api.WeaponItemEquip",
         "fields": {
-            "name": "Арбалет, тяжёлый",
+            "name": "Арбалет тяжёлый",
             "ranged_weapon": true,
             "melee_weapon": false,
             "onehanded": false,

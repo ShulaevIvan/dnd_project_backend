@@ -410,7 +410,9 @@ class UserCharacterInventoryView(APIView):
 
         params = request.query_params
         item_filter = params.get('filter')
+        item_name = params.get('item')
         inventory_data = {}
+        check_char_item = UserCharacter.objects.get(id=character_id).char_inventory.items.filter(name=item_name).exists()
         all_items = {
             'weapons': ItemsEquipBook.objects.get(id=1).item_weapons.all().values(),
             'armor': ItemsEquipBook.objects.get(id=1).item_armor.all().values(),
@@ -422,20 +424,18 @@ class UserCharacterInventoryView(APIView):
             }
             return Response({'items': inventory_data})
 
-        if params.get('item'):
-            item_name = params.get('item')
-            target_item = [weapon for weapon in  all_items['weapons'] if weapon['name'] == item_name]
-            print(target_item)
-            
-            # for i in all_items['weapons'].values():
-            #     print(i['name'])
-            return Response({'status': all_items['weapons']})
-
-        if params.get('weapons'):
-           
-            return Response({'status': 'weapons'})
+        if params.get('item') and check_char_item:
+            for key, arr in all_items.items():
+                target_item = [item for item in arr if item['name'] == item_name]
+                if target_item:
+                    return Response({'items': target_item})
+        elif params.get('item') and not check_char_item:
+            return Response({'items': []})
         
         if not params:
+            inventory_data = {
+                'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.all().values()],
+            }
             return Response({'status': inventory_data})
 
     

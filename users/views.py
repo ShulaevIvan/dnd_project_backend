@@ -423,7 +423,7 @@ class UserCharacterInventoryView(APIView):
                 'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
             }
             return Response({'items': inventory_data})
-
+        
         if params.get('item') and check_char_item:
             for key, arr in all_items.items():
                 target_item = [item for item in arr if item['name'] == item_name]
@@ -434,9 +434,14 @@ class UserCharacterInventoryView(APIView):
         
         if not params:
             inventory_data = {
-                'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.all().values()],
+                'items': [{
+                    "id": item.id,
+                    "name": item.name,
+                    "type": item.item_type,
+                    'quantity': item.character_inventory_item.filter(item_id=item.id, character_id=character_id).values_list('quantity', flat=True)[0]
+                } for item in UserCharacter.objects.get(id=character_id).char_inventory.items.all()],
             }
-            return Response({'status': inventory_data})
+            return Response(inventory_data)
 
     
     

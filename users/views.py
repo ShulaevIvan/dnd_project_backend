@@ -409,6 +409,7 @@ class UserCharacterInventoryView(APIView):
     def get(self, request, user_id, character_id):
 
         params = request.query_params
+        images_folder = f'{os.getcwd()}/app_data/character_items/images/'
         item_filter = params.get('filter')
         item_name = params.get('item')
         inventory_data = {}
@@ -418,6 +419,7 @@ class UserCharacterInventoryView(APIView):
             'armor': ItemsEquipBook.objects.get(id=1).item_armor.all().values(),
             'instruments': ItemsEquipBook.objects.get(id=1).item_instruments.all().values(),
         }
+
         if item_filter:
             inventory_data = {
                 'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
@@ -438,10 +440,34 @@ class UserCharacterInventoryView(APIView):
                     "id": item.id,
                     "name": item.name,
                     "type": item.item_type,
-                    'quantity': item.character_inventory_item.filter(item_id=item.id, character_id=character_id).values_list('quantity', flat=True)[0]
+                    'quantity': item.character_inventory_item.filter(item_id=item.id, character_id=character_id).values_list('quantity', flat=True)[0],
+                    'image': {
+                        'data': get_base64(images_folder, 'item_img.jpg'),
+                        'ext': 'image/jpeg'
+                    }
                 } for item in UserCharacter.objects.get(id=character_id).char_inventory.items.all()],
             }
+
+            for item_obj in inventory_data['items']:
+                if item_obj['type'] == 'armor':
+                    item_description = ItemsEquipBook.objects.get(id=1) \
+                        .item_armor.filter(name=item_obj['name']).values_list('description', flat=True)
+                elif item_obj['type'] == 'weapon':
+                    item_description = ItemsEquipBook.objects.get(id=1) \
+                        .item_weapons.filter(name=item_obj['name']).values_list('description', flat=True)
+                elif item_obj['type'] == 'instrument':
+                    item_description = ItemsEquipBook.objects.get(id=1) \
+                        .item_instruments.filter(name=item_obj['name']).values_list('description', flat=True)
+                
+                if len(item_description) > 0:
+                        item_obj['description'] = item_description[0]
+                
             return Response(inventory_data)
 
     
     
+def get_base64(folder_path, image_name):
+    print(f'{folder_path}{image_name}')
+    with open(f'{folder_path}{image_name}', 'rb') as file:
+        encoded_string = base64.b64encode(file.read())
+    return encoded_string

@@ -306,7 +306,7 @@ class UserCharacterControl(APIView):
                 'file_ext': query.character_avatar_ext,
                 'file_type': 'test',
             })
-        
+
         if not params:
             query_user_character = UserCharacter.objects.filter(dnd_user=user_id, id=character_id)
             if not query_user_character.exists():
@@ -413,26 +413,17 @@ class UserCharacterInventoryView(APIView):
         item_filter = params.get('filter')
         item_name = params.get('item')
         inventory_data = {}
-        check_char_item = get_object_or_404(UserCharacter, id=character_id).char_inventory.items.filter(name=item_name).exists()
+
         all_items = {
             'weapons': ItemsEquipBook.objects.get(id=1).item_weapons.all().values(),
             'armor': ItemsEquipBook.objects.get(id=1).item_armor.all().values(),
             'instruments': ItemsEquipBook.objects.get(id=1).item_instruments.all().values(),
         }
-        
-        if item_filter:
-            inventory_data = {
-                'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
-            }
-            return Response({'items': inventory_data})
-        
-        if params.get('item') and check_char_item:
-            for key, arr in all_items.items():
-                target_item = [item for item in arr if item['name'] == item_name]
-                if target_item:
-                    return Response({'items': target_item})
-        elif params.get('item') and not check_char_item:
-            return Response({'items': []})
+        if not os.path.exists(images_folder):
+            os.mkdir(f'{os.getcwd()}/app_data/character_items/')
+            os.mkdir(f'{os.getcwd()}/app_data/character_items/images/')
+            with open(f'{os.getcwd()}/app_data/character_items/images/test_img.jpg', 'w') as test_img:
+                test_img.write('tset')
         
         if not params:
             inventory_data = {
@@ -472,6 +463,27 @@ class UserCharacterInventoryView(APIView):
                         item_obj['stats'] = item_data.values('weight')[0]
 
             return Response(inventory_data)
+        
+        check_char_item = get_object_or_404(UserCharacter, id=character_id).char_inventory.items.filter(name=item_name).exists()
+
+        if item_filter:
+            inventory_data = {
+                'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
+            }
+            return Response({'items': inventory_data})
+        
+        if params.get('item') and check_char_item:
+            for key, arr in all_items.items():
+                target_item = [item for item in arr if item['name'] == item_name]
+                if target_item:
+                    return Response({'items': target_item})
+        elif params.get('item') and not check_char_item:
+            return Response({'items': []})
+    
+    def post(self, request, user_id, character_id):
+        item_data = json.loads(request.body)
+        print(item_data)
+        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
 
     
     

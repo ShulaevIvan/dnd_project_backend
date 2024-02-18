@@ -388,7 +388,7 @@ class UserCharacterControl(APIView):
 
         return Response({
             'status': 'not found'
-        })
+        }, status=status.HTTP_200_OK)
     
 class UserCharacterSpellsView(APIView):
 
@@ -402,7 +402,7 @@ class UserCharacterSpellsView(APIView):
             query_spells = get_object_or_404(UserCharacter, id=character_id, dnd_user_id=user_id).char_spells.all().values('spell_id')
             spell_data = [UserCharacterSpellSerializer(SpellItem.objects.filter(id=spell_obj['spell_id']), many=True).data[0] for spell_obj in query_spells]
             
-            return Response({'spells': spell_data})
+            return Response({'spells': spell_data}, status=status.HTTP_200_OK)
 
 class UserCharacterInventoryView(APIView):
 
@@ -462,7 +462,7 @@ class UserCharacterInventoryView(APIView):
                     elif item_obj['type'] == 'instrument':
                         item_obj['stats'] = item_data.values('weight')[0]
 
-            return Response(inventory_data)
+            return Response(inventory_data, status=status.HTTP_200_OK)
         
         check_char_item = get_object_or_404(UserCharacter, id=character_id).char_inventory.items.filter(name=item_name).exists()
 
@@ -470,15 +470,15 @@ class UserCharacterInventoryView(APIView):
             inventory_data = {
                 'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
             }
-            return Response({'items': inventory_data})
+            return Response({'items': inventory_data}, status=status.HTTP_200_OK)
         
         if params.get('item') and check_char_item:
             for key, arr in all_items.items():
                 target_item = [item for item in arr if item['name'] == item_name]
                 if target_item:
-                    return Response({'items': target_item})
+                    return Response({'items': target_item}, status=status.HTTP_200_OK)
         elif params.get('item') and not check_char_item:
-            return Response({'items': []})
+            return Response({'items': []}, status=status.HTTP_200_OK)
     
     def post(self, request, user_id, character_id):
         item_data = json.loads(request.body)

@@ -436,7 +436,7 @@ class UserCharacterInventoryView(APIView):
                         'data': get_base64(images_folder, 'item_img.jpg'),
                         'ext': 'image/jpeg'
                     }
-                } for item in UserCharacter.objects.get(id=character_id).char_inventory.items.all()],
+                } for item in get_object_or_404(UserCharacter, id=character_id).char_inventory.items.all()],
             }
 
             for item_obj in inventory_data['items']:

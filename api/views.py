@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, logout
 from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.authtoken.models import Token
+from .serializers import WeaponItemEquipSerializer, ArmorItemEquipSerializer, InstrumentItemEquipSerializer
 from .models import ReferenceBook, ReferenceBookCharClass, ReferenceBookMenu, InstrumentsMenu, CharacterName
 from .models import ReferenceBookCharRace, ReferenceBookBackground, ReferenceBookSkills, ReferenceBookMastery, ClassSpellbook, ReferenceBookClassSkills
 
@@ -528,7 +529,7 @@ class ReferenceBookWeaponSkillView(APIView):
             'name': weapon_obj.name,
         }for weapon_obj in query.mastery_skill.all()]
 
-        return Response(weapons)
+        return Response(weapons, status=status.HTTP_200_OK)
 
 class ReferenceBookMasteryView(APIView):
     
@@ -580,8 +581,73 @@ class ReferenceBookMasteryView(APIView):
             'instruments': instrument.instrument_mastery.all().values(),
         }
 
-        return Response(all_mastery)
-    
+        return Response(all_mastery, status=status.HTTP_200_OK)
+
+class ReferenceBookItemsView(APIView):
+
+    def get(self, request):
+        params = request.query_params
+        items = {}
+        query_book = get_object_or_404(ReferenceBook, id=1)
+
+        if params.get('item'):
+            item_name = f"{params.get('item')[0].upper()}{params.get('item')[1:len(params.get('item'))]}"
+            weapon_serializer = WeaponItemEquipSerializer(
+                data=list(query_book.items_eqip_book.item_weapons.filter(name=item_name).all().values()), many=True
+            )
+            armor_serizlizer = ArmorItemEquipSerializer(
+                data=list(query_book.items_eqip_book.item_armor.filter(name=item_name).all().values()), many=True
+            )
+            instrument_serializer = InstrumentItemEquipSerializer(
+                data=list(query_book.items_eqip_book.item_instruments.filter(name=item_name).all().values()), many=True
+            )
+            weapon_serializer.is_valid()
+            armor_serizlizer.is_valid()
+            instrument_serializer.is_valid()
+           
+            target_item = {
+                'weapon': weapon_serializer.data,
+                'armor': armor_serizlizer.data,
+                'instruments': instrument_serializer.data
+            }
+            target_item = [arr for key, arr in target_item.items() if len(arr) > 0]
+
+            return Response({'items': target_item}, status=status.HTTP_200_OK)
+                    
+        if params.get('filter') == 'weapons':
+            weapons = WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().values(), many=True)
+            weapons.is_valid()
+
+            return Response({'weapons': weapons.data}, status=status.HTTP_200_OK) 
+        
+        elif params.get('filter') == 'armor':
+            armor = ArmorItemEquipSerializer(data=query_book.items_eqip_book.item_armor.all().values(), many=True)
+            armor.is_valid()
+
+            return Response({'armor': armor.data}, status=status.HTTP_200_OK)
+        
+        elif params.get('filter') == 'instruments':
+            instruments = InstrumentItemEquipSerializer(data=query_book.items_eqip_book.item_instruments.all().values(), many=True)
+            instruments.is_valid()
+
+            return Response({'instruments': instruments.data}, status=status.HTTP_200_OK)
+        
+        weapons = WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().values().values(), many=True)
+        armor = ArmorItemEquipSerializer(data=query_book.items_eqip_book.item_armor.all().values(), many=True)
+        instruments = InstrumentItemEquipSerializer(data=query_book.items_eqip_book.item_instruments.all().values(), many=True)
+
+        weapons.is_valid()
+        armor.is_valid()
+        instruments.is_valid()
+
+        items = {
+            'wepons': weapons.data,
+            'armor': armor.data,
+            'instruments': instruments.data,
+        }
+        
+        return Response({'items': items}, status=status.HTTP_200_OK)
+
 class ReferenceBookLanguagesView(APIView):
 
     def get(self, request):
@@ -589,7 +655,7 @@ class ReferenceBookLanguagesView(APIView):
         query = get_object_or_404(ReferenceBook, id=1)
         languges = [{'id': lang_obj.id, 'name': lang_obj.name} for lang_obj in query.book_languges.lang_item.all().exclude(id=9)]
 
-        return Response(languges)
+        return Response(languges, status=status.HTTP_200_OK)
 
 class InstrumentsView(APIView):
     

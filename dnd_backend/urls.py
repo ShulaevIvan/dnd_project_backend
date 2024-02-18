@@ -20,7 +20,8 @@ from users.views import UserCharacterView, UserCharacterControl, UserCharacterSp
 from api.views import UserRegisterView, UserLoginView, UserLogoutView, UserRecoverPasswordView
 from api.views import ReferenceBookView, ReferenceBookClassView, DetailClassView, ReferenceBookRaceView, DetailRaceView, \
 CharacterBackgroundView, DetailBackgroundView, InstrumentsView, ReferenceBookAbilitesView,ReferenceBookMasteryView, \
-ReferenceBookLanguagesView, ReferenceBookSpellsView, DetailSpellView, RandomCharacterNameView, ReferenceBookSkillsView
+ReferenceBookLanguagesView, ReferenceBookSpellsView, DetailSpellView, RandomCharacterNameView, ReferenceBookSkillsView, \
+ReferenceBookItemsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -40,6 +41,7 @@ urlpatterns = [
     path('api/reference_book/skills/', ReferenceBookSkillsView.as_view()),
     path('api/reference_book/mastery/', ReferenceBookMasteryView.as_view()),
     path('api/reference_book/languages/', ReferenceBookLanguagesView.as_view()),
+    path('api/reference_book/items/', ReferenceBookItemsView.as_view()),
     path('api/reference_book/background/<int:background_id>/', DetailBackgroundView.as_view()),
     path('api/instruments/', InstrumentsView.as_view()),
     path('api/services/namegen/<str:gender>/', RandomCharacterNameView.as_view()),

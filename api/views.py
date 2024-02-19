@@ -607,11 +607,7 @@ class ReferenceBookItemsView(APIView):
                 query_book.items_eqip_book.item_weapons.all().values()[random.randint(1, weapon_objects_count - 1)] 
                 for i in range(chunks[random.randint(0, len(chunks) - 1)])
             ]
-            # weapon_serializer = WeaponItemEquipSerializer(
-            #     data=query_book.items_eqip_book.item_weapons.all().values()[random.randint(1, weapon_objects_count - 1)], many=True
-            # )
-            # weapon_serializer.is_valid()
-            # print(weapon_serializer.data)
+          
             chunks.pop(chunks.index(get_random_chunk))
             get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
 

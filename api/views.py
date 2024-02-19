@@ -14,6 +14,7 @@ import json
 import secrets
 import random
 import re
+import random
 
 from .serializers import RegisterDndUser
 from users.models import DndUser
@@ -589,7 +590,52 @@ class ReferenceBookItemsView(APIView):
         params = request.query_params
         items = {}
         query_book = get_object_or_404(ReferenceBook, id=1)
+        if params.get('chunk'):
+            max_items = int(params.get('chunk'))
+            chunks = [random.randint(1, round(max_items / 3)) for i in range(3)]
+            chunks_sum = sum(chunks)
+            if chunks_sum < max_items:
+                dif = max_items - chunks_sum
+                chunks[random.randint(0, len(chunks) - 1)] += dif
+            
+            weapon_objects_count = query_book.items_eqip_book.item_weapons.count()
+            armor_objects_count = query_book.items_eqip_book.item_armor.count()
+            instruments_objects_count = query_book.items_eqip_book.item_instruments.count()
+            get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
+            
+            rand_weapons = [
+                query_book.items_eqip_book.item_weapons.all().values()[random.randint(1, weapon_objects_count - 1)] 
+                for i in range(chunks[random.randint(0, len(chunks) - 1)])
+            ]
+            # weapon_serializer = WeaponItemEquipSerializer(
+            #     data=query_book.items_eqip_book.item_weapons.all().values()[random.randint(1, weapon_objects_count - 1)], many=True
+            # )
+            # weapon_serializer.is_valid()
+            # print(weapon_serializer.data)
+            chunks.pop(chunks.index(get_random_chunk))
+            get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
 
+            rand_armor = [
+                query_book.items_eqip_book.item_armor.all().values()[random.randint(1, armor_objects_count - 1)] 
+                for i in range(chunks[random.randint(0, len(chunks) - 1)])
+            ]
+
+            chunks.pop(chunks.index(get_random_chunk))
+            get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
+
+            rand_instruments = [
+                query_book.items_eqip_book.item_instruments.all().values()[random.randint(1, instruments_objects_count - 1)] 
+                for i in range(chunks[random.randint(0, len(chunks) - 1)])
+            ]
+            items = {
+                'weapons': rand_weapons,
+                'armor': rand_armor,
+                'instruments': rand_instruments
+                
+            }
+
+            return Response({'status': items}, status=status.HTTP_200_OK)
+        
         if params.get('item'):
             item_name = f"{params.get('item')[0].upper()}{params.get('item')[1:len(params.get('item'))]}"
             weapon_serializer = WeaponItemEquipSerializer(
@@ -641,7 +687,7 @@ class ReferenceBookItemsView(APIView):
         instruments.is_valid()
 
         items = {
-            'wepons': weapons.data,
+            'weapons': weapons.data,
             'armor': armor.data,
             'instruments': instruments.data,
         }

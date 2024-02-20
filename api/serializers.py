@@ -38,6 +38,7 @@ class WeaponItemEquipSerializer(serializers.Serializer):
     weight = serializers.IntegerField()
     price = serializers.IntegerField(source='default_price')
     description = serializers.CharField()
+    itemType = serializers.CharField(source='item_type')
 
     class Meta:
         model = WeaponItemEquip
@@ -57,6 +58,7 @@ class ArmorItemEquipSerializer(serializers.Serializer):
     heavyArmor = serializers.BooleanField(source='heavy_armor')
     shield = serializers.BooleanField()
     weight = serializers.IntegerField()
+    itemType = serializers.CharField(source='item_type')
 
     class Meta:
         model = ArmorItemEquip
@@ -68,6 +70,7 @@ class InstrumentItemEquipSerializer(serializers.Serializer):
     description = serializers.CharField()
     price = serializers.IntegerField(source='default_price')
     weight = serializers.IntegerField()
+    itemType = serializers.CharField(source='item_type')
 
     class Meta:
         model = ArmorItemEquip

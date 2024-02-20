@@ -590,47 +590,39 @@ class ReferenceBookItemsView(APIView):
         params = request.query_params
         items = {}
         query_book = get_object_or_404(ReferenceBook, id=1)
-        if params.get('chunk'):
+
+        if params.get('chunk') and params.get('chunk').isdigit():
             max_items = int(params.get('chunk'))
+
             chunks = [random.randint(1, round(max_items / 3)) for i in range(3)]
             chunks_sum = sum(chunks)
             if chunks_sum < max_items:
                 dif = max_items - chunks_sum
                 chunks[random.randint(0, len(chunks) - 1)] += dif
-            
+
             weapon_objects_count = query_book.items_eqip_book.item_weapons.count()
             armor_objects_count = query_book.items_eqip_book.item_armor.count()
             instruments_objects_count = query_book.items_eqip_book.item_instruments.count()
-            get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
-            
-            rand_weapons = [
-                query_book.items_eqip_book.item_weapons.all().values()[random.randint(1, weapon_objects_count - 1)] 
-                for i in range(chunks[random.randint(0, len(chunks) - 1)])
-            ]
-          
-            chunks.pop(chunks.index(get_random_chunk))
-            get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
 
-            rand_armor = [
-                query_book.items_eqip_book.item_armor.all().values()[random.randint(1, armor_objects_count - 1)] 
-                for i in range(chunks[random.randint(0, len(chunks) - 1)])
-            ]
+            weapon_serializer = WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().values(), many=True)
+            armor_serizlizer = ArmorItemEquipSerializer(data=query_book.items_eqip_book.item_armor.all().values(), many=True)
+            instrument_serializer = InstrumentItemEquipSerializer(data=query_book.items_eqip_book.item_instruments.all().values(), many=True)
 
-            chunks.pop(chunks.index(get_random_chunk))
-            get_random_chunk = chunks[random.randint(0, len(chunks) - 1)]
+            weapon_serializer.is_valid()
+            armor_serizlizer.is_valid()
+            instrument_serializer.is_valid()
 
-            rand_instruments = [
-                query_book.items_eqip_book.item_instruments.all().values()[random.randint(1, instruments_objects_count - 1)] 
-                for i in range(chunks[random.randint(0, len(chunks) - 1)])
-            ]
+            rand_weapons = [weapon_serializer.data[random.randint(0, weapon_objects_count - 1)] for i in range(chunks[0])]
+            rand_armor = [armor_serizlizer.data[random.randint(0, armor_objects_count - 1)] for i in range(chunks[1])]
+            rand_instruments = [ instrument_serializer.data[random.randint(0, instruments_objects_count - 1)] for i in range(chunks[2])]
+
             items = {
                 'weapons': rand_weapons,
                 'armor': rand_armor,
                 'instruments': rand_instruments
-                
             }
 
-            return Response({'status': items}, status=status.HTTP_200_OK)
+            return Response({'items': items}, status=status.HTTP_200_OK)
         
         if params.get('item'):
             item_name = f"{params.get('item')[0].upper()}{params.get('item')[1:len(params.get('item'))]}"
@@ -674,7 +666,7 @@ class ReferenceBookItemsView(APIView):
 
             return Response({'instruments': instruments.data}, status=status.HTTP_200_OK)
         
-        weapons = WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().values().values(), many=True)
+        weapons = WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().values(), many=True)
         armor = ArmorItemEquipSerializer(data=query_book.items_eqip_book.item_armor.all().values(), many=True)
         instruments = InstrumentItemEquipSerializer(data=query_book.items_eqip_book.item_instruments.all().values(), many=True)
 
@@ -683,12 +675,32 @@ class ReferenceBookItemsView(APIView):
         instruments.is_valid()
 
         items = {
-            'weapons': weapons.data,
+            'weapons':weapons.data,
             'armor': armor.data,
             'instruments': instruments.data,
         }
         
         return Response({'items': items}, status=status.HTTP_200_OK)
+    
+    def post(self, request):
+        request_data = json.loads(request.body)
+        add_items_count = request_data.get('count')
+        existing_items_ids = request_data.get('existingItems')
+        if not existing_items_ids and not add_items_count: return Response({'status': 'err'})
+        existing_weapons = list(filter(lambda item: item['type'] == 'weapon', request_data.get('existingItems')))
+        existing_armor = list(filter(lambda item: item['type'] == 'armor', request_data.get('existingItems')))
+        existing_instruments = list(filter(lambda item: item['type'] == 'instrument', request_data.get('existingItems')))
+
+        excludeing_ids = []
+        for weapon in existing_weapons:
+            excludeing_ids.append(weapon['id'])
+        
+        query_book = get_object_or_404(ReferenceBook, id=1)
+
+        weapons =  WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().exclude(id__in=[1,3,4]).values(), many=True)
+        weapons.is_valid()
+
+        return Response({'status': weapons.data})
 
 class ReferenceBookLanguagesView(APIView):
 

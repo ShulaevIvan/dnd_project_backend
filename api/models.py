@@ -284,6 +284,7 @@ class WeaponItemEquip(models.Model):
     weight = models.IntegerField()
     default_price = models.IntegerField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
+    item_type = models.CharField(max_length=255, blank=True, null=True)
 
     book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_weapons')
 
@@ -300,6 +301,7 @@ class ArmorItemEquip(models.Model):
     heavy_armor = models.BooleanField(blank=True)
     shield = models.BooleanField(blank=True)
     weight = models.IntegerField()
+    item_type = models.CharField(max_length=255, blank=True, null=True)
 
     book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_armor')
 
@@ -308,6 +310,7 @@ class InstrumentItemEquip(models.Model):
     description = models.TextField(null=True, blank=True)
     default_price = models.IntegerField(null=True, blank=True)
     weight = models.IntegerField()
+    item_type = models.CharField(max_length=255, blank=True, null=True)
 
     book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_instruments')
 
@@ -315,6 +318,7 @@ class OtherItemEquip(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(null=True, blank=True)
     default_price = models.IntegerField(null=True, blank=True)
+    item_type = models.CharField(max_length=255, blank=True, null=True)
 
     book_id = models.ForeignKey(ItemsEquipBook, on_delete=models.CASCADE, related_name='item_other')
 

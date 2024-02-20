@@ -687,20 +687,23 @@ class ReferenceBookItemsView(APIView):
         add_items_count = request_data.get('count')
         existing_items_ids = request_data.get('existingItems')
         if not existing_items_ids and not add_items_count: return Response({'status': 'err'})
-        existing_weapons = list(filter(lambda item: item['type'] == 'weapon', request_data.get('existingItems')))
-        existing_armor = list(filter(lambda item: item['type'] == 'armor', request_data.get('existingItems')))
-        existing_instruments = list(filter(lambda item: item['type'] == 'instrument', request_data.get('existingItems')))
-
-        excludeing_ids = []
-        for weapon in existing_weapons:
-            excludeing_ids.append(weapon['id'])
         
-        query_book = get_object_or_404(ReferenceBook, id=1)
+        count_any_item = round(int(request_data.get('count')) / 3)
+        additional_items = int(request_data.get('count')) - (count_any_item * 3)
+        rand_arr = []
+        
+        for i in range(3):
+            rand_arr.append(count_any_item)
+        rand_arr[random.randint(0, len(rand_arr) -1)] += additional_items
 
-        weapons =  WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().exclude(id__in=[1,3,4]).values(), many=True)
-        weapons.is_valid()
+        data = {
+            'weapons': load_more_items_count(existing_items_ids, 'weapon', rand_arr[0]),
+            'armor': load_more_items_count(existing_items_ids, 'armor', rand_arr[1]),
+            'instruments': load_more_items_count(existing_items_ids, 'instrument', rand_arr[2])
+        }
+        count_items = len(data['weapons']) + len(data['armor']) + len(data['instruments'])
 
-        return Response({'status': weapons.data})
+        return Response(data)
 
 class ReferenceBookLanguagesView(APIView):
 
@@ -751,7 +754,38 @@ class RandomCharacterNameView(APIView):
             random_names.append({'name': query.name, gender: query.gender})
  
         return Response(random_names, status=status.HTTP_200_OK)
-        
+
+def load_more_items_count(all_items, item_type, count):
+    query_book = get_object_or_404(ReferenceBook, id=1)
+    existing_items = list(filter(lambda item: item['type'] == item_type, all_items))
+    existing_ids = []
+
+    for item in existing_items:
+        existing_ids.append(item['id'])
+
+    if item_type == 'weapon':
+        weapons = WeaponItemEquipSerializer(
+            data=query_book.items_eqip_book.item_weapons.exclude(id__in=existing_ids).order_by('?')[:count].values(), many=True
+        )
+        weapons.is_valid()
+        return weapons.data
+    
+    elif item_type == 'armor':
+        armor = ArmorItemEquipSerializer(
+            data=query_book.items_eqip_book.item_armor.exclude(id__in=existing_ids).order_by('?')[:count].values(), many=True
+        )
+        armor.is_valid()
+        return armor.data
+    
+    elif item_type == 'instrument':
+        instruments = InstrumentItemEquipSerializer(
+            data=query_book.items_eqip_book.item_instruments.exclude(id__in=existing_ids).order_by('?')[:count].values(), many=True
+        )
+        instruments.is_valid()
+        return instruments.data
+
+    return []
+   
 def generate_user_password():
     password = secrets.token_urlsafe(6)
 

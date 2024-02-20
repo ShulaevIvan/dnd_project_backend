@@ -701,9 +701,8 @@ class ReferenceBookItemsView(APIView):
             'armor': load_more_items_count(existing_items_ids, 'armor', rand_arr[1]),
             'instruments': load_more_items_count(existing_items_ids, 'instrument', rand_arr[2])
         }
-        count_items = len(data['weapons']) + len(data['armor']) + len(data['instruments'])
 
-        return Response(data)
+        return Response({'items': data})
 
 class ReferenceBookLanguagesView(APIView):
 

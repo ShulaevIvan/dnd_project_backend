@@ -644,7 +644,7 @@ class ReferenceBookItemsView(APIView):
                 'armor': armor_serizlizer.data,
                 'instruments': instrument_serializer.data
             }
-            target_item = [arr for key, arr in target_item.items() if len(arr) > 0]
+            target_item = [arr[0] for key, arr in target_item.items() if len(arr) > 0]
 
             return Response({'items': target_item}, status=status.HTTP_200_OK)
                     
@@ -702,7 +702,7 @@ class ReferenceBookItemsView(APIView):
             'instruments': load_more_items_count(existing_items_ids, 'instrument', rand_arr[2])
         }
 
-        return Response({'items': data})
+        return Response({'items': data} , status=status.HTTP_202_ACCEPTED)
 
 class ReferenceBookLanguagesView(APIView):
 

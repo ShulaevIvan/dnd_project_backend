@@ -404,6 +404,7 @@ class UserCharacterSpellsView(APIView):
             
             return Response({'spells': spell_data}, status=status.HTTP_200_OK)
 
+      
 class UserCharacterInventoryView(APIView):
 
     def get(self, request, user_id, character_id):
@@ -431,6 +432,7 @@ class UserCharacterInventoryView(APIView):
                     'id': item.id,
                     'name': item.name,
                     'type': item.item_type,
+                    'item_id': get_item_id_by_item_type(item.name, item.item_type),
                     'quantity': item.character_inventory_item.filter(item_id=item.id, character_id=character_id).values_list('quantity', flat=True)[0],
                     'image': {
                         'data': get_base64(images_folder, 'item_img.jpg'),
@@ -485,9 +487,9 @@ class UserCharacterInventoryView(APIView):
         if params.get('add') == 'item':
             item_data = json.loads(request.body)
 
-            target_character = get_object_or_404(UserCharacter, id=item_data['characterId'], character_name = item_data['characterName'])
+            target_character = get_object_or_404(UserCharacter, dnd_user = user_id, id=item_data['characterId'], character_name = item_data['characterName'])
             target_item = CharacterInventoryItem.objects.filter(name=item_data['itemName'], item_type=item_data['itemType'])
-            character_inventory = get_object_or_404(UserCharacterInventory, character_id=target_character.id)
+            character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
             new_qnt = int(item_data['quantity'])
 
             if target_item.exists():
@@ -505,10 +507,24 @@ class UserCharacterInventoryView(APIView):
                 ),
                 character_id = character_inventory
             )
-            
-        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
 
+        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
     
+    def delete(self, request, user_id, character_id):
+        
+        return Response({'status': 'ok'}, status=status.HTTP_204_NO_CONTENT)
+
+def get_item_id_by_item_type(item_name, item_type):
+    items_book = ItemsEquipBook.objects.get(id=1)
+    item = 0
+    if item_type == 'weapon':
+        item = items_book.item_weapons.filter(name=item_name, item_type = item_type).values_list('id', flat=True)[0]
+    elif item_type == 'armor':
+        item = items_book.item_armor.filter(name=item_name, item_type = item_type).values_list('id', flat=True)[0]
+    elif item_type == 'instrument':
+        item = items_book.item_instruments.filter(name=item_name, item_type = item_type).values_list('id', flat=True)[0]
+    
+    return item   
     
 def get_base64(folder_path, image_name):
     with open(f'{folder_path}{image_name}', 'rb') as file:

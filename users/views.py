@@ -481,8 +481,31 @@ class UserCharacterInventoryView(APIView):
             return Response({'items': []}, status=status.HTTP_200_OK)
     
     def post(self, request, user_id, character_id):
-        item_data = json.loads(request.body)
-        print(item_data)
+        params = request.query_params
+        if params.get('add') == 'item':
+            item_data = json.loads(request.body)
+
+            target_character = get_object_or_404(UserCharacter, id=item_data['characterId'], character_name = item_data['characterName'])
+            target_item = CharacterInventoryItem.objects.filter(name=item_data['itemName'], item_type=item_data['itemType'])
+            character_inventory = get_object_or_404(UserCharacterInventory, character_id=target_character.id)
+            new_qnt = int(item_data['quantity'])
+
+            if target_item.exists():
+                inventory_item = UserCharacterInventoryItem.objects.filter(item_id = target_item[0].id)
+                new_qnt = int(inventory_item.values_list('quantity', flat=True)[0]) + int(item_data['quantity'])
+                inventory_item.update(quantity=new_qnt)
+
+                return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
+
+            UserCharacterInventoryItem.objects.update_or_create(
+                quantity = new_qnt,
+                item_id = CharacterInventoryItem.objects.create(
+                    name=item_data['itemName'],
+                    item_type=item_data['itemType'],
+                ),
+                character_id = character_inventory
+            )
+            
         return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
 
     

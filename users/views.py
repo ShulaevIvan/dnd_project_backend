@@ -513,21 +513,29 @@ class UserCharacterInventoryView(APIView):
     def delete(self, request, user_id, character_id):
         params = request.query_params
         item_data = json.loads(request.body)
+
         character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
         target_item_qnt = UserCharacterInventoryItem.objects.filter(
             item_id = item_data['id'],
             character_id = character_id
         )
         if target_item_qnt.exists():
-            target_item_qnt = target_item_qnt.values_list('quantity', flat=True)[0]
+            item_qnt = target_item_qnt.values_list('quantity', flat=True)[0]
         
-        print(target_item_qnt)
         for item_obj in character_inventory.items.all():
             if item_data['id'] == item_obj.id and item_obj.name == item_data['name'] and item_obj.item_type == item_data['type']:
-                print(target_item_qnt)
-        
-
-        return Response({'status': 'ok'}, status=status.HTTP_204_NO_CONTENT)
+                item_model =  target_item_qnt[0]
+                if item_qnt > 1:
+                    item_model.quantity = item_model.quantity - int(item_data['count'])
+                    item_model.save()
+                    item_data['count'] = item_model.quantity
+                    item_data['status'] = 'reduced'
+                    return Response(item_data, status=status.HTTP_202_ACCEPTED)
+                else:
+                    item_model.delete()
+                    item_data['count'] = 0
+                    item_data['status'] = 'removed'
+                    return Response(item_data, status=status.HTTP_202_ACCEPTED)
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

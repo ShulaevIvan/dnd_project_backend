@@ -432,7 +432,7 @@ class UserCharacterInventoryView(APIView):
                     'id': item.id,
                     'name': item.name,
                     'type': item.item_type,
-                    'item_id': get_item_id_by_item_type(item.name, item.item_type),
+                    'itemId': get_item_id_by_item_type(item.name, item.item_type),
                     'quantity': item.character_inventory_item.filter(item_id=item.id, character_id=character_id).values_list('quantity', flat=True)[0],
                     'image': {
                         'data': get_base64(images_folder, 'item_img.jpg'),
@@ -511,7 +511,22 @@ class UserCharacterInventoryView(APIView):
         return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
     
     def delete(self, request, user_id, character_id):
+        params = request.query_params
+        item_data = json.loads(request.body)
+        character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
+        target_item_qnt = UserCharacterInventoryItem.objects.filter(
+            item_id = item_data['id'],
+            character_id = character_id
+        )
+        if target_item_qnt.exists():
+            target_item_qnt = target_item_qnt.values_list('quantity', flat=True)[0]
         
+        print(target_item_qnt)
+        for item_obj in character_inventory.items.all():
+            if item_data['id'] == item_obj.id and item_obj.name == item_data['name'] and item_obj.item_type == item_data['type']:
+                print(target_item_qnt)
+        
+
         return Response({'status': 'ok'}, status=status.HTTP_204_NO_CONTENT)
 
 def get_item_id_by_item_type(item_name, item_type):

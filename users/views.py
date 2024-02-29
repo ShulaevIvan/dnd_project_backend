@@ -484,31 +484,40 @@ class UserCharacterInventoryView(APIView):
     
     def post(self, request, user_id, character_id):
         params = request.query_params
+
         if params.get('add') == 'item':
             item_data = json.loads(request.body)
-
             target_character = get_object_or_404(UserCharacter, dnd_user = user_id, id=item_data['characterId'], character_name = item_data['characterName'])
             target_item = CharacterInventoryItem.objects.filter(name=item_data['itemName'], item_type=item_data['itemType'])
-            character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
+            character_inventory = get_object_or_404(UserCharacterInventory, character_id=target_character)
+            check_item = character_inventory.items.filter(name = item_data['itemName'], item_type=item_data['itemType'])
+            # for i in check_item.all():
+            #     i.delete()
+            # print(check_item.values())
+            # if check_item.exists():
+            #     target_item_id = target_item.values_list('id', flat=True)[0]
+            #     new_qnt = int(check_item.values_list('quantity', flat=True)[0]) + int(item_data['quantity'])
+            #     check_item.update(quantity=new_qnt)
+            #     return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
             new_qnt = int(item_data['quantity'])
+            # if target_item.exists():
+            #     target_item_id = target_item.values_list('id', flat=True)[0]
+            #     inventory_item = UserCharacterInventoryItem.objects.filter(item_id_id = target_item_id, character_id = target_character.id)
+            #     new_qnt = int(inventory_item.values_list('quantity', flat=True)[0]) + int(item_data['quantity'])
+            #     inventory_item.update(quantity=new_qnt)
 
-            if target_item.exists():
-                inventory_item = UserCharacterInventoryItem.objects.filter(item_id = target_item[0].id)
-                new_qnt = int(inventory_item.values_list('quantity', flat=True)[0]) + int(item_data['quantity'])
-                inventory_item.update(quantity=new_qnt)
-
-                return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
-
-            UserCharacterInventoryItem.objects.update_or_create(
-                quantity = new_qnt,
-                item_id = CharacterInventoryItem.objects.create(
+            #     return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
+            item, created = CharacterInventoryItem.objects.update_or_create(
                     name=item_data['itemName'],
                     item_type=item_data['itemType'],
-                ),
+                )
+            UserCharacterInventoryItem.objects.update_or_create(
+                quantity = new_qnt,
+                item_id = item,
                 character_id = character_inventory
             )
 
-        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
+        return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
     
     def delete(self, request, user_id, character_id):
         params = request.query_params

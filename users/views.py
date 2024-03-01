@@ -487,64 +487,54 @@ class UserCharacterInventoryView(APIView):
 
         if params.get('add') == 'item':
             item_data = json.loads(request.body)
-            target_character = get_object_or_404(UserCharacter, dnd_user = user_id, id=item_data['characterId'], character_name = item_data['characterName'])
-            target_item = CharacterInventoryItem.objects.filter(name=item_data['itemName'], item_type=item_data['itemType'])
-            character_inventory = get_object_or_404(UserCharacterInventory, character_id=target_character)
-            check_item = character_inventory.items.filter(name = item_data['itemName'], item_type=item_data['itemType'])
-            # for i in check_item.all():
-            #     i.delete()
-            # print(check_item.values())
-            # if check_item.exists():
-            #     target_item_id = target_item.values_list('id', flat=True)[0]
-            #     new_qnt = int(check_item.values_list('quantity', flat=True)[0]) + int(item_data['quantity'])
-            #     check_item.update(quantity=new_qnt)
-            #     return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
-            new_qnt = int(item_data['quantity'])
-            # if target_item.exists():
-            #     target_item_id = target_item.values_list('id', flat=True)[0]
-            #     inventory_item = UserCharacterInventoryItem.objects.filter(item_id_id = target_item_id, character_id = target_character.id)
-            #     new_qnt = int(inventory_item.values_list('quantity', flat=True)[0]) + int(item_data['quantity'])
-            #     inventory_item.update(quantity=new_qnt)
-
-            #     return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
-            item, created = CharacterInventoryItem.objects.update_or_create(
-                    name=item_data['itemName'],
-                    item_type=item_data['itemType'],
+            character_id = item_data.get('characterId')
+            item_name = item_data.get('itemName')
+            item_type = item_data.get('itemType')
+            
+            target_character = get_object_or_404(UserCharacter, dnd_user = user_id, id=character_id, character_name = item_data['characterName'])
+            check_item = target_character.char_inventory.items.filter(name=item_name, item_type=item_type)
+            target_item_obj = CharacterInventoryItem.objects.filter(name=item_name, item_type=item_type).first()
+            if not check_item.exists() and target_item_obj:
+                UserCharacterInventoryItem.objects.create(
+                    quantity = int(item_data.get('quantity')),
+                    item_id = target_item_obj,
+                    character_id = UserCharacterInventory.objects.get(character_id=character_id)
                 )
-            UserCharacterInventoryItem.objects.update_or_create(
-                quantity = new_qnt,
-                item_id = item,
-                character_id = character_inventory
-            )
+            elif check_item.exists() and target_item_obj:
+                for item in target_character.char_inventory.items.all():
+                    if item.name == item_name and item.item_type == item_type:
+                        new_qnt = int(item.character_inventory_item.all().values_list('quantity', flat=True)[0]) + int(item_data.get('quantity'))
+
+                        UserCharacterInventoryItem.objects.update(
+                            quantity = new_qnt,
+                            item_id = target_item_obj,
+                            character_id = UserCharacterInventory.objects.get(character_id=character_id)
+                        )
 
         return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
     
     def delete(self, request, user_id, character_id):
         params = request.query_params
         item_data = json.loads(request.body)
-
         character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
-        target_item_qnt = UserCharacterInventoryItem.objects.filter(
-            item_id = item_data['id'],
-            character_id = character_id
-        )
-        if target_item_qnt.exists():
-            item_qnt = target_item_qnt.values_list('quantity', flat=True)[0]
-        
-        for item_obj in character_inventory.items.all():
-            if item_data['id'] == item_obj.id and item_obj.name == item_data['name'] and item_obj.item_type == item_data['type']:
-                item_model =  target_item_qnt[0]
-                if item_qnt > 1:
-                    item_model.quantity = item_model.quantity - int(item_data['count'])
-                    item_model.save()
-                    item_data['count'] = item_model.quantity
-                    item_data['status'] = 'reduced'
-                    return Response(item_data, status=status.HTTP_202_ACCEPTED)
-                else:
-                    item_model.delete()
-                    item_data['count'] = 0
-                    item_data['status'] = 'removed'
-                    return Response(item_data, status=status.HTTP_202_ACCEPTED)
+
+        for char_item in character_inventory.items.all():
+            item_qnt = char_item.character_inventory_item.all().values_list('quantity', flat=True)
+            if char_item.name == item_data['name'] and char_item.item_type == item_data['type'] and item_qnt and int(item_qnt[0]) <= 1:
+                char_item.delete()
+                item_data['status'] = 'removed'
+
+                return Response(item_data, status=status.HTTP_202_ACCEPTED)
+            elif char_item.name == item_data['name'] and char_item.item_type == item_data['type'] and item_qnt and int(item_qnt[0]) > 1:
+                for item_field in char_item.character_inventory_item.all():
+                    item_field.quantity = int(item_field.quantity) - int(item_data['count'])
+                    item_field.save()
+                    item_data['count'] = item_field.quantity
+                
+                item_data['status'] = 'reduced'
+                return Response(item_data, status=status.HTTP_202_ACCEPTED)
+
+        return Response({'status': 'err'}, status=status.HTTP_400_BAD_REQUEST)
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

@@ -475,10 +475,19 @@ class UserCharacterInventoryView(APIView):
             return Response({'items': inventory_data}, status=status.HTTP_200_OK)
         
         if params.get('item') and check_char_item:
+            character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
+            items_qnt = [{
+                'item_name': item_obj.name,
+                'item_type': item_obj.item_type,
+                'item_qnt': item_obj.character_inventory_item.filter(character_id=character_id).values_list('quantity', flat=True)[0]
+            } for item_obj in character_inventory.items.all()]
+            
             for key, arr in all_items.items():
                 target_item = [item for item in arr if item['name'] == item_name]
                 if target_item:
+                    target_item[0]['quantity'] = [item_q for item_q in items_qnt if item_q['item_name'] == item_name][0]['item_qnt']
                     return Response({'items': target_item}, status=status.HTTP_200_OK)
+                
         elif params.get('item') and not check_char_item:
             return Response({'items': []}, status=status.HTTP_200_OK)
     
@@ -494,12 +503,16 @@ class UserCharacterInventoryView(APIView):
             target_character = get_object_or_404(UserCharacter, dnd_user = user_id, id=character_id, character_name = item_data['characterName'])
             check_item = target_character.char_inventory.items.filter(name=item_name, item_type=item_type)
             target_item_obj = CharacterInventoryItem.objects.filter(name=item_name, item_type=item_type).first()
-            if not check_item.exists() and target_item_obj:
-                UserCharacterInventoryItem.objects.create(
+
+            if not check_item.exists():
+                UserCharacterInventoryItem.objects.update_or_create(
                     quantity = int(item_data.get('quantity')),
-                    item_id = target_item_obj,
+                    item_id = CharacterInventoryItem.objects.create(name=item_name, item_type=item_type),
                     character_id = UserCharacterInventory.objects.get(character_id=character_id)
                 )
+               
+
+                return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
             elif check_item.exists() and target_item_obj:
                 for item in target_character.char_inventory.items.all():
                     if item.name == item_name and item.item_type == item_type:
@@ -510,6 +523,7 @@ class UserCharacterInventoryView(APIView):
                             item_id = target_item_obj,
                             character_id = UserCharacterInventory.objects.get(character_id=character_id)
                         )
+                        return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
 
         return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
     

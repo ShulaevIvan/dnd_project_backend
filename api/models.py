@@ -132,13 +132,16 @@ class WeaponMasteryItem(models.Model):
     exotic_weapon = models.BooleanField()
     simple_weapon = models.BooleanField()
     fundamental_skill = models.BooleanField(null=True, blank=True)
-    
+    description = models.TextField(null=True, blank=True)
+    mastery_type = models.CharField(max_length=255, null=True, blank=True)
+
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='mastery_skill')
 
 class WeaponCharMastery(models.Model):
     all_simple_weapons = models.BooleanField(null=True, blank=True, default=False)
     all_warriors_weapons = models.BooleanField(null=True, blank=True, default=False)
     all_exotic_weapons = models.BooleanField(null=True, blank=True, default=False)
+
     class_id = models.ForeignKey(ReferenceBookCharClass, on_delete=models.CASCADE, related_name='weapon_mastery')
     mastery_id = models.ForeignKey(WeaponMasteryItem, on_delete=models.CASCADE, related_name='char_weapon_mastery')
 
@@ -146,6 +149,7 @@ class ArmorMasteryItem(models.Model):
     name = models.TextField(max_length=255, unique=True)
     description = models.TextField(null=True, blank=True)
     fundamental_skill = models.BooleanField(null=True, blank=True)
+    mastery_type = models.CharField(max_length=255, null=True, blank=True)
 
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='armor_mastery')
 
@@ -157,6 +161,7 @@ class InstrumentMasteryItem(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(max_length=3000)
     fundamental_skill = models.BooleanField(null=True, blank=True)
+    mastery_type = models.CharField(max_length=255, null=True, blank=True)
 
     mastery_book_id = models.ForeignKey(ReferenceBookMastery, on_delete=models.CASCADE, related_name='instrument_mastery')
 

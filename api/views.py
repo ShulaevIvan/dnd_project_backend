@@ -536,37 +536,43 @@ class ReferenceBookMasteryView(APIView):
     
     def get(self, request):
 
-        param = request.GET.get('mastery')
-        fundamentals_param = request.GET.get('fundamental')
+        param = request.query_params
 
-        if (fundamentals_param):
-            fundamentals_param = True
+        if param and param.get('search'):
+            mastery_name = param.get('search')
+            mastery_type = param.get('type')
+            print(mastery_type)
 
-        if param and param == 'armor':
+        if param and param.get('mastery') == 'armor':
             query = get_object_or_404(ReferenceBookMastery, id=2)
             
             armor = [{
                 'id': armor_obj.id, 
                 'name': armor_obj.name,
+                'type': armor_obj.mastery_type,
+                'description': armor_obj.description
             } for armor_obj in query.armor_mastery.all()]
 
 
             return Response(armor)
         
-        elif param and param == 'weapons':
+        elif param and param.get('mastery') == 'weapons':
             query = get_object_or_404(ReferenceBookMastery, id=1)
             weapons = [{
                 'id': weapon_obj.id, 
                 'name': weapon_obj.name,
+                'type': weapon_obj.mastery_type,
+                'description': weapon_obj.description
             }for weapon_obj in query.mastery_skill.all()]
 
             return Response(weapons)
         
-        elif param and param == 'instruments':
+        elif param and param.get('mastery') == 'instruments':
             query = get_object_or_404(ReferenceBookMastery, id=3)
             instrument = [{
                 'id': instrument_obj.id, 
                 'name': instrument_obj.name,
+                'type': instrument_obj.mastery_type,
                 'description': instrument_obj.description
             }for instrument_obj in query.instrument_mastery.all()]
 

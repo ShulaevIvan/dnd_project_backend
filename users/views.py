@@ -510,9 +510,8 @@ class UserCharacterInventoryView(APIView):
                     item_id = CharacterInventoryItem.objects.create(name=item_name, item_type=item_type),
                     character_id = UserCharacterInventory.objects.get(character_id=character_id)
                 )
-               
-
                 return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
+            
             elif check_item.exists() and target_item_obj:
                 for item in target_character.char_inventory.items.all():
                     if item.name == item_name and item.item_type == item_type:

@@ -537,55 +537,63 @@ class ReferenceBookMasteryView(APIView):
     def get(self, request):
 
         param = request.query_params
+        mastery_name = param.get('search')
+        mastery_type = param.get('mastery')
+
+        query_armor = get_object_or_404(ReferenceBookMastery,id=2)
+        query_weapons = get_object_or_404(ReferenceBookMastery,id=1)
+        query_instruments = get_object_or_404(ReferenceBookMastery,id=3)
 
         if param and param.get('search'):
-            mastery_name = param.get('search')
-            mastery_type = param.get('type')
-            print(mastery_type)
+            data = dict()
+            if not param.get('mastery'):
+                data['weapons'] = query_weapons.mastery_skill.filter(name=mastery_name).values()
+                data['armor'] = query_armor.armor_mastery.filter(name=mastery_name).values()
+                data['instruments'] = query_instruments.instrument_mastery.filter(name=mastery_name).values()
+                
+                for arr in data.values():
+                    print(len(list(arr)))
 
-        if param and param.get('mastery') == 'armor':
-            query = get_object_or_404(ReferenceBookMastery, id=2)
+                return Response(data, status=status.HTTP_200_OK)
+
+        if param and mastery_type == 'armor':
             
             armor = [{
                 'id': armor_obj.id, 
                 'name': armor_obj.name,
                 'type': armor_obj.mastery_type,
                 'description': armor_obj.description
-            } for armor_obj in query.armor_mastery.all()]
+            } for armor_obj in query_armor.armor_mastery.filter(mastery_type=mastery_type)]
 
 
-            return Response(armor)
+            return Response(armor, status=status.HTTP_200_OK)
         
-        elif param and param.get('mastery') == 'weapons':
+        elif param and mastery_type == 'weapons':
             query = get_object_or_404(ReferenceBookMastery, id=1)
             weapons = [{
                 'id': weapon_obj.id, 
                 'name': weapon_obj.name,
                 'type': weapon_obj.mastery_type,
                 'description': weapon_obj.description
-            }for weapon_obj in query.mastery_skill.all()]
+            }for weapon_obj in query.mastery_skill.filter(mastery_type=mastery_type)]
 
-            return Response(weapons)
+            return Response(weapons, status=status.HTTP_200_OK)
         
-        elif param and param.get('mastery') == 'instruments':
+        elif param and mastery_type == 'instruments':
             query = get_object_or_404(ReferenceBookMastery, id=3)
             instrument = [{
                 'id': instrument_obj.id, 
                 'name': instrument_obj.name,
                 'type': instrument_obj.mastery_type,
                 'description': instrument_obj.description
-            }for instrument_obj in query.instrument_mastery.all()]
+            }for instrument_obj in query.instrument_mastery.filter(mastery_type=mastery_type)]
 
-            return Response(instrument)
-        
-        armor = get_object_or_404(ReferenceBookMastery,id=2)
-        weapon = get_object_or_404(ReferenceBookMastery,id=1)
-        instrument = get_object_or_404(ReferenceBookMastery,id=3)
+            return Response(instrument, status=status.HTTP_200_OK)
 
         all_mastery = {
-            'armor': armor.armor_mastery.all().values(),
-            'weapons': weapon.mastery_skill.all().values(),
-            'instruments': instrument.instrument_mastery.all().values(),
+            'armor': query_armor.armor_mastery.all().values(),
+            'weapons': query_weapons.mastery_skill.all().values(),
+            'instruments': query_instruments.instrument_mastery.all().values(),
         }
 
         return Response(all_mastery, status=status.HTTP_200_OK)

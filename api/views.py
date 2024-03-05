@@ -551,10 +551,16 @@ class ReferenceBookMasteryView(APIView):
                 data['armor'] = query_armor.armor_mastery.filter(name=mastery_name).values()
                 data['instruments'] = query_instruments.instrument_mastery.filter(name=mastery_name).values()
                 
-                for arr in data.values():
-                    print(len(list(arr)))
+                search_result = {
+                    'items': list(filter(lambda query_set: len(list(query_set)) > 0,  data.values())),
+                }
 
-                return Response(data, status=status.HTTP_200_OK)
+                if len(search_result['items']) ==  0:
+                    search_result['items'] = []
+                else:
+                    search_result = search_result['items'][0]
+
+                return Response(search_result, status=status.HTTP_200_OK)
 
         if param and mastery_type == 'armor':
             

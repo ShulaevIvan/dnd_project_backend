@@ -503,27 +503,65 @@ class UserCharacterInventoryView(APIView):
             target_character = get_object_or_404(UserCharacter, dnd_user = user_id, id=character_id, character_name = item_data['characterName'])
             check_item = target_character.char_inventory.items.filter(name=item_name, item_type=item_type)
             target_item_obj = CharacterInventoryItem.objects.filter(name=item_name, item_type=item_type).first()
+            character_inventory = UserCharacterInventory.objects.get(character_id=character_id)
 
             if not check_item.exists():
-                UserCharacterInventoryItem.objects.update_or_create(
+                UserCharacterInventoryItem.objects.create(
                     quantity = int(item_data.get('quantity')),
                     item_id = CharacterInventoryItem.objects.create(name=item_name, item_type=item_type),
-                    character_id = UserCharacterInventory.objects.get(character_id=character_id)
+                    character_id = character_inventory
                 )
+
                 return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
             
             elif check_item.exists() and target_item_obj:
-                for item in target_character.char_inventory.items.all():
-                    if item.name == item_name and item.item_type == item_type:
-                        new_qnt = int(item.character_inventory_item.all().values_list('quantity', flat=True)[0]) + int(item_data.get('quantity'))
+                exists_item = UserCharacterInventory.objects.get(character_id=character_inventory.character_id).items.filter(name=item_name, item_type=item_type)
+                current_inventory_item = UserCharacterInventoryItem.objects.get(item_id=exists_item[0].id)
+                new_qnt = int(current_inventory_item.quantity) + int(item_data.get('quantity'))
+                current_inventory_item.quantity = new_qnt
+                current_inventory_item.save()
+                    
+        if params.get('send') and params.get('character'):
+            data = json.loads(request.body)
+            sended_item_id = data.get('sendItemId')
+            sended_item_name= data.get('sendItemName')
+            sended_item_type = data.get('sendItemType')
+            sended_item_qnt = data.get('itemQuantity')
+            sender_character_id = int(data.get('sendCharacterId'))
+            sender_receiving_id = int(data.get('targetCharacterId'))
+            character_owner = get_object_or_404(UserCharacter, id=sender_character_id, character_name = data.get('sendCharacterName'))
+            character_receiving = get_object_or_404(UserCharacter, id=sender_receiving_id, character_name = data.get('targetCharacterName'))
+            character_receiving_inventory = get_object_or_404(UserCharacterInventory, character_id=character_receiving)
+            check_item = character_receiving_inventory.items.filter(name=sended_item_name, item_type=sended_item_type)
 
-                        UserCharacterInventoryItem.objects.update(
-                            quantity = new_qnt,
-                            item_id = target_item_obj,
-                            character_id = UserCharacterInventory.objects.get(character_id=character_id)
-                        )
-                        return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
+            sender_inventory = get_object_or_404(UserCharacterInventory, character_id=character_owner)
+            sender_item = sender_inventory.items.filter(name=sended_item_name, item_type=sended_item_type)
+            sender_item_qnt = UserCharacterInventoryItem.objects.get(item_id=sender_item[0].id)
+            new_sender_qnt = int(sender_item_qnt.quantity) - int(sended_item_qnt)
+            
+            if new_sender_qnt <= 0: sender_item_qnt.delete()
+            else:
+                sender_item_qnt.quantity = new_sender_qnt
+                sender_item_qnt.save()
 
+            if check_item.exists():
+                exists_item = UserCharacterInventory.objects.get(character_id=sender_receiving_id).items.filter(name=sended_item_name, item_type=sended_item_type)
+                current_inventory_item = UserCharacterInventoryItem.objects.get(item_id=exists_item[0].id)
+                new_qnt = int(current_inventory_item.quantity) + int(sended_item_qnt)
+                current_inventory_item.quantity = new_qnt
+                current_inventory_item.save()
+
+                return Response({'status': 'update'}, status=status.HTTP_201_CREATED)
+
+            if not check_item.exists():
+                UserCharacterInventoryItem.objects.create(
+                    quantity = int(sended_item_qnt),
+                    item_id = CharacterInventoryItem.objects.create(name=sended_item_name, item_type=sended_item_type),
+                    character_id = character_receiving_inventory,
+                )
+
+                return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
+        
         return Response({'status': 'create'}, status=status.HTTP_201_CREATED)
     
     def delete(self, request, user_id, character_id):

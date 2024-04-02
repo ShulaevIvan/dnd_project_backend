@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, UserCharacterSubclass, \
 UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
-UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventroryMoney, CharacterInventoryItem, \
-UserCharacterInventoryItem, UserCharacterInventroryMoney
+UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventoryMoney, CharacterInventoryItem, \
+UserCharacterInventoryItem
 
 from api.models import SpellItem, ItemsEquipBook
 
@@ -201,7 +201,7 @@ class UserCharacterView(APIView):
 
         
         if character_data['character_inventory'].get('currency'):
-            UserCharacterInventroryMoney.objects.update_or_create(
+            UserCharacterInventoryMoney.objects.update_or_create(
                 gold=character_data['character_inventory']['currency']['money']['gold'],
                 silver=character_data['character_inventory']['currency']['money']['silver'],
                 bronze=character_data['character_inventory']['currency']['money']['bronze'],
@@ -427,6 +427,7 @@ class UserCharacterInventoryView(APIView):
                 test_img.write('tset')
         
         if not params:
+            target_character_inventory = get_object_or_404(UserCharacter, id=character_id).char_inventory
             inventory_data = {
                 'items': [{
                     'id': item.id,
@@ -438,7 +439,12 @@ class UserCharacterInventoryView(APIView):
                         'data': get_base64(images_folder, 'item_img.jpg'),
                         'ext': 'image/jpeg'
                     }
-                } for item in get_object_or_404(UserCharacter, id=character_id).char_inventory.items.all()],
+                } for item in target_character_inventory.items.all()],
+                'money': {
+                    'gold': target_character_inventory.money.gold,
+                    'silver': target_character_inventory.money.silver,
+                    'bronze': target_character_inventory.money.bronze
+                }
             }
 
             for item_obj in inventory_data['items']:
@@ -493,6 +499,34 @@ class UserCharacterInventoryView(APIView):
     
     def post(self, request, user_id, character_id):
         params = request.query_params
+
+        if params.get('send') == 'gold':
+            gold_data = json.loads(request.body)
+            sender = gold_data.get('charSend')
+            receiver = gold_data.get('charRecive')
+            money_data = gold_data.get('moneyData')
+            
+            if money_data and sender and receiver:
+                target_character = get_object_or_404(UserCharacter, id=receiver['id'], character_name=receiver['name'])
+                sender_character = get_object_or_404(UserCharacter, id=sender['id'], character_name=sender['name'])
+                sender_character_money = getattr(sender_character.char_inventory.money, money_data['money'])
+                target_character_money = getattr(target_character.char_inventory.money, money_data['money'])
+
+                if money_data['money'] == 'gold':
+                    target_character.char_inventory.money.gold = int(money_data['value']) + int(target_character_money)
+                    sender_character.char_inventory.money.gold = int(sender_character_money) - int(money_data['value'])
+                elif money_data['money'] == 'silver':
+                    target_character.char_inventory.money.silver = int(money_data['value']) + int(target_character_money)
+                    sender_character.char_inventory.money.silver = int(sender_character_money) - int(money_data['value'])
+                elif money_data['money'] == 'bronze':
+                    target_character.char_inventory.money.bronze = int(money_data['value']) + int(target_character_money)
+                    sender_character.char_inventory.money.bronze = int(sender_character_money) - int(money_data['value'])
+
+                sender_character.char_inventory.money.save()
+                target_character.char_inventory.money.save()
+
+                return Response({'status': 'gold_send'}, status=status.HTTP_201_CREATED)
+            return Response({'status': 'err'}, status=status.HTTP_400_BAD_REQUEST)
 
         if params.get('add') == 'item':
             item_data = json.loads(request.body)

@@ -104,7 +104,7 @@ class UserCharacterInventory(models.Model):
 
     character_id = models.OneToOneField(UserCharacter, on_delete=models.CASCADE, primary_key=True, related_name='char_inventory')
 
-class UserCharacterInventroryMoney(models.Model):
+class UserCharacterInventoryMoney(models.Model):
     gold = models.IntegerField(null=True, blank=True)
     silver = models.IntegerField(null=True, blank=True)
     bronze = models.IntegerField(null=True, blank=True)

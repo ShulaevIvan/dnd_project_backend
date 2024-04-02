@@ -48,7 +48,7 @@ urlpatterns = [
     path('api/users/<int:user_id>/characters/', UserCharacterView.as_view()),
     path('api/users/<int:user_id>/characters/<int:character_id>/', UserCharacterControl.as_view()),
     path('api/users/<int:user_id>/characters/<int:character_id>/spells/', UserCharacterSpellsView.as_view()),
-    path('api/users/<int:user_id>/characters/<int:character_id>/inventory/', UserCharacterInventoryView.as_view())
+    path('api/users/<int:user_id>/characters/<int:character_id>/inventory/', UserCharacterInventoryView.as_view()),
 ]
 
 if not os.path.exists(f'{os.getcwd()}/app_data'):

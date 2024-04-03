@@ -479,7 +479,7 @@ class UserCharacterInventoryView(APIView):
                 'items': [item for item in UserCharacter.objects.get(id=character_id).char_inventory.items.filter(item_type=item_filter).values()],
             }
             return Response({'items': inventory_data}, status=status.HTTP_200_OK)
-        
+
         if params.get('item') and check_char_item:
             character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
             items_qnt = [{
@@ -511,7 +511,7 @@ class UserCharacterInventoryView(APIView):
                 sender_character = get_object_or_404(UserCharacter, id=sender['id'], character_name=sender['name'])
                 sender_character_money = getattr(sender_character.char_inventory.money, money_data['money'])
                 target_character_money = getattr(target_character.char_inventory.money, money_data['money'])
-
+                
                 if money_data['money'] == 'gold':
                     target_character.char_inventory.money.gold = int(money_data['value']) + int(target_character_money)
                     sender_character.char_inventory.money.gold = int(sender_character_money) - int(money_data['value'])
@@ -524,8 +524,13 @@ class UserCharacterInventoryView(APIView):
 
                 sender_character.char_inventory.money.save()
                 target_character.char_inventory.money.save()
+                data = {
+                    'gold': sender_character.char_inventory.money.gold,
+                    'silver': sender_character.char_inventory.money.silver,
+                    'bronze': sender_character.char_inventory.money.bronze
+                }
 
-                return Response({'status': 'gold_send'}, status=status.HTTP_201_CREATED)
+                return Response({'money': data}, status=status.HTTP_201_CREATED)
             return Response({'status': 'err'}, status=status.HTTP_400_BAD_REQUEST)
 
         if params.get('add') == 'item':

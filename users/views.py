@@ -532,6 +532,35 @@ class UserCharacterInventoryView(APIView):
 
                 return Response({'money': data}, status=status.HTTP_201_CREATED)
             return Response({'status': 'err'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        if params.get('add') == 'gold':
+            gold_data = json.loads(request.body)
+            character_id = gold_data.get('characterId')
+            character_name = gold_data.get('characterName')
+            money_type = gold_data.get('moneyType')
+            money_value = gold_data.get('moneyValue')
+
+            if character_id and money_type and money_value:
+                target_character = get_object_or_404(UserCharacter, id=character_id, character_name=character_name)
+
+                if money_type == 'gold':
+                    current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
+                    target_character.char_inventory.money.gold = int(money_value) + int(current_character_gold)
+                elif money_type == 'silver':
+                    current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
+                    target_character.char_inventory.money.silver = int(money_value) + int(current_character_gold)
+                elif money_type == 'bronze':
+                    current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
+                    target_character.char_inventory.money.bronze = int(money_value) + int(current_character_gold)
+                
+                target_character.char_inventory.money.save()
+
+                char_money = {
+                    'gold': target_character.char_inventory.money.gold,
+                    'silver': target_character.char_inventory.money.silver,
+                    'bronze': target_character.char_inventory.money.bronze,
+                }
+                return Response({'money': char_money}, status=status.HTTP_201_CREATED)
 
         if params.get('add') == 'item':
             item_data = json.loads(request.body)

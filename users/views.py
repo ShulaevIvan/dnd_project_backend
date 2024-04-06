@@ -512,15 +512,8 @@ class UserCharacterInventoryView(APIView):
                 sender_character_money = getattr(sender_character.char_inventory.money, money_data['money'])
                 target_character_money = getattr(target_character.char_inventory.money, money_data['money'])
                 
-                if money_data['money'] == 'gold':
-                    target_character.char_inventory.money.gold = int(money_data['value']) + int(target_character_money)
-                    sender_character.char_inventory.money.gold = int(sender_character_money) - int(money_data['value'])
-                elif money_data['money'] == 'silver':
-                    target_character.char_inventory.money.silver = int(money_data['value']) + int(target_character_money)
-                    sender_character.char_inventory.money.silver = int(sender_character_money) - int(money_data['value'])
-                elif money_data['money'] == 'bronze':
-                    target_character.char_inventory.money.bronze = int(money_data['value']) + int(target_character_money)
-                    sender_character.char_inventory.money.bronze = int(sender_character_money) - int(money_data['value'])
+                setattr(target_character.char_inventory.money, money_data['money'], int(money_data['value']) + int(target_character_money))
+                setattr(sender_character.char_inventory.money, money_data['money'], int(sender_character_money) - int(money_data['value']))
 
                 sender_character.char_inventory.money.save()
                 target_character.char_inventory.money.save()
@@ -539,19 +532,16 @@ class UserCharacterInventoryView(APIView):
             character_name = gold_data.get('characterName')
             money_type = gold_data.get('moneyType')
             money_value = gold_data.get('moneyValue')
+            money_mode = gold_data.get('mode')
 
             if character_id and money_type and money_value:
                 target_character = get_object_or_404(UserCharacter, id=character_id, character_name=character_name)
+                current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
 
-                if money_type == 'gold':
-                    current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
-                    target_character.char_inventory.money.gold = int(money_value) + int(current_character_gold)
-                elif money_type == 'silver':
-                    current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
-                    target_character.char_inventory.money.silver = int(money_value) + int(current_character_gold)
-                elif money_type == 'bronze':
-                    current_character_gold = int(getattr(target_character.char_inventory.money, money_type))
-                    target_character.char_inventory.money.bronze = int(money_value) + int(current_character_gold)
+                if money_mode == 'plus':
+                    setattr(target_character.char_inventory.money, money_type, int(money_value) + int(current_character_gold))
+                elif money_mode == 'min':
+                    setattr(target_character.char_inventory.money, money_type, int(current_character_gold) - int(money_value))
                 
                 target_character.char_inventory.money.save()
 

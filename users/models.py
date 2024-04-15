@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+from api.models import InstrumentItemEquip, ArmorItemEquip, WeaponItemEquip
 
 
 # Create your models here.
@@ -110,6 +110,27 @@ class UserCharacterInventoryMoney(models.Model):
     bronze = models.IntegerField(null=True, blank=True)
 
     inventory_id = models.OneToOneField(UserCharacterInventory, on_delete=models.CASCADE, primary_key=True, related_name='money')
+
+class CharacterEquipSlots(models.Model):
+    head_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    armor_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    waist_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    hands_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    feet_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    neck_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    weapon_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    weapon_shield_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    arms_shield_equip_allow = models.BooleanField(null=True, blank=True, default=True)
+    l_ring_allow = models.BooleanField(null=True, blank=True, default=True)
+    r_ring_allow = models.BooleanField(null=True, blank=True, default=True)
+
+    character_id = models.OneToOneField(UserCharacter, on_delete=models.CASCADE, primary_key=True)
+    
+class CharacterEquippedItem(models.Model):
+    item_slot = models.CharField(max_length=255, null=True, blank=True)
+    item_equip_id = models.IntegerField(null=True, blank=True)
+    
+    character_inventory_id = models.ForeignKey(UserCharacterInventory, on_delete=models.CASCADE, related_name='character_equipped_items')
 
 class CharacterInventoryItem(models.Model):
     name = models.CharField(max_length=255)

@@ -493,6 +493,7 @@ class UserCharacterInventoryView(APIView):
                 'itemId': equip_obj['item_id'],
                 'equipped': equip_obj['equipped']
             } for equip_obj in UserCharacter.objects.get(id=character_id).char_inventory.character_eqip_slot.all().values()]
+            
             return Response({'items': char_equipped_items}, status=status.HTTP_200_OK)
         
         check_char_item = get_object_or_404(UserCharacter, id=character_id).char_inventory.items.filter(name=item_name).exists()

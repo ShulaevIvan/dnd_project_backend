@@ -805,6 +805,18 @@
         }
     },
     {
+        "pk": 34,
+        "model": "api.InstrumentItemEquip",
+        "fields": {
+            "name": "none",
+            "default_price": 0,
+            "weight": 0,
+            "item_type": "weapon",
+            "description": "",
+            "book_id": 1
+        }
+    },
+    {
         "pk": 1,
         "model": "api.ArmorItemEquip",
         "fields": {
@@ -1081,6 +1093,18 @@
             "weight": 6,
             "item_type": "armor",
             "description": "Щит изготавливается из дерева или металла, и несётся одной рукой. Использование щита увеличивает КД на 2. Вы получаете преимущество только от одного щита одновременно.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.InstrumentItemEquip",
+        "fields": {
+            "name": "none",
+            "default_price": 0,
+            "weight": 0,
+            "item_type": "armor",
+            "description": "",
             "book_id": 1
         }
     },
@@ -1381,6 +1405,18 @@
             "weight": 15,
             "item_type": "instrument",
             "description": "Набор учёного включает в себя: ,рюкзак [backpack], научную книгу [book], бутылочку чернил [ink], писчее перо [ink pen], 10 листов пергамента [parchment], небольшую сумочку с песком, небольшой нож.",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "api.InstrumentItemEquip",
+        "fields": {
+            "name": "none",
+            "default_price": 0,
+            "weight": 0,
+            "item_type": "instrument",
+            "description": "",
             "book_id": 1
         }
     },

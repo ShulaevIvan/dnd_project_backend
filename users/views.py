@@ -3,7 +3,7 @@ from django.shortcuts import render
 from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, UserCharacterSubclass, \
 UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
 UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventoryMoney, CharacterInventoryItem, \
-UserCharacterInventoryItem, CharacterEquipSlots, CharacterEquippedItem
+UserCharacterInventoryItem, UserCharacterEquipSlot
 
 from api.models import SpellItem, ItemsEquipBook
 
@@ -120,10 +120,10 @@ class UserCharacterView(APIView):
                         },
                         'equippedItems': [
                             {
-                                'slot': equip_item['item_slot'],
-                                'itemId': equip_item['item_equip_id']
-                            } 
-                            for equip_item in UserCharacterInventory.objects.get(character_id=character['id']).character_equipped_items.all().values()]
+                                'slot': eqip_obj.slot_name,
+                                'itemId': eqip_obj.item_id,
+                                'equipped': eqip_obj.equipped
+                            } for eqip_obj in UserCharacterInventory.objects.get(character_id=character['id']).character_eqip_slot.all()]
                     }
                    
                 } for character in query.character.all().values()]
@@ -190,32 +190,15 @@ class UserCharacterView(APIView):
         )
 
         inventory, created_inventory = UserCharacterInventory.objects.get_or_create(character_id=created_character)
-        equip_slots, created = CharacterEquipSlots.objects.get_or_create(
-            head_equip_allow = True,
-            armor_equip_allow = True,
-            waist_equip_allow = True,
-            hands_equip_allow = True,
-            feet_equip_allow = True,
-            neck_equip_allow = True,
-            weapon_equip_allow = True,
-            weapon_shield_equip_allow = True,
-            arms_shield_equip_allow = True,
-            l_ring_allow = True,
-            r_ring_allow = True,
+        equip_slots = [
+            'head','armor', 'waist', 
+            'hands', 'feet', 'instrument', 
+            'neck', 'weapon', 'weapon-shield',
+            'arms', 'l-ring', 'r-ring'
+        ]
 
-            character_id = created_character
-        )
-        CharacterEquippedItem.objects.create(item_slot = 'head', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'armor', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'waist', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'hands', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'neck', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'weapon', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'weapon_shield', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'arms_shield', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'l_ring', item_equip_id = 0, character_inventory_id = inventory).save()
-        CharacterEquippedItem.objects.create(item_slot = 'r_ring', item_equip_id = 0, character_inventory_id = inventory).save()
-
+        for eqip_name in equip_slots:
+            slot, created = UserCharacterEquipSlot.objects.get_or_create(inventory_id=inventory, slot_name=eqip_name, item_id=9999, equipped=False)
 
         if character_data['character_inventory'].get('weapons'):
             for weapon_obj in character_data['character_inventory']['weapons']:
@@ -503,6 +486,14 @@ class UserCharacterInventoryView(APIView):
                         item_obj['stats'] = item_data.values('weight')[0]
 
             return Response(inventory_data, status=status.HTTP_200_OK)
+        
+        if params.get('equip') == 'items':
+            char_equipped_items = [{
+                'slot': equip_obj['slot_name'],
+                'itemId': equip_obj['item_id'],
+                'equipped': equip_obj['equipped']
+            } for equip_obj in UserCharacter.objects.get(id=character_id).char_inventory.character_eqip_slot.all().values()]
+            return Response({'items': char_equipped_items}, status=status.HTTP_200_OK)
         
         check_char_item = get_object_or_404(UserCharacter, id=character_id).char_inventory.items.filter(name=item_name).exists()
 

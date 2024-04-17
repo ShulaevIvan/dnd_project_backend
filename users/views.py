@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from django.forms.models import model_to_dict
 
 from users.models import DndUser, UserCharacter, UserCharacterStat, UserCharacterAbility, UserCharacterSubclass, \
 UserCharacterSavethrow, UserCharacterLanguage, UserCharacterArmorMastery, UserCharacterWeaponMastery, \
 UserCharacterInstrumentMastery, UserCharacterSkill, UserCharacterSpell, UserCharacterInventory, UserCharacterInventoryMoney, CharacterInventoryItem, \
 UserCharacterInventoryItem, UserCharacterEquipSlot
 
-from api.models import SpellItem, ItemsEquipBook
+from api.models import SpellItem, ItemsEquipBook, ArmorItemEquip, WeaponItemEquip, InstrumentItemEquip
 
 from django.shortcuts import get_object_or_404
 from django.core.serializers import serialize
@@ -668,6 +669,49 @@ class UserCharacterInventoryView(APIView):
                 return Response(item_data, status=status.HTTP_202_ACCEPTED)
 
         return Response({'status': 'err'}, status=status.HTTP_400_BAD_REQUEST)
+
+class UserCharacterEquippedItemsView(APIView):
+
+    def get(self, request, user_id, character_id):
+
+        params = request.query_params
+        result_items = []
+        item_types_data = [
+            {'type': ['head','armor', 'waist', 'hands', 'feet', 'neck', 'arms', 'l-ring', 'r-ring'],'model': ArmorItemEquip },
+            {'type': ['weapon', 'weapon-shield'], 'model': WeaponItemEquip },
+            {'type': ['instrument'], 'model': InstrumentItemEquip },
+        ]
+        char_equipped_slots = UserCharacter.objects.get(id=character_id, dnd_user=user_id).char_inventory.character_eqip_slot.all()
+
+        if not params:
+            for equip_slot in char_equipped_slots.values():
+                for item_type in item_types_data:
+                    if equip_slot['slot_name'] in item_type['type']:
+                        result_items.append({
+                            'slot': equip_slot['slot_name'],
+                            'item': [
+                                { field: value } for field, value in model_to_dict(item_type['model'].objects.get(id=equip_slot['item_id'])).items() 
+                                if not field == 'book_id'
+                            ]
+                        })
+        
+            return Response({'items': result_items}, status=status.HTTP_200_OK)
+        
+        if params.get('slot'):
+            slot_name = params.get('slot')
+            item_type = [obj for obj in item_types_data if slot_name in obj['type']][0]
+
+            for equip_slot in list(filter(lambda slot_obj: slot_obj['slot_name'] == slot_name, char_equipped_slots.values())):  
+                result_items.append({
+                    'slot': equip_slot['slot_name'],
+                    'item': [
+                        { field: value } for field, value in model_to_dict(item_type['model'].objects.get(id=equip_slot['item_id'])).items() 
+                        if not field == 'book_id'
+                    ]
+                })
+            return Response({'status': result_items})
+        return Response({'status': 'not found'})
+    
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

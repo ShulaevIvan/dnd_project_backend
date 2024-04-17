@@ -784,7 +784,7 @@
         }
     },
     {
-        "pk": 33,
+        "pk": 34,
         "model": "api.WeaponItemEquip",
         "fields": {
             "name": "Цеп",
@@ -801,18 +801,6 @@
             "default_price": 1000,
             "item_type": "weapon",
             "description": "Боевой цеп — контактное холодное оружие дробящего действия, состоящее из двух (реже — трёх) гибко сочленённых твёрдых палок.",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 34,
-        "model": "api.InstrumentItemEquip",
-        "fields": {
-            "name": "none",
-            "default_price": 0,
-            "weight": 0,
-            "item_type": "weapon",
-            "description": "",
             "book_id": 1
         }
     },
@@ -1093,18 +1081,6 @@
             "weight": 6,
             "item_type": "armor",
             "description": "Щит изготавливается из дерева или металла, и несётся одной рукой. Использование щита увеличивает КД на 2. Вы получаете преимущество только от одного щита одновременно.",
-            "book_id": 1
-        }
-    },
-    {
-        "pk": 16,
-        "model": "api.InstrumentItemEquip",
-        "fields": {
-            "name": "none",
-            "default_price": 0,
-            "weight": 0,
-            "item_type": "armor",
-            "description": "",
             "book_id": 1
         }
     },
@@ -1409,13 +1385,54 @@
         }
     },
     {
-        "pk": 26,
+        "pk": 9999,
         "model": "api.InstrumentItemEquip",
         "fields": {
-            "name": "none",
+            "name": "none_instrument",
             "default_price": 0,
             "weight": 0,
             "item_type": "instrument",
+            "description": "empty slot",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9999,
+        "model": "api.ArmorItemEquip",
+        "fields": {
+            "name": "none armor",
+            "base_armor": 0,
+            "dex_modif": 0,
+            "dex_modif_full": false,
+            "sneak_penalty": false,
+            "light_armor": false,
+            "medium_armor": false,
+            "heavy_armor": false,
+            "shield": false,
+            "default_price": 0,
+            "item_type": "armor",
+            "weight": 0,
+            "description": "",
+            "book_id": 1
+        }
+    },
+    {
+        "pk": 9999,
+        "model": "api.WeaponItemEquip",
+        "fields": {
+            "name": "none_weapon",
+            "ranged_weapon": false,
+            "melee_weapon": false,
+            "onehanded": false,
+            "twohanded": false,
+            "min_dmg": 0,
+            "max_dmg": 0,
+            "effective_range": 0,
+            "max_range": 0,
+            "weight" : 0,
+            "dmg_type": "",
+            "default_price": 0,
+            "item_type": "weapon",
             "description": "",
             "book_id": 1
         }

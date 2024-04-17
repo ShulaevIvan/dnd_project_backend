@@ -687,31 +687,24 @@ class UserCharacterEquippedItemsView(APIView):
             for equip_slot in char_equipped_slots.values():
                 for item_type in item_types_data:
                     if equip_slot['slot_name'] in item_type['type']:
-                        result_items.append({
+                        list_item_values = {
                             'slot': equip_slot['slot_name'],
                             'item': [
                                 { field: value } for field, value in model_to_dict(item_type['model'].objects.get(id=equip_slot['item_id'])).items() 
                                 if not field == 'book_id'
-                            ]
-                        })
-        
+                            ],
+                        }
+                        result_items.append({**list_item_values, 'item': join_dicts(list_item_values,'item')})
+
             return Response({'items': result_items}, status=status.HTTP_200_OK)
         
         if params.get('slot'):
             slot_name = params.get('slot')
-            item_type = [obj for obj in item_types_data if slot_name in obj['type']][0]
+            item_type = [obj for obj in item_types_data if slot_name in obj['type']]
+            target_item = list(filter(lambda slot_obj: slot_obj['slot_name'] == slot_name, char_equipped_slots.values()))
 
-            for equip_slot in list(filter(lambda slot_obj: slot_obj['slot_name'] == slot_name, char_equipped_slots.values())):  
-                result_items.append({
-                    'slot': equip_slot['slot_name'],
-                    'item': [
-                        { field: value } for field, value in model_to_dict(item_type['model'].objects.get(id=equip_slot['item_id'])).items() 
-                        if not field == 'book_id'
-                    ]
-                })
-            return Response({'status': result_items})
-        return Response({'status': 'not found'})
-    
+            return Response({'items': target_item}, status=status.HTTP_200_OK)
+        return Response({'status': 'not found'}, status=status.HTTP_404_NOT_FOUND)    
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)
@@ -729,3 +722,9 @@ def get_base64(folder_path, image_name):
     with open(f'{folder_path}{image_name}', 'rb') as file:
         encoded_string = base64.b64encode(file.read())
     return encoded_string
+
+def join_dicts(list, key_list):
+    if key_list:
+        return {key: value for dict in list[key_list] for key, value in dict.items()}
+    return {key: value for dict in list[key_list] for key, value in dict.items()}
+    

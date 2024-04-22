@@ -668,7 +668,7 @@ class ReferenceBookItemsView(APIView):
 
             return Response({'items': target_item}, status=status.HTTP_200_OK)
                     
-        if params.get('filter') == 'weapons':
+        if params.get('filter') == 'weapons' or params.get('filter') == 'weapon':
             weapons = WeaponItemEquipSerializer(data=query_book.items_eqip_book.item_weapons.all().values(), many=True)
             weapons.is_valid()
 
@@ -680,7 +680,7 @@ class ReferenceBookItemsView(APIView):
 
             return Response({'armor': armor.data}, status=status.HTTP_200_OK)
         
-        elif params.get('filter') == 'instruments':
+        elif params.get('filter') == 'instruments' or params.get('filter') == 'instrument':
             instruments = InstrumentItemEquipSerializer(data=query_book.items_eqip_book.item_instruments.all().values(), many=True)
             instruments.is_valid()
 

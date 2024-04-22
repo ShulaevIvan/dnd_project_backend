@@ -704,7 +704,60 @@ class UserCharacterEquippedItemsView(APIView):
             target_item = list(filter(lambda slot_obj: slot_obj['slot_name'] == slot_name, char_equipped_slots.values()))
 
             return Response({'items': target_item}, status=status.HTTP_200_OK)
-        return Response({'status': 'not found'}, status=status.HTTP_404_NOT_FOUND)    
+        
+        return Response({'status': 'not found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    def post(self, request, user_id, character_id):
+        params = request.query_params
+        send_data = json.loads(request.body)
+
+        target_character_name = send_data.get('characterName')
+        target_item_slot = send_data.get('slot')
+        current_item = send_data.get('currentItem')
+
+        target_character = get_object_or_404(UserCharacter, dnd_user=user_id, character_name=target_character_name)
+        character_inventory = get_object_or_404(UserCharacterInventory, character_id=character_id)
+        current_equipped_item_obj = UserCharacterEquipSlot.objects.get(inventory_id=character_inventory, slot_name=target_item_slot)
+        current_equipped_item = target_character.char_inventory.character_eqip_slot.filter(slot_name=target_item_slot)
+        current_item_id = int(list(current_equipped_item.values('item_id'))[0]['item_id'])
+
+        
+        if current_item_id != 9999:
+            qnt = 1
+            check_item = target_character.char_inventory.items.filter(name=current_item['name'], item_type=current_item['item_type'])
+            current_equipped_item_id = list(current_equipped_item.values_list('item_id', flat=True))[0]
+            # a = [i.delete() for i in CharacterInventoryItem.objects.all()]
+            if not check_item.exists():
+                inventory_item = CharacterInventoryItem.objects.create(
+                    name=current_item['name'], 
+                    item_type=current_item['item_type']
+                )
+            else:
+                inventory_item = CharacterInventoryItem.objects.get(name=current_item['name'], item_type=current_item['item_type'])
+
+            inventory_item_qnt = list(UserCharacterInventoryItem.objects.filter(character_id=character_id, item_id=inventory_item.id).values('quantity'))
+
+            if not inventory_item_qnt:
+                qnt = 1
+                UserCharacterInventoryItem.objects.create(
+                    quantity = qnt,
+                    item_id = inventory_item,
+                    character_id = character_inventory,
+                )
+            elif inventory_item_qnt:
+                qnt = int(inventory_item_qnt[0]['quantity']) + 1
+                UserCharacterInventoryItem.objects.update(
+                    quantity = qnt,
+                    item_id = inventory_item,
+                    character_id = character_inventory,
+                )
+
+        current_equipped_item_obj.item_id = send_data['item']['id']
+        current_equipped_item_obj.equipped = True
+        current_equipped_item_obj.save()
+
+
+        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

@@ -721,21 +721,20 @@ class UserCharacterEquippedItemsView(APIView):
         current_equipped_item = target_character.char_inventory.character_eqip_slot.filter(slot_name=target_item_slot)
         current_item_id = int(list(current_equipped_item.values('item_id'))[0]['item_id'])
 
-        
-        if current_item_id != 9999:
+        if current_item_id != 9999 and params.get('add') == 'new':
             qnt = 1
             check_item = target_character.char_inventory.items.filter(name=current_item['name'], item_type=current_item['item_type'])
             current_equipped_item_id = list(current_equipped_item.values_list('item_id', flat=True))[0]
-            # a = [i.delete() for i in CharacterInventoryItem.objects.all()]
             if not check_item.exists():
                 inventory_item = CharacterInventoryItem.objects.create(
                     name=current_item['name'], 
                     item_type=current_item['item_type']
                 )
-            else:
+                inventory_item.save()
+            elif check_item.exists():
                 inventory_item = CharacterInventoryItem.objects.get(name=current_item['name'], item_type=current_item['item_type'])
 
-            inventory_item_qnt = list(UserCharacterInventoryItem.objects.filter(character_id=character_id, item_id=inventory_item.id).values('quantity'))
+            inventory_item_qnt = list(UserCharacterInventoryItem.objects.filter(character_id=character_id, item_id=inventory_item.id).values('id', 'quantity'))
 
             if not inventory_item_qnt:
                 qnt = 1
@@ -744,20 +743,28 @@ class UserCharacterEquippedItemsView(APIView):
                     item_id = inventory_item,
                     character_id = character_inventory,
                 )
-            elif inventory_item_qnt:
-                qnt = int(inventory_item_qnt[0]['quantity']) + 1
-                UserCharacterInventoryItem.objects.update(
-                    quantity = qnt,
-                    item_id = inventory_item,
-                    character_id = character_inventory,
-                )
+            qnt = int(inventory_item_qnt[0]['quantity']) + 1
+                
+            UserCharacterInventoryItem.objects.filter(id=inventory_item_qnt[0]['id']).update(
+                quantity = qnt,
+                item_id = inventory_item,
+                character_id = character_inventory,
+            )
 
-        current_equipped_item_obj.item_id = send_data['item']['id']
-        current_equipped_item_obj.equipped = True
-        current_equipped_item_obj.save()
+            current_equipped_item_obj.item_id = send_data['item']['id']
+            current_equipped_item_obj.equipped = True
+            current_equipped_item_obj.save()
 
 
-        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
+            return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
+        
+        if params.get('unequip') == 'true':
+            # no_name_item = WeaponItemEquip
+            print(current_item['item_type'])
+            print(current_item['id'])
+            # print(send_data)
+            # print(current_equipped_item)
+            return Response({'status': 'test'})
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

@@ -721,10 +721,11 @@ class UserCharacterEquippedItemsView(APIView):
         current_equipped_item = target_character.char_inventory.character_eqip_slot.filter(slot_name=target_item_slot)
         current_item_id = int(list(current_equipped_item.values('item_id'))[0]['item_id'])
 
-        if current_item_id != 9999 and params.get('add') == 'new':
+        if params.get('add') == 'new':
             qnt = 1
             check_item = target_character.char_inventory.items.filter(name=current_item['name'], item_type=current_item['item_type'])
             current_equipped_item_id = list(current_equipped_item.values_list('item_id', flat=True))[0]
+            
             if not check_item.exists():
                 inventory_item = CharacterInventoryItem.objects.create(
                     name=current_item['name'], 
@@ -755,16 +756,25 @@ class UserCharacterEquippedItemsView(APIView):
             current_equipped_item_obj.equipped = True
             current_equipped_item_obj.save()
 
+        if params.get('unequip') == 'true' and current_equipped_item_obj.item_id:
+            item_params = [
+                {"item_type": 'weapon', "model": WeaponItemEquip,},
+                {"item_type": 'armor', "model": ArmorItemEquip,},
+                {"item_type": 'instrument', "model": InstrumentItemEquip,}
+            ]
+            target_item_type = list(filter((lambda param: param['item_type'] == current_equipped_item_obj.slot_name), item_params))[0]
+            no_item_obj = target_item_type['model'].objects.filter(id=9999).first()
+            current_equipped_item_obj.item_id = no_item_obj.id
+            current_equipped_item_obj.slot_name = target_item_type['item_type']
+            current_equipped_item_obj.equipped = True
+            current_equipped_item_obj.save()
 
-            return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
-        
-        if params.get('unequip') == 'true':
-            # no_name_item = WeaponItemEquip
-            print(current_item['item_type'])
-            print(current_item['id'])
-            # print(send_data)
-            # print(current_equipped_item)
             return Response({'status': 'test'})
+
+
+        return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
+        
+        
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

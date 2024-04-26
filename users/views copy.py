@@ -722,7 +722,34 @@ class UserCharacterEquippedItemsView(APIView):
         current_item_id = int(list(current_equipped_item.values('item_id'))[0]['item_id'])
 
         if params.get('add') == 'new':
-            save_item_to_character_inventory(target_character, current_item, character_inventory)
+            qnt = 1
+            check_item = target_character.char_inventory.items.filter(name=current_item['name'], item_type=current_item['item_type'])
+            
+            if not check_item.exists():
+                inventory_item = CharacterInventoryItem.objects.create(
+                    name=current_item['name'], 
+                    item_type=current_item['item_type']
+                )
+                inventory_item.save()
+            elif check_item.exists():
+                inventory_item = CharacterInventoryItem.objects.get(name=current_item['name'], item_type=current_item['item_type'])
+
+            inventory_item_qnt = list(UserCharacterInventoryItem.objects.filter(character_id=character_id, item_id=inventory_item.id).values('id', 'quantity'))
+
+            if not inventory_item_qnt:
+                qnt = 1
+                UserCharacterInventoryItem.objects.create(
+                    quantity = qnt,
+                    item_id = inventory_item,
+                    character_id = character_inventory,
+                )
+            qnt = int(inventory_item_qnt[0]['quantity']) + 1
+                
+            UserCharacterInventoryItem.objects.filter(id=inventory_item_qnt[0]['id']).update(
+                quantity = qnt,
+                item_id = inventory_item,
+                character_id = character_inventory,
+            )
 
             current_equipped_item_obj.item_id = send_data['item']['id']
             current_equipped_item_obj.equipped = True
@@ -734,11 +761,9 @@ class UserCharacterEquippedItemsView(APIView):
                 {"item_type": 'armor', "model": ArmorItemEquip,},
                 {"item_type": 'instrument', "model": InstrumentItemEquip,}
             ]
-
+            
             target_item_type = list(filter((lambda param: param['item_type'] == current_equipped_item_obj.slot_name), item_params))[0]
             no_item_obj = target_item_type['model'].objects.filter(id=9999).first()
-            save_item_to_character_inventory(target_character, current_item, character_inventory)
-
             current_equipped_item_obj.item_id = no_item_obj.id
             current_equipped_item_obj.slot_name = target_item_type['item_type']
             current_equipped_item_obj.equipped = True
@@ -749,34 +774,7 @@ class UserCharacterEquippedItemsView(APIView):
 
         return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
         
-
-def save_item_to_character_inventory(character_obj, item_to_inventory_obj, character_inventory_obj):
-    qnt = 1
-    check_item = character_obj.char_inventory.items.filter(name=item_to_inventory_obj['name'], item_type=item_to_inventory_obj['item_type'])
-
-    if not check_item.exists():
-        inventory_item = CharacterInventoryItem.objects.create(name=item_to_inventory_obj['name'], item_type=item_to_inventory_obj['item_type'])
-        inventory_item.save()
-    elif check_item.exists():
-        inventory_item = CharacterInventoryItem.objects.get(name=item_to_inventory_obj['name'], item_type=item_to_inventory_obj['item_type'])
-
-        inventory_item_qnt = list(UserCharacterInventoryItem.objects.filter(character_id=character_obj.id, item_id=inventory_item.id).values('id', 'quantity'))
-
-        if not inventory_item_qnt:
-            qnt = 1
-            UserCharacterInventoryItem.objects.create(
-                quantity = qnt,
-                item_id = inventory_item,
-                character_id = character_inventory_obj,
-            )
-            qnt = int(inventory_item_qnt[0]['quantity']) + 1
-                
-            UserCharacterInventoryItem.objects.filter(id=inventory_item_qnt[0]['id']).update(
-                quantity = qnt,
-                item_id = inventory_item,
-                character_id = character_inventory_obj,
-            )      
-
+        
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)

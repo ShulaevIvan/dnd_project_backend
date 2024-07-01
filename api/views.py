@@ -773,7 +773,7 @@ class RandomCharacterNameView(APIView):
             random_names.append({'name': query.name, gender: query.gender})
  
         return Response(random_names, status=status.HTTP_200_OK)
-
+    
 def load_more_items_count(all_items, item_type, count):
     query_book = get_object_or_404(ReferenceBook, id=1)
     existing_items = list(filter(lambda item: item['type'] == item_type, all_items))

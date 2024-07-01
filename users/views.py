@@ -687,15 +687,17 @@ class UserCharacterEquippedItemsView(APIView):
             for equip_slot in char_equipped_slots.values():
                 for item_type in item_types_data:
                     if equip_slot['slot_name'] in item_type['type']:
+                        
                         list_item_values = {
                             'slot': equip_slot['slot_name'],
                             'item': [
-                                { field: value } for field, value in model_to_dict(item_type['model'].objects.get(id=equip_slot['item_id'])).items() 
+                                { field: value, 'image': generate_item_image_link(equip_slot['item_id'], item_type['type']) } 
+                                    for field, value in model_to_dict(item_type['model'].objects.get(id=equip_slot['item_id'])).items() 
                                 if not field == 'book_id'
-                            ],
+                            ]
                         }
                         result_items.append({**list_item_values, 'item': join_dicts(list_item_values,'item')})
-
+            
             return Response({'items': result_items}, status=status.HTTP_200_OK)
         
         if params.get('slot'):
@@ -720,13 +722,15 @@ class UserCharacterEquippedItemsView(APIView):
         current_equipped_item_obj = UserCharacterEquipSlot.objects.get(inventory_id=character_inventory, slot_name=target_item_slot)
         current_equipped_item = target_character.char_inventory.character_eqip_slot.filter(slot_name=target_item_slot)
         current_item_id = int(list(current_equipped_item.values('item_id'))[0]['item_id'])
+        response_data = dict()
 
         if params.get('add') == 'new':
             save_item_to_character_inventory(target_character, current_item, character_inventory)
-
             current_equipped_item_obj.item_id = send_data['item']['id']
             current_equipped_item_obj.equipped = True
             current_equipped_item_obj.save()
+
+            return Response({'status': 'added'}, status=status.HTTP_201_CREATED)
 
         if params.get('unequip') == 'true' and current_equipped_item_obj.item_id and current_equipped_item_obj.item_id != 9999:
             item_params = [
@@ -734,17 +738,16 @@ class UserCharacterEquippedItemsView(APIView):
                 {"item_type": 'armor', "model": ArmorItemEquip,},
                 {"item_type": 'instrument', "model": InstrumentItemEquip,}
             ]
-
             target_item_type = list(filter((lambda param: param['item_type'] == current_equipped_item_obj.slot_name), item_params))[0]
             no_item_obj = target_item_type['model'].objects.filter(id=9999).first()
+            
             save_item_to_character_inventory(target_character, current_item, character_inventory)
-
             current_equipped_item_obj.item_id = no_item_obj.id
             current_equipped_item_obj.slot_name = target_item_type['item_type']
             current_equipped_item_obj.equipped = True
             current_equipped_item_obj.save()
 
-            return Response({'status': 'test'})
+            return Response({'status': 'removed'}, status=status.HTTP_201_CREATED)
 
 
         return Response({'status': 'ok'}, status=status.HTTP_201_CREATED)
@@ -759,7 +762,6 @@ def save_item_to_character_inventory(character_obj, item_to_inventory_obj, chara
         inventory_item.save()
     elif check_item.exists():
         inventory_item = CharacterInventoryItem.objects.get(name=item_to_inventory_obj['name'], item_type=item_to_inventory_obj['item_type'])
-
         inventory_item_qnt = list(UserCharacterInventoryItem.objects.filter(character_id=character_obj.id, item_id=inventory_item.id).values('id', 'quantity'))
 
         if not inventory_item_qnt:
@@ -777,6 +779,10 @@ def save_item_to_character_inventory(character_obj, item_to_inventory_obj, chara
                 character_id = character_inventory_obj,
             )      
 
+def generate_item_image_link(item_id, item_type):
+    print(item_id)
+    print(item_type)
+    return 'test'
 
 def get_item_id_by_item_type(item_name, item_type):
     items_book = ItemsEquipBook.objects.get(id=1)
